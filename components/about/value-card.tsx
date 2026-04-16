@@ -1,4 +1,3 @@
-import Button from "@/components/ui/grad-button";
 import Image from "next/image";
 
 interface ValueCardProps {
@@ -10,20 +9,20 @@ interface ValueCardProps {
 }
 
 // Default descriptions
-const defaultDescription1 = "At Americana Computers, we see ourselves as more than just vendors; we view our partnerships as pathways to collaboration and innovation. Among the trusted digital transformation providers in UAE, we partner with leading global technology corporations to provide infrastructure, cloud platforms, and enterprise systems with high security and performance.";
+const defaultDescription1 = "We are a global brand that specializes in consulting, manufacturing & constructing aluminium helidecks and providing heliport solutions, for both offshore and land-based helidecks. We focus on delivering effective and superior solutions for marking assets and landing areas for guaranteed safe operations. We have been a huge part of offering our trusted services to both government and private organizations.";
 
-const defaultDescription2 = "Our industry-leading partnerships enable us to deliver the best digital transformation services in UAE and the UAE to organizations looking to adopt the latest technologies and scale up digitally. We combine our expertise with the capabilities of the world's leading technology firms to create scalable, future-ready solutions for evolving enterprise environments.";
+const defaultDescription2 = "Working with experts, vendors and other external partners help Cranton Electrical to support its mission of providing optimal solutions in the industry. Our expert team has extensive knowledge of aluminium helidecks and delivering heliport related solutions. This offers possibilities for successful implementation of innovative ideas and advanced aluminium solutions in helidecks.";
+
+const defaultDescription3 = "Our wide range of solutions focuses on areas where there are weight limitations and also provide low maintenance costs without compromising on the strength of structures. We cater to offering our services to suit every specific requirement to all brands and businesses locally and internationally.";
 
 export function ValueCard({
     title,
-    description1,
-    description2,
     image
 }: ValueCardProps) {
     return (
         <section className="w-full bg-background py-12 md:py-20 md:px-8">
             <div className="2xl:max-w-350 w-[90%] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
 
                     {/* Desktop Image */}
                     <div className="hidden md:flex justify-center">
@@ -42,17 +41,21 @@ export function ValueCard({
                     <div className="flex flex-col gap-2">
 
                         {/* Title */}
-                        <h2 className="text-[20px] md:text-3xl lg:text-[35px] font-medium leading-[1.2] text-[#0a0f1e]">
+                        <h2 className="text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2] text-[#0a0f1e] max-w-[50%]">
                             {title}
                         </h2>
 
-                        <p className="text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-black font-medium">
+                        <p className="text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium">
                             {defaultDescription1}
                         </p>
 
 
-                        <p className="text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-black font-medium">
+                        <p className="text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium">
                             {defaultDescription2}
+                        </p>
+
+                        <p className="text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium">
+                            {defaultDescription3}
                         </p>
                     </div>
 

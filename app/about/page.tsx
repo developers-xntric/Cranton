@@ -15,9 +15,9 @@ const About = () => {
             <ValueCard
                 isPartner={true}
                 title={
-                    "Creating Long-Term Value With Our Technology Partners"
+                    "About Cranton Electrical Limited"
                 }
-                image=""
+                image="/about/2.png"
                 description1={""}
                 description2={""}
             />
