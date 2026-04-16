@@ -1,0 +1,34 @@
+export default function Hero() {
+    return (
+        <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex items-end">
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0 bg-black">
+                <video
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src="/home/hero-bg.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                </video>
+                {/* Gradient overlays to match the design's dark bottom edge for text readability */}
+                <div className="absolute inset-0 bg-linear-to-t from-[#1a1a1a]/90 via-transparent to-transparent"></div>
+            </div>
+
+            {/* Hero Content */}
+            <div className="relative z-10  max-w-[1440px] w-[90%] mx-auto pb-16 ">
+                <h1 className="text-white text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[4.5rem] 2xl:text-[5.5rem]  tracking-tight">
+                    Vertiport & Heliport
+                    <br />
+                    Obstruction Lighting Solutions
+                </h1>
+            </div>
+        </section>
+    );
+}
+
+
+
+
