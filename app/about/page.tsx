@@ -1,3 +1,4 @@
+import FourCards from "@/components/about/four-cards";
 import { ValueCard } from "@/components/about/value-card";
 import DynamicHero from "@/components/dynamic-hero";
 
@@ -25,6 +26,7 @@ const About = () => {
                 description3={"We specialize in the design, manufacturing, and installation of aluminium helidecks and associated systems, ensuring every solution is tailored to specific operational requirements. Our team works closely with clients, consultants, and external partners to ensure smooth execution at every stage of the project."}
                 description4={"We specialize in the design, manufacturing, and installation of aluminium helidecks and associated systems, ensuring every solution is tailored to specific operational requirements. Our team works closely with clients, consultants, and external partners to ensure smooth execution at every stage of the project."}
             />
+            <FourCards heading="What We Do" para="We provide complete heliport solutions, combining expertise, innovation, and safety for both offshore and land-based helidecks." />
         </div>
     )
 }
