@@ -13,13 +13,13 @@ const About = () => {
                 backgroundImage={"/about/hero.png"}
             />
             <ValueCard
-                isPartner={true}
-                title={
-                    "About Cranton Electrical Limited"
-                }
+                title="About Cranton Electrical Limited"
                 image="/about/2.png"
-                description1={""}
-                description2={""}
+            />
+            <ValueCard
+                title="Our Story"
+                image="/about/2.png"
+                isBlack={true}
             />
         </div>
     )

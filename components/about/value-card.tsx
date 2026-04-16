@@ -5,7 +5,7 @@ interface ValueCardProps {
     description1?: any;
     description2?: any;
     image: string;
-    isPartner?: boolean;
+    isBlack?: boolean
 }
 
 // Default descriptions
@@ -17,12 +17,13 @@ const defaultDescription3 = "Our wide range of solutions focuses on areas where 
 
 export function ValueCard({
     title,
-    image
+    image,
+    isBlack
 }: ValueCardProps) {
     return (
-        <section className="w-full bg-background py-12 md:py-20 md:px-8">
+        <section className={`w-full ${isBlack ? "bg-black" : "bg-background"} py-12 md:py-20 md:px-8`}>
             <div className="2xl:max-w-350 w-[90%] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 direction-rtl items-center">
 
                     {/* Desktop Image */}
                     <div className="hidden md:flex justify-center">
