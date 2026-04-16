@@ -42,17 +42,16 @@ export default function DynamicHero({
             className="relative w-full h-110 md:h-130 2xl:h-162.5 bg-cover bg-center flex items-center justify-center overflow-hidden"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
-
             }}
         >
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/60" />
+            {/* <div className="absolute inset-0 bg-black/60" /> */}
 
             {/* Centered Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center gap-3 px-4 pt-16">
                 {/* Page Title */}
                 <h1
-                    className="text-white text-3xl lg:text-[55px] font-light tracking-wide text-balance"
+                    className="text-white text-3xl lg:text-[60px] font-light tracking-wide text-balance"
                     dangerouslySetInnerHTML={{ __html: title }}></h1>
 
                 {/* Shadcn Breadcrumb — styled white for dark background */}
@@ -64,13 +63,13 @@ export default function DynamicHero({
                                 <span key={index} className="flex items-center gap-1.5">
                                     <BreadcrumbItem>
                                         {isLast ? (
-                                            <BreadcrumbPage className="text-white/90 text-[13px] md:text-base font-normal">
+                                            <BreadcrumbPage className="text-white/90 text-[13px] md:text-lg font-normal">
                                                 {crumb.label}
                                             </BreadcrumbPage>
                                         ) : (
                                             <BreadcrumbLink
                                                 href={crumb.href || "#"}
-                                                className="text-[#168DCA] underline text-[13px] md:text-base font-normal hover:text-white transition-colors duration-200"
+                                                className="text-[#168DCA] underline text-[13px] md:text-lg font-normal hover:text-white transition-colors duration-200"
                                             >
                                                 {crumb.label}
                                             </BreadcrumbLink>
