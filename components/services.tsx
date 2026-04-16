@@ -5,37 +5,37 @@ const services = [
     {
         title: "Vertiport & Heliport Consulting and Refurbishment",
         description: "Our industry experts provide tailored consulting and refurbishment services to deliver reliable Vertiport & Heliport solutions.",
-        image: "https://images.unsplash.com/photo-1559297621-0a6eba7b9ef2?q=80&w=800&auto=format&fit=crop",
+        image: "/home/service-card1.png",
         link: "/services/consulting",
     },
     {
-        title: "Custom Strategy & Project Management",
-        description: "We provide dedicated strategic oversight and project management to ensure seamless execution from concept planning through successful operational delivery for our clients.",
-        image: null, // Card 2 with NO image
+        title: "End-to-End Aviation, Vertiport & Heliport Solutions",
+        description: "Cranton offers focused, high-quality services supporting Vertiport, Heliport  and aviation infrastructure. Our team ensures every project benefits from expert engineering, certified systems, and dependable execution.",
+        image: null,
         link: "/services/management",
     },
     {
         title: "Vertiport & Heliport Lighting",
         description: "Reliable and well-functioning LED lighting system is an essential factor in case of vertiport & heliport operation. An effective vertiport & heliport lighting system ensures the safe operation.",
-        image: "https://images.unsplash.com/photo-1544253163-95d85202a0a2?q=80&w=800&auto=format&fit=crop",
+        image: "/home/service-card3.png",
         link: "/services/lighting",
     },
     {
         title: "Heliport and Vertiport Solutions",
         description: "MESH is an innovative solution for creating safe landing sites for helicopters and future eVTOL aircraft. It enables low-impact deployment for floating, surface, and elevated heliports.",
-        image: "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=800&auto=format&fit=crop",
+        image: "/home/service-card4.png",
         link: "/services/solutions",
     },
     {
         title: "Advanced Air Mobility (AAM)",
         description: "We support the future of urban air transportation by enabling the development of AAM infrastructure, vehicle integration, and regulatory readiness.",
-        image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop",
+        image: "/home/service-card5.png",
         link: "/services/aam",
     },
     {
         title: "Vertiport & Heliport Fire Fighting System",
         description: "As per the norms of International Civil Aviation Organization, vertiport & heliport should be equipped with Fire Fighting System on two sides.",
-        image: "https://images.unsplash.com/photo-1601002242457-3f32812fc4ac?q=80&w=800&auto=format&fit=crop",
+        image: "/home/service-card6.png",
         link: "/services/fire-fighting",
     },
 ];
@@ -57,21 +57,16 @@ export default function Services() {
 
                         if (isCard2) {
                             return (
-                                <Link
-                                    href={service.link}
+                                <div
                                     key={index}
-                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[400px] p-8 border border-white/10 bg-linear-to-br from-[#1a1a2e] to-[#0f0f1a] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/20"
+                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[370px] 2xl:min-h-[400px] p-7  border border-white/10  transition-all duration-300 "
                                 >
-                                    {/* Hidden Arrow that shows on hover */}
-                                    <div className="absolute top-6 right-6 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 p-3 bg-white/10 rounded-full backdrop-blur-md">
-                                        <ArrowUpRight />
-                                    </div>
 
-                                    <div className="relative z-20">
-                                        <h3 className="text-2xl lg:text-3xl font-medium text-white mb-4">{service.title}</h3>
-                                        <p className="text-base text-gray-400 leading-relaxed">{service.description}</p>
+                                    <div className="relative z-20 text-center">
+                                        <h3 className="text-2xl lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
+                                        <p className="text-[15px] text-black ">{service.description}</p>
                                     </div>
-                                </Link>
+                                </div>
                             );
                         }
 
@@ -79,7 +74,7 @@ export default function Services() {
                             <Link
                                 href={service.link}
                                 key={index}
-                                className="group relative rounded-2xl overflow-hidden flex flex-col min-h-[400px] transition-all duration-300 hover:-translate-y-2 shadow-lg"
+                                className="group relative rounded-2xl overflow-hidden flex flex-col min-h-[370px]  2xl:min-h-[400px] transition-all duration-300 hover:-translate-y-2 shadow-lg"
                             >
                                 {/* Background Image */}
                                 {service.image && (
@@ -96,15 +91,20 @@ export default function Services() {
                                     </div>
                                 )}
 
-                                {/* Hidden Arrow that shows on hover */}
-                                <div className="absolute top-6 right-6 z-30 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 p-3 bg-white/20 backdrop-blur-md rounded-full border border-white/20">
-                                    <ArrowUpRight />
-                                </div>
 
                                 {/* Bottom Glass Content */}
-                                <div className="relative z-20 mt-auto p-6 md:p-8 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20">
-                                    <h3 className="text-xl md:text-2xl font-medium text-white mb-3">{service.title}</h3>
-                                    <p className="text-sm md:text-base text-gray-200 line-clamp-3">{service.description}</p>
+                                <div className="relative z-20 mt-auto p-4 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
+                                    <h3 className="text-xl md:text-[20px]  text-white mb-1">{service.title}</h3>
+                                    <p className="text-sm md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
+
+                                    {/* Arrow expands beneath text without taking initial space */}
+                                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
+                                        <div className="overflow-hidden">
+                                            <div className="w-fit p-2.5 mt-3 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center">
+                                                <ArrowUpRight />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </Link>
                         );
