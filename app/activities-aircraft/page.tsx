@@ -1,3 +1,4 @@
+import AirCraftWarningLights from "@/components/activities-aircraft/aircraft-warning-lights";
 import DynamicHero from "@/components/dynamic-hero";
 
 const ActivitiesAircraft = () => {
@@ -11,6 +12,7 @@ const ActivitiesAircraft = () => {
                 ]}
                 backgroundImage={"/activities-aircraft/herobanner.png"}
             />
+            <AirCraftWarningLights />
         </div>
     )
 }

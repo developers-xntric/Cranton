@@ -21,8 +21,8 @@ const products = [
     },
 ];
 
-export default function ObstructionLighting() {
-    return (
+export default function  ObstructionLighting() {
+    return ( 
         <section className="bg-black py-16">
             <div className="max-w-[1240px] w-[90%] mx-auto">
                 <SectionHeading title="Obstruction Lighting"  />
