@@ -56,7 +56,6 @@ const testimonials: Testimonial[] = [
     },
 ];
 
-// ─── Animated Counter ────────────────────────────────────────────────────────
 function AnimatedCounter({
     value,
     suffix,
@@ -115,7 +114,6 @@ function StarRating({ count }: { count: number }) {
     );
 }
 
-// ─── Why Choose Us Section ───────────────────────────────────────────────────
 export function WhyChooseUsSection() {
     const statsRef = useRef<HTMLDivElement>(null);
     const [statsVisible, setStatsVisible] = useState(false);
