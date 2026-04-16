@@ -77,7 +77,7 @@ export default function FourCards({ heading, para }: { heading: string; para: st
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6 }}
-                    className="text-[20px] md:text-3xl lg:text-[40px] font-medium leading-[1.2] text-black text-center mb-10"
+                    className="text-[20px] md:text-3xl lg:text-[40px] font-medium leading-[1.2] text-black text-center mb-4"
                 >
                     {heading}
                 </motion.h2>
@@ -149,7 +149,7 @@ export default function FourCards({ heading, para }: { heading: string; para: st
                             transition={{ duration: 0.5, delay: idx * 0.15 }}
                             className="flex flex-col items-start p-6 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.05)]"
                         >
-                            <div className="mb-10 w-10 h-16 relative">
+                            <div className="mb-4 w-12 h-12 relative">
                                 <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                             </div>
                             <h3 className="text-[25px] leading-8 font-bold text-black mb-3 mt-8">
