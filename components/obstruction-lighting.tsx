@@ -24,7 +24,7 @@ const products = [
 export default function ObstructionLighting() {
     return (
         <section className="bg-black py-16">
-            <div className="max-w-[1240px] w-[90%] mx-auto">
+            <div className="max-w-[1440px] w-[90%] mx-auto">
                 <SectionHeading title="Obstruction Lighting"  />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
