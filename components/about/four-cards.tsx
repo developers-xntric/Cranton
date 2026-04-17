@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function FourCards({ heading, para }: { heading: string; para: string }) {
+export default function FourCards({ heading, para, isBlack = false }: { heading: string; para: string, isBlack?: boolean }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
