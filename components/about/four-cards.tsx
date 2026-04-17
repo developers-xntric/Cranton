@@ -54,7 +54,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6 }}
-                    className={`text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] ${isBlack ? 'text-white' : 'text-black'} text-center mb-4`}
+                    className={`text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] ${isBlack ? 'text-white' : 'text-black'} text-center mb-6`}
                 >
                     {heading}
                 </motion.h2>

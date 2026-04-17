@@ -1,6 +1,28 @@
-'use client'
+"use client";
 
-export default function ImageContentSection() {
+type Point = {
+  title: string;
+};
+
+type ImageContentSectionProps = {
+  id?: string;
+  image?: string;
+  imageAlt?: string;
+  title?: string;
+  paragraphs?: string[];
+  subTitle?: string;
+  points?: Point[];
+};
+
+export default function ImageContentSection({
+  id = "about",
+  image = "/placeholder.png",
+  imageAlt = "image",
+  title = "",
+  paragraphs = [],
+  subTitle = "",
+  points = [],
+}: ImageContentSectionProps) {
   const CheckIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,60 +43,64 @@ export default function ImageContentSection() {
       />
     </svg>
   );
-   const points = [
-    { title: "Drafting the primary plan / concept of the helideck" },
-    { title: "Preparing detailed planning based on the approved concept" },
-    { title: "Submission and approvals from concerned departments / officials" },
-    { title: "Associating with related authorities / agencies in order to meet the applicable standards." },
-  ];
+
   return (
-    <section id="about" className="w-full bg-white py-10 md:py-16">
+    <section id={id} className="w-full bg-white pt-10 pb-10">
       <div className="mx-auto max-w-[1440px] w-[90%]">
         {/* Image */}
-        <div className="w-full mt-6">
-          <img
-            src="/activities-aircraft/aircraft-warning-lights.png"
-            alt="Advanced Oncology Center building"
-            className="w-full h-56 md:h-auto shadow-lg object-cover  "
-          />
-        </div>
-        {/* Text Content */}
-        
-          {/* Heading */}
-          <div className="space-y-4 w-full py-6">
-          
-            <h2 className={`text-[20px] md:text-3xl lg:text-[36px] font-Regular leading-[1.2]  }`}>
-              Helideck Consulting
-            </h2>
-            <div>
-            <p className="text-[16px] leading-relaxed text-[#333333] mb-2">
-        We are industry experts and provide you the most cost effective and up to date helideck solutions based on your requirements. We provide our clients a free primary consultation to listen to and clarify queries based on their helideck requirements
-      </p>
-      <p className="text-[16px] leading-relaxed text-[#333333] mb-2">
-        Cranton Electrical Helideck consulting has designed more ground, rooftop and offshore helideck manufactures than anyone else in the world. Unlike most of our competitors, Cranton Electrical Heliports manufactures has an extensive in-house engineering staff with the capability to design everything for a complete helipad installation, Cranton Electrical Helideck manufactures will design the support structure, fire suppression equipment, snow melting system, and lighting package as needed for your specific project. We are staffed to handle multiple helidecks projects and still give your project the first-class attention it deserves.
-      </p>
-      <h3 className={`text-[22px] font-light leading-[1.2] pt-3  }`}>
-              Our Consultation Consists Of
-            </h3>
-      <div className="space-y-3 py-4">
-      {points.map((item, index) => (
-        <div key={index} className="flex items-center gap-3">
-          <CheckIcon />
-          <p className="text-base font-light text-[#636363] text-[17px] ">{item.title}</p>
-        </div>
-      ))}
-    </div>
-            
-            
+        {image && (
+          <div className="w-full mt-6">
+            <img
+              src={image}
+              alt={imageAlt}
+              className="w-full h-56 md:h-auto shadow-lg object-cover"
+            />
           </div>
+        )}
 
+        {/* Text Content */}
+        <div className="space-y-4 w-full py-6">
+          {/* Heading */}
+          {title && (
+            <h2 className="text-[20px] md:text-3xl lg:text-[36px] font-Regular leading-[1.2]">
+              {title}
+            </h2>
+          )}
 
+          {/* Paragraphs */}
+          <div>
+            {paragraphs.map((para, index) => (
+              <p
+                key={index}
+                className="text-[16px] leading-relaxed text-[#333333] mb-2"
+              >
+                {para}
+              </p>
+            ))}
+
+            {/* Sub Title */}
+            {subTitle && (
+              <h3 className="text-[22px] font-light leading-[1.2] pt-3">
+                {subTitle}
+              </h3>
+            )}
+
+            {/* Points */}
+            {points.length > 0 && (
+              <div className="space-y-3 py-4">
+                {points.map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckIcon />
+                    <p className="text-base font-light text-[#636363] text-[17px]">
+                      {item.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-
-        
-        </div>
-        
-      
+      </div>
     </section>
-  )
+  );
 }
