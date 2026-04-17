@@ -2,8 +2,10 @@ import AirCraftWarningLights from "@/components/activities-aircraft/aircraft-war
 import GraySplitSection from "@/components/activities-aircraft/graysplitssection";
 import SplitSection from "@/components/activities-aircraft/splitsection";
 import DynamicHero from "@/components/dynamic-hero";
+import ActivitiesAircraft from "../activities-aircraft/page";
+import ImageContentSection from "@/components/activities-helideck/image-content-section";
 
-const ActivitiesAircraft = () => {
+const ActivitiesHelideck = () => {
     return (
         <div>
             <DynamicHero
@@ -12,13 +14,12 @@ const ActivitiesAircraft = () => {
                     { label: "Home", href: "/" },
                     { label: "Activities" }, 
                 ]}
-                backgroundImage={"/activities-aircraft/herobanner.png"}
+                backgroundImage={"/activities-helideck/hero.png"}
             />
-            <AirCraftWarningLights />
-            <SplitSection />
-            <GraySplitSection />
+            <ImageContentSection />
+               
         </div>
     )
 }
 
-export default ActivitiesAircraft;
+export default ActivitiesHelideck;
