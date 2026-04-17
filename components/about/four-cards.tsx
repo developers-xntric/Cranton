@@ -4,33 +4,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function FourCards({ heading, para }: { heading: string; para: string }) {
+export default function FourCards({ heading, para, isBlack = false, features }: { heading: string; para: string | null, isBlack?: boolean, features: any[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-    const features = [
-        {
-            icon: "/about/c1.png",
-            title: "Expert Engineering Solutions",
-            desc: "From concept to commissioning, our teams manage every stage with precision and strict compliance.",
-        },
-        {
-            icon: "/about/c2.png",
-            title: "Uncompromised Quality",
-            desc: "We follow strict quality standards to ensure all systems are safe, reliable, and durable, every time.",
-        },
-        {
-            icon: "/about/c3.png",
-            title: "Reliable Long-Term Support",
-            desc: "We provide ongoing support and maintenance to ensure systems perform efficiently throughout their lifecycle.",
-        },
-        {
-            icon: "/about/c4.png",
-            title: "Continuous Innovation",
-            desc: "We continuously refine processes, adopt new technologies, and strengthen capabilities to meet industry demands.",
-        },
-    ];
 
     // Handle screen size detection
     useEffect(() => {
@@ -60,16 +37,16 @@ export default function FourCards({ heading, para }: { heading: string; para: st
     }, [startAutoplay]);
 
     return (
-        <section className="relative w-full bg-white py-16 overflow-hidden">
+        <section className={`relative w-full ${isBlack ? 'bg-[#161616]' : 'bg-white'} py-16 overflow-hidden`}>
             {/* Grid Background */}
-            {/* <div
+            {isBlack && <div
                 className="absolute inset-0 opacity-20"
                 style={{
                     backgroundImage: `linear-gradient(to right, #333131 1px, transparent 1px), linear-gradient(to bottom, #333131 1px, transparent 1px)`,
                     backgroundSize: '50px 100px',
                 }}
-            /> */}
-
+            />
+            }
             <div className="2xl:max-w-350 w-[90%] mx-auto relative z-10 flex flex-col items-center">
                 {/* Heading */}
                 <motion.h2
@@ -77,12 +54,12 @@ export default function FourCards({ heading, para }: { heading: string; para: st
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6 }}
-                    className="text-[20px] md:text-3xl lg:text-[40px] font-medium leading-[1.2] text-black text-center mb-4"
+                    className={`text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] ${isBlack ? 'text-white' : 'text-black'} text-center mb-4`}
                 >
                     {heading}
                 </motion.h2>
 
-                <motion.p
+                {para && <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
@@ -90,7 +67,7 @@ export default function FourCards({ heading, para }: { heading: string; para: st
                     className="text-[16px] leading-[1.2] text-black text-center mb-10"
                 >
                     {para}
-                </motion.p>
+                </motion.p>}
                 {/* Mobile Slider Version */}
                 <div className="md:hidden w-full overflow-hidden relative">
                     <div
@@ -152,10 +129,10 @@ export default function FourCards({ heading, para }: { heading: string; para: st
                             <div className="mb-4 w-12 h-12 relative">
                                 <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                             </div>
-                            <h3 className="text-[25px] leading-8 font-bold text-black mb-3 mt-8">
+                            <h3 className={`${isBlack ? "text-lg text-white" : "text-[25px] text- font-bold"} leading-8 mb-3 mt-8`}>
                                 {feature.title}
                             </h3>
-                            <p className="text-[#86898C] text-[14px] leading-relaxed">
+                            <p className={`${isBlack ? "text-white" :"text-[#86898C]"} text-[14px] leading-relaxed`}>
                                 {feature.desc}
                             </p>
                         </motion.div>
