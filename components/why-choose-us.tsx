@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
                         title="Why Industry Leaders Choose Cranton"
                         className="text-3xl md:text-4xl f text-black mb-4 leading-tight"
                     />
-                    <p className="font-onest text-[#7C7E86] text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+                    <p className="font-onest text-[#7C7E86] text-base md:text-base leading-relaxed max-w-3xl mx-auto">
                         From manufacturing precision to on-site readiness, Cranton delivers aviation, Vertiport & heliport solutions engineered for performance, compliance, and long-term reliability.
                     </p>
                 </div>
@@ -94,8 +94,8 @@ export default function WhyChooseUs() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex flex-col border-b border-[#CACCD2] pb-6">
-                                    <div className="mb-4 text-[#000]">
-                                        {/* <feature.icon className="w-8 h-8 stroke-1" /> */}
+                                    <div className="mb-2 text-[#000]">
+                                        {feature.icon}
                                     </div>
                                     <h3 className="font-rethink text-xl  text-black mb-2 leading-snug">
                                         {feature.title}
