@@ -28,12 +28,12 @@ export default function BuildingBlocks() {
     return (
         <section className="bg-white py-16">
             <div className="max-w-[1440px] w-[90%] mx-auto">
-                <div className="text-center max-w-[90%] mx-auto mb-16">
+                <div className="text-center max-w-[90%] mx-auto mb-10">
                     <SectionHeading
                         title="The Building Blocks Of Safe & Reliable Vertiport & Heliport"
                         className="text-3xl md:text-4xl font-medium text-black mb-6 leading-tight"
                     />
-                    <p className=" text-[15px] md:text-base leading-relaxed">
+                    <p className="font-onest text-[15px] md:text-base leading-relaxed">
                         Cranton Heliport is engineered with precision, using high-performance materials and systems designed to meet demanding aviation standards. These core elements work together to deliver safety, durability, and long-term operational confidence.
                     </p>
                 </div>
@@ -55,11 +55,11 @@ export default function BuildingBlocks() {
                                 />
                             </div>
 
-                            <h3 className="text-xl md:text-2xl font-bold text-black mb-4 leading-snug">
+                            <h3 className="font-rethink text-xl md:text-2xl font-bold text-black mb-4 leading-snug">
                                 {block.title}
                             </h3>
 
-                            <p className="text-[#86898C] text-[14px]  mb-auto">
+                            <p className="font-onest text-[#86898C] text-[14px]  mb-auto">
                                 {block.description}
                             </p>
 

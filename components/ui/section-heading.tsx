@@ -8,7 +8,7 @@ export default function SectionHeading({ title, className }: SectionHeadingProps
     const styles = className ?? "text-3xl md:text-4xl font-medium text-white text-center mb-6";
 
     return (
-        <h2 className={styles}>
+        <h2 className={`${styles} font-rethink`}>
             {title}
         </h2>
     );
