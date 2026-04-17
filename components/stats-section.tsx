@@ -50,12 +50,12 @@ const stats = [
 
 export default function StatsSection() {
     return (
-        <section className="bg-white py-24">
-            <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section className="bg-[#EFEFEF] py-16">
+            <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-9 items-center">
                 {/* Left: Image */}
-                <div className="relative aspect-square rounded-[24px] overflow-hidden shadow-2xl">
+                <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-2xl">
                     <Image
-                        src="/home/engineering-excellence.png"
+                        src="/home/stats-left.png"
                         alt="Engineering Precision"
                         fill
                         className="object-cover"
@@ -67,14 +67,14 @@ export default function StatsSection() {
                 <div className="flex flex-col">
                     <SectionHeading
                         title="Engineering Precision. Manufacturing Excellence"
-                        className="text-3xl md:text-4xl font-medium text-black mb-6 leading-tight text-left"
+                        className="text-3xl md:text-4xl font-normal text-black mb-4 leading-tight text-left"
                     />
 
-                    <div className="space-y-6 mb-10">
-                        <p className="text-[15px] md:text-base leading-relaxed text-[#333]">
+                    <div className="space-y-6 mb-5">
+                        <p className="font-onest text-[15px] md:text-base leading-relaxed text-[#86898C]">
                             Cranton is a specialist manufacturer and solutions provider for aviation and infrastructure systems, with a strong focus on helideck and helipad solutions, aviation lighting, and electrical safety equipment. We combine engineering expertise with in-house manufacturing to deliver products that meet the highest standards of safety, durability, and compliance.
                         </p>
-                        <p className="text-[15px] md:text-base leading-relaxed text-[#333]">
+                        <p className="font-onest text-[15px] md:text-base leading-relaxed text-[#86898C]">
                             Built on a foundation of technical knowledge and practical experience, Cranton supports clients across aviation, offshore, healthcare, defense, and industrial sectors. Our products are designed to perform in demanding environments where reliability and precision are critical.
                         </p>
                     </div>
@@ -89,10 +89,10 @@ export default function StatsSection() {
                                 {index % 2 === 1 && (
                                     <div className="absolute left-[-20px] top-2 bottom-2 w-px bg-gray-200 hidden sm:block" />
                                 )}
-                                <div className="text-4xl md:text-5xl font-bold text-black mb-2 tabular-nums">
+                                <div className="font-rethink text-4xl md:text-5xl font-bold text-black mb-2 tabular-nums">
                                     <AnimatedNumber value={stat.value} suffix={stat.suffix} />
                                 </div>
-                                <div className="text-sm md:text-base text-gray-500 font-medium">
+                                <div className="font-onest text-sm md:text-base text-[#7C7E86] ">
                                     {stat.label}
                                 </div>
                             </div>

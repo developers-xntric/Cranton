@@ -50,7 +50,7 @@ export default function Button({
 
     const variantMap: Record<ButtonVariant, string> = {
         gradient:
-            "bg-linear-to-l from-[#0F2453] to-[#168DCA] text-white border border-[#0F2453] hover:scale-105 hover:bg-none hover:text-[#168DCA] hover:border-[#168DCA] hover:shadow-xl hover:shadow-[#168DCA]/20 active:scale-95",
+            "bg-linear-to-l from-[#0F2453] to-[#168DCA] text-white  hover:border hover:scale-105 hover:bg-none hover:text-[#168DCA] hover:border-[#168DCA] hover:shadow-xl hover:shadow-[#168DCA]/20 active:scale-95",
         outline:
             "border border-[#1A6FEB] text-[#1A6FEB] bg-transparent hover:bg-[#1A6FEB]/5 hover:text-[#168DCA] hover:border-[#168DCA] active:scale-95",
         ghost:

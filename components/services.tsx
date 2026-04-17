@@ -63,8 +63,8 @@ export default function Services() {
                                 >
 
                                     <div className="relative z-20 text-center">
-                                        <h3 className="text-2xl lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
-                                        <p className="text-[15px] text-black ">{service.description}</p>
+                                        <h3 className="font-rethink text-2xl lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
+                                        <p className="font-onest text-[15px] text-black ">{service.description}</p>
                                     </div>
                                 </div>
                             );
@@ -94,8 +94,8 @@ export default function Services() {
 
                                 {/* Bottom Glass Content */}
                                 <div className="relative z-20 mt-auto p-4 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
-                                    <h3 className="text-xl md:text-[20px]  text-white mb-1">{service.title}</h3>
-                                    <p className="text-sm md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
+                                    <h3 className="font-rethink text-xl md:text-[20px]  text-white mb-1">{service.title}</h3>
+                                    <p className="font-onest text-sm md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
 
                                     {/* Arrow expands beneath text without taking initial space */}
                                     <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
