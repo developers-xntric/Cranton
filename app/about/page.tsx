@@ -1,6 +1,6 @@
 import FourCards from "@/components/about/four-cards";
 import { ValueCard } from "@/components/about/value-card";
-import { WhyChooseUsSection } from "@/components/about/why-choose";
+import { TestimonialsSection, WhyChooseUsSection } from "@/components/about/why-choose";
 import DynamicHero from "@/components/dynamic-hero";
 
 const About = () => {
@@ -77,6 +77,7 @@ const About = () => {
                     desc: "We continuously refine processes, adopt new technologies, and strengthen capabilities to meet industry demands.",
                 },
                 ]} />
+            <TestimonialsSection />
         </div>
     )
 }
