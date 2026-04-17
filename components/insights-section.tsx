@@ -43,7 +43,7 @@ export default function InsightsSection() {
                 <div className="text-center mb-10">
                     <SectionHeading
                         title="Insights That Power Smarter Decisions"
-                        className="text-3xl md:text-4xl font-medium text-black"
+                        className="text-3xl md:text-4xl  text-black"
                     />
                 </div>
 
