@@ -31,7 +31,7 @@ export default function BuildingBlocks() {
                 <div className="text-center max-w-[90%] mx-auto mb-10">
                     <SectionHeading
                         title="The Building Blocks Of Safe & Reliable Vertiport & Heliport"
-                        className="text-3xl md:text-4xl font-medium text-black mb-6 leading-tight"
+                        className="text-3xl md:text-4xl text-black mb-6 leading-tight"
                     />
                     <p className="font-onest text-[15px] md:text-base leading-relaxed">
                         Cranton Heliport is engineered with precision, using high-performance materials and systems designed to meet demanding aviation standards. These core elements work together to deliver safety, durability, and long-term operational confidence.
