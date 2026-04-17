@@ -29,7 +29,7 @@ const InsightCard = ({ title, image, className = "", isLarge = false }: InsightC
 
         {/* Text */}
         <div className="absolute bottom-6 left-6 right-6">
-            <h3 className={`font-rethink text-white  leading-tight ${isLarge ? 'text-xl md:text-3xl' : 'text-sm md:text-[20px]'}`}>
+            <h3 className={`font-rethink text-white  leading-tight ${isLarge ? 'text-xl md:text-3xl' : 'text-sm md:text-[15px] 2xl:text-[20px]'}`}>
                 {title}
             </h3>
         </div>

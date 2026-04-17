@@ -63,7 +63,7 @@ export default function BuildingBlocks() {
                                 {block.description}
                             </p>
 
-                            <div className="mt-5">
+                            <div className="mt-2">
                                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-[#168DCA] group-hover:border-[#168DCA]">
                                     <svg
                                         viewBox="0 0 24 24"
