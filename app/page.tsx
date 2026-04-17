@@ -5,6 +5,7 @@ import BuildingBlocks from "@/components/building-blocks";
 import ObstructionLighting from "@/components/obstruction-lighting";
 import WhyChooseUs from "@/components/why-choose-us";
 import InsightsSection from "@/components/insights-section";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <BuildingBlocks />
       <StatsSection />
       <WhyChooseUs />
-      <InsightsSection  />
+      <InsightsSection />
+      <ContactSection />
     </main>
   );
 }
-

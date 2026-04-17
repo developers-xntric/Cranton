@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./ui/grad-button";
 
 const services = [
     {
@@ -66,6 +67,13 @@ export default function Services() {
                                         <h3 className="font-rethink text-2xl lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
                                         <p className="font-onest text-[15px] text-black ">{service.description}</p>
                                     </div>
+
+                                    <Button
+                                        href="/contact"
+                                        className="mt-4 w-fit mx-auto"
+                                    >
+                                        Inquire Now
+                                    </Button>
                                 </div>
                             );
                         }
