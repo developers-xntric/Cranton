@@ -27,8 +27,56 @@ const About = () => {
                 description3={"We specialize in the design, manufacturing, and installation of aluminium helidecks and associated systems, ensuring every solution is tailored to specific operational requirements. Our team works closely with clients, consultants, and external partners to ensure smooth execution at every stage of the project."}
                 description4={"We specialize in the design, manufacturing, and installation of aluminium helidecks and associated systems, ensuring every solution is tailored to specific operational requirements. Our team works closely with clients, consultants, and external partners to ensure smooth execution at every stage of the project."}
             />
-            <FourCards heading="What We Do" para="We provide complete heliport solutions, combining expertise, innovation, and safety for both offshore and land-based helidecks." />
+            <FourCards
+                heading="What We Do"
+                para="We provide complete heliport solutions, combining expertise, innovation, and safety for both offshore and land-based helidecks."
+                features={[{
+                    icon: "/about/c1.png",
+                    title: "Expert Engineering Solutions",
+                    desc: "From concept to commissioning, our teams manage every stage with precision and strict compliance.",
+                },
+                {
+                    icon: "/about/c2.png",
+                    title: "Uncompromised Quality",
+                    desc: "We follow strict quality standards to ensure all systems are safe, reliable, and durable, every time.",
+                },
+                {
+                    icon: "/about/c3.png",
+                    title: "Reliable Long-Term Support",
+                    desc: "We provide ongoing support and maintenance to ensure systems perform efficiently throughout their lifecycle.",
+                },
+                {
+                    icon: "/about/c4.png",
+                    title: "Continuous Innovation",
+                    desc: "We continuously refine processes, adopt new technologies, and strengthen capabilities to meet industry demands.",
+                },
+                ]} />
             <WhyChooseUsSection />
+            <FourCards
+                heading="The Values That Define Our Success"
+                para={null}
+                isBlack={true}
+                features={[{
+                    icon: "/about/c1.png",
+                    title: "Expert Engineering Solutions",
+                    desc: "From concept to commissioning, our teams manage every stage with precision and strict compliance.",
+                },
+                {
+                    icon: "/about/c2.png",
+                    title: "Uncompromised Quality",
+                    desc: "We follow strict quality standards to ensure all systems are safe, reliable, and durable, every time.",
+                },
+                {
+                    icon: "/about/c3.png",
+                    title: "Reliable Long-Term Support",
+                    desc: "We provide ongoing support and maintenance to ensure systems perform efficiently throughout their lifecycle.",
+                },
+                {
+                    icon: "/about/c4.png",
+                    title: "Continuous Innovation",
+                    desc: "We continuously refine processes, adopt new technologies, and strengthen capabilities to meet industry demands.",
+                },
+                ]} />
         </div>
     )
 }
