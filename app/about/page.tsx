@@ -57,22 +57,22 @@ const About = () => {
                 para={null}
                 isBlack={true}
                 features={[{
-                    icon: "/about/c1.png",
+                    icon: "/about/c5.png",
                     title: "Expert Engineering Solutions",
                     desc: "From concept to commissioning, our teams manage every stage with precision and strict compliance.",
                 },
                 {
-                    icon: "/about/c2.png",
+                    icon: "/about/c6.png",
                     title: "Uncompromised Quality",
                     desc: "We follow strict quality standards to ensure all systems are safe, reliable, and durable, every time.",
                 },
                 {
-                    icon: "/about/c3.png",
+                    icon: "/about/c7.png",
                     title: "Reliable Long-Term Support",
                     desc: "We provide ongoing support and maintenance to ensure systems perform efficiently throughout their lifecycle.",
                 },
                 {
-                    icon: "/about/c4.png",
+                    icon: "/about/c8.png",
                     title: "Continuous Innovation",
                     desc: "We continuously refine processes, adopt new technologies, and strengthen capabilities to meet industry demands.",
                 },
