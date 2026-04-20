@@ -328,8 +328,8 @@ export function TestimonialsSection() {
                             <div className="flex items-start justify-between">
                                 <StarRating count={t.stars} />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-                                    <path d="M14.7521 8.49168C11.6742 16.0466 5.21067 15.3897 2.12747 11.2463C-0.955727 7.10302 2.90226 1.75794 6.28794 1.10099C9.67361 0.444038 15.0599 2.9076 15.0505 11.1467C15.038 22.1234 4.35214 32.64 3.17789 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
-                                    <path d="M33.9125 8.49168C30.8346 16.0466 24.3711 15.3897 21.2879 11.2463C18.2047 7.10302 22.0627 1.75794 25.4483 1.10099C28.834 0.444038 34.2203 2.9076 34.2109 11.1467C34.1984 22.1234 23.5125 32.64 22.3383 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M14.7521 8.49168C11.6742 16.0466 5.21067 15.3897 2.12747 11.2463C-0.955727 7.10302 2.90226 1.75794 6.28794 1.10099C9.67361 0.444038 15.0599 2.9076 15.0505 11.1467C15.038 22.1234 4.35214 32.64 3.17789 33.5635" stroke="black" stroke-opacity="0.2" strokeWidth="2" stroke-linecap="round" />
+                                    <path d="M33.9125 8.49168C30.8346 16.0466 24.3711 15.3897 21.2879 11.2463C18.2047 7.10302 22.0627 1.75794 25.4483 1.10099C28.834 0.444038 34.2203 2.9076 34.2109 11.1467C34.1984 22.1234 23.5125 32.64 22.3383 33.5635" stroke="black" stroke-opacity="0.2" strokeWidth="2" stroke-linecap="round" />
                                 </svg>
                             </div>
 
