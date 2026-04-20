@@ -87,10 +87,10 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                                     <div className="mb-6 w-10 h-16 relative">
                                         <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                                     </div>
-                                    <h3 className="text-[17px] font-medium text-white mb-3 mt-4">
+                                    <h3 className={`text-[17px] font-medium ${isBlack ? 'text-white' : 'text-black'} mb-3 mt-4`}>
                                         {feature.title}
                                     </h3>
-                                    <p className="text-white text-[13px] leading-relaxed">
+                                    <p className={`${isBlack ? 'text-white' : 'text-black'} text-[13px] leading-relaxed`}>
                                         {feature.desc}
                                     </p>
                                 </div>
@@ -132,7 +132,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                             <h3 className={`${isBlack ? "text-lg text-white" : "text-[25px] text- font-bold"} leading-8 mb-3 mt-8`}>
                                 {feature.title}
                             </h3>
-                            <p className={`${isBlack ? "text-white" :"text-[#86898C]"} text-[14px] leading-relaxed`}>
+                            <p className={`${isBlack ? "text-white" : "text-[#86898C]"} text-[14px] leading-relaxed`}>
                                 {feature.desc}
                             </p>
                         </motion.div>
