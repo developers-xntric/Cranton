@@ -7,7 +7,7 @@ import ImageContentSection from "@/components/activities-helideck/image-content-
 import SplitSectionHelideck from "@/components/activities-helideck/splitsection-helideck";
 import FourCards from "@/components/about/four-cards";
 import CTASection from "@/components/cta-section";
-
+// This is a client component, as it uses dynamic imports and interactive elements
 const ActivitiesRefurbishing = () => {
     return (
         <div>
