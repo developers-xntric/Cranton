@@ -1,3 +1,4 @@
+import { ContactSection } from '@/components/contact/contact-section';
 import DynamicHero from '@/components/dynamic-hero';
 
 const Contact = () => {
@@ -11,6 +12,7 @@ const Contact = () => {
                 ]}
                 backgroundImage={"/contact/hero.png"}
             />
+            <ContactSection />
         </div>
     )
 }
