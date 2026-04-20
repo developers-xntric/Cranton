@@ -1,5 +1,5 @@
 'use client'
-import { Home, User, Settings, Mail } from "lucide-react";
+
 type CardItem = {
   id: number;
   title: string;
@@ -27,45 +27,50 @@ const cards: CardItem[] = [
 </svg> },
 
 ];
+
 export default function AirCraftWarningLights() {
-  
   return (
-    <section id="about" className="w-full bg-white py-10 md:py-16">
+    <section id="about" className="w-full bg-white py-10 md:py-12">
       <div className="mx-auto max-w-[1440px] w-[90%]">
-        {/* Text Content */}
-        <div className="flex flex-col lg:flex-row gap-6 ">
-          {/* Heading */}
+
+        {/* Layout */}
+        <div className="flex flex-col lg:flex-row gap-6">
+
+          {/* LEFT SIDE */}
           <div className="flex flex-col justify-between w-full lg:w-[40%]">
-          
-            <h2 className={`text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2]  }`}>
+
+            <h2 className="text-[18px] md:text-3xl lg:text-[36px] font-medium leading-[1.2]">
               Aircraft Warning Lights
             </h2>
-            <div className="grid grid-cols-2 gap-6 ">
-      {cards.map((card) => (
-        <div
-          key={card.id}
-          className="flex flex-col px-3 py-3 bg-white rounded-[8px] border-[#bdbdbd] border-1 "
-        >
-          <div className="mb-3">{card.icon}</div>
-          <h3 className="text-sm font-medium">{card.title}</h3>
-        </div>
-      ))}
-    </div>
-            
+
+            {/* MOBILE + TABLET FIX ONLY */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-4 lg:mt-0">
+              {cards.map((card) => (
+                <div
+                  key={card.id}
+                  className="flex flex-row sm:flex-col items-center sm:items-start gap-3 px-3 py-3 bg-white rounded-[8px] border border-[#bdbdbd]"
+                >
+                  <div className="">{card.icon}</div>
+                  <h3 className="text-[14px] md:text-sm font-medium">{card.title}</h3>
+                </div>
+              ))}
+            </div>
+
           </div>
 
-          {/* Paragraphs */}
-          <div className=" w-full lg:w-[60%] space-y-3 text-[15px] text-[#333333]">
-            <p >
+          {/* RIGHT SIDE */}
+          <div className="w-full lg:w-[60%] space-y-3 text-[14px] md:text-[15px] text-[#333333]">
+            <p>
               Cranton provides high-performance aircraft warning lights designed to enhance aviation safety by ensuring clear visibility of tall structures and potential obstacles. Our solutions are engineered to meet aviation compliance requirements while delivering reliable performance in demanding environments.
             </p>
             <p>
               Built with advanced technology and durable materials, these systems offer long operational life, energy efficiency, and minimal maintenance. By ensuring consistent visibility and dependable operation, Catobo’s aircraft warning lights help safeguard airspace while supporting the safe development of modern infrastructure.
             </p>
           </div>
+
         </div>
 
-        {/* Image */}
+        {/* IMAGE */}
         <div className="w-full mt-6">
           <img
             src="/activities-aircraft/aircraft-warning-lights.png"
@@ -73,9 +78,8 @@ export default function AirCraftWarningLights() {
             className="w-full h-56 md:h-auto rounded-lg shadow-lg object-cover"
           />
         </div>
-        </div>
-        
-      
+
+      </div>
     </section>
-  )
+  );
 }

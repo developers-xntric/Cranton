@@ -134,12 +134,12 @@ export function WhyChooseUsSection() {
     }, []);
 
     return (
-        <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white pb-12 lg:py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Top Grid: Left Text | Right Mission/Vision */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-b border-dashed border-[#C9C9C9]">
                     {/* Left Column */}
-                    <div className="py-12">
+                    <div className="pb-12 lg:py-12">
                         <h2 className="text-3xl sm:text-4xl font-medium text-gray-900 mb-5 leading-tight tracking-tight">
                             Why Choose Us
                         </h2>
@@ -160,9 +160,9 @@ export function WhyChooseUsSection() {
                     </div>
 
                     {/* Right Column: Mission + Vision */}
-                    <div className="flex flex-col gap-8 border-l border-dashed border-[#C9C9C9] pt-12 relative">
+                    <div className="flex flex-col gap-8 lg:border-l border-dashed border-[#C9C9C9] lg:pt-12 relative">
                         {/* Mission */}
-                        <div className="flex flex-col gap-4 items-start ms-10">
+                        <div className="flex flex-col gap-4 items-start lg:ms-10">
                             <div className="flex gap-5 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 41 39" fill="none">
                                     <path d="M21.9815 1.22884L26.4403 10.1892C26.7688 10.8383 27.3958 11.2892 28.1189 11.3894L38.1342 12.848C38.7191 12.9302 39.2499 13.2387 39.6084 13.7096C39.963 14.1744 40.1152 14.7635 40.0291 15.3426C39.959 15.8234 39.7326 16.2682 39.3861 16.6089L32.129 23.6437C31.5982 24.1346 31.3578 24.8619 31.486 25.5732L33.2727 35.4632C33.463 36.6574 32.6718 37.7834 31.486 38.0098C30.9973 38.088 30.4965 38.0058 30.0558 37.7814L21.1222 33.127C20.4592 32.7923 19.676 32.7923 19.013 33.127L10.0793 37.7814C8.98162 38.3645 7.62154 37.9678 7.01061 36.8858C6.78426 36.455 6.70414 35.9641 6.77825 35.4853L8.56498 25.5932C8.69318 24.8839 8.45081 24.1526 7.922 23.6617L0.664907 16.6309C-0.198412 15.7974 -0.224452 14.4249 0.606818 13.5613C0.624846 13.5433 0.644877 13.5232 0.664907 13.5032C1.00943 13.1526 1.46213 12.9302 1.95087 12.8721L11.9662 11.4114C12.6873 11.3092 13.3142 10.8624 13.6447 10.2092L17.9433 1.22884C18.3259 0.459441 19.1191 -0.0194313 19.9804 0.000605207H20.2488C20.996 0.0907695 21.647 0.553613 21.9815 1.22884Z" fill="#96B6C5" />
@@ -172,7 +172,7 @@ export function WhyChooseUsSection() {
                                     Our Mission
                                 </h3>
                             </div>
-                            <p className="ms-14 max-w-[70%] text-sm text-gray-600 leading-relaxed">
+                            <p className="lg:ms-14 lg:max-w-[70%] text-sm text-gray-600 leading-relaxed">
                                 To Provide The Highest Technical Competence Through Strong
                                 Collaboration And The Shortest Possible Delivery Time In The
                                 Manufacturing And Commissioning Of Helidecks.
@@ -180,8 +180,8 @@ export function WhyChooseUsSection() {
                         </div>
 
                         {/* Vision */}
-                        <div className="flex flex-col gap-4 items-start border-t border-dashed border-[#C9C9C9] pt-12">
-                            <div className="flex gap-5 items-center ms-10">
+                        <div className="flex flex-col gap-4 items-start lg:border-t lg:border-dashed lg:border-[#C9C9C9] lg:pt-12">
+                            <div className="flex gap-5 items-center lg:ms-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 43 43" fill="none">
                                     <path d="M0 27.4721C0 36.048 6.95203 42.9999 15.5278 42.9999C24.1037 42.9999 31.0556 36.048 31.0556 27.4721C31.0556 18.8962 24.1037 11.9443 15.5278 11.9443C6.95203 11.9443 0 18.8962 0 27.4721Z" fill="#025094" />
                                     <path d="M15.0263 6.24188C14.7353 6.63132 15.0421 7.16667 15.5283 7.16667C26.7426 7.16667 35.8338 16.2578 35.8338 27.4722C35.8338 27.9584 36.3692 28.2651 36.7585 27.9741C40.5476 25.1428 43.0005 20.6216 43.0005 15.5278C43.0005 6.95203 36.0486 0 27.4727 0C22.3789 0 17.8576 2.45287 15.0263 6.24188Z" fill="#96B6C5" />
@@ -190,7 +190,7 @@ export function WhyChooseUsSection() {
                                     Vision
                                 </h3>
                             </div>
-                            <p className="ms-24 max-w-[70%] text-sm text-gray-600 leading-relaxed">
+                            <p className="lg:ms-24 lg:max-w-[70%] text-sm text-gray-600 leading-relaxed">
                                 To Collaborate With Research Institutes And High-Tech Partners
                                 In Developing Advanced, Innovative, And Future-Ready Heliport
                                 Solutions.
@@ -328,8 +328,8 @@ export function TestimonialsSection() {
                             <div className="flex items-start justify-between">
                                 <StarRating count={t.stars} />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-                                    <path d="M14.7521 8.49168C11.6742 16.0466 5.21067 15.3897 2.12747 11.2463C-0.955727 7.10302 2.90226 1.75794 6.28794 1.10099C9.67361 0.444038 15.0599 2.9076 15.0505 11.1467C15.038 22.1234 4.35214 32.64 3.17789 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
-                                    <path d="M33.9125 8.49168C30.8346 16.0466 24.3711 15.3897 21.2879 11.2463C18.2047 7.10302 22.0627 1.75794 25.4483 1.10099C28.834 0.444038 34.2203 2.9076 34.2109 11.1467C34.1984 22.1234 23.5125 32.64 22.3383 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M14.7521 8.49168C11.6742 16.0466 5.21067 15.3897 2.12747 11.2463C-0.955727 7.10302 2.90226 1.75794 6.28794 1.10099C9.67361 0.444038 15.0599 2.9076 15.0505 11.1467C15.038 22.1234 4.35214 32.64 3.17789 33.5635" stroke="black" stroke-opacity="0.2" strokeWidth="2" stroke-linecap="round" />
+                                    <path d="M33.9125 8.49168C30.8346 16.0466 24.3711 15.3897 21.2879 11.2463C18.2047 7.10302 22.0627 1.75794 25.4483 1.10099C28.834 0.444038 34.2203 2.9076 34.2109 11.1467C34.1984 22.1234 23.5125 32.64 22.3383 33.5635" stroke="black" stroke-opacity="0.2" strokeWidth="2" stroke-linecap="round" />
                                 </svg>
                             </div>
 

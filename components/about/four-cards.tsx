@@ -37,7 +37,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
     }, [startAutoplay]);
 
     return (
-        <section className={`relative w-full ${isBlack ? 'bg-[#161616]' : 'bg-[#F7F7F7]'} py-16 overflow-hidden`}>
+        <section className={`relative w-full ${isBlack ? 'bg-[#161616]' : 'bg-[#F7F7F7]'} py-8 md:py-16 overflow-hidden`}>
             {/* Grid Background */}
             {isBlack && <div
                 className="absolute inset-0 opacity-20"
@@ -87,10 +87,10 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                                     <div className="mb-6 w-10 h-16 relative">
                                         <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                                     </div>
-                                    <h3 className="text-[17px] font-medium text-white mb-3 mt-4">
+                                    <h3 className={`text-[17px] font-medium ${isBlack ? 'text-white' : 'text-black'} mb-3 mt-4`}>
                                         {feature.title}
                                     </h3>
-                                    <p className="text-white text-[13px] leading-relaxed">
+                                    <p className={`${isBlack ? 'text-white' : 'text-black'} text-[13px] leading-relaxed`}>
                                         {feature.desc}
                                     </p>
                                 </div>

@@ -45,24 +45,27 @@ export default function ImageContentSection({
   );
 
   return (
-    <section id={id} className="w-full bg-white pt-10 pb-10">
-      <div className="mx-auto max-w-[1440px] w-[90%]">
+    <section id={id} className="w-full bg-white pt-5 md:pt-10 pb-5 md:pb-10">
+
+      <div className="mx-auto max-w-[1440px] w-[92%] sm:w-[90%]">
+
         {/* Image */}
         {image && (
-          <div className="w-full mt-6">
+          <div className="w-full mt-4 md:mt-6">
             <img
               src={image}
               alt={imageAlt}
-              className="w-full h-56 md:h-auto shadow-lg object-cover"
+              className="w-full h-[180px] sm:h-[220px] md:h-auto shadow-lg object-cover rounded-md"
             />
           </div>
         )}
 
         {/* Text Content */}
-        <div className="space-y-4 w-full py-6">
+        <div className="space-y-3 md:space-y-4 w-full py-5 md:py-6">
+
           {/* Heading */}
           {title && (
-            <h2 className="text-[20px] md:text-3xl lg:text-[36px] font-Regular leading-[1.2]">
+            <h2 className="text-[20px] sm:text-[20px] md:text-3xl lg:text-[36px] font-Regular leading-[1.2]">
               {title}
             </h2>
           )}
@@ -72,7 +75,7 @@ export default function ImageContentSection({
             {paragraphs.map((para, index) => (
               <p
                 key={index}
-                className="text-[16px] leading-relaxed text-[#333333] mb-2"
+                className="text-[14px] md:text-[16px] leading-relaxed text-[#333333] mb-2"
               >
                 {para}
               </p>
@@ -80,7 +83,7 @@ export default function ImageContentSection({
 
             {/* Sub Title */}
             {subTitle && (
-              <h3 className="text-[22px] font-light leading-[1.2] pt-3">
+              <h3 className="text-[20px] sm:text-[20px] md:text-[22px] font-light leading-[1.2] pt-3">
                 {subTitle}
               </h3>
             )}
@@ -89,17 +92,24 @@ export default function ImageContentSection({
             {points.length > 0 && (
               <div className="space-y-3 py-4">
                 {points.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckIcon />
-                    <p className="text-base font-light text-[#636363] text-[17px]">
+                  <div key={index} className="flex items-start gap-3">
+
+                    <div className="shrink-0 mt-1 md:0">
+                      <CheckIcon />
+                    </div>
+
+                    <p className="text-[14px] md:text-[17px] font-light text-[#636363]">
                       {item.title}
                     </p>
+
                   </div>
                 ))}
               </div>
             )}
+
           </div>
         </div>
+
       </div>
     </section>
   );
