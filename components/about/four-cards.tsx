@@ -83,7 +83,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                                 className="w-full shrink-0 px-2 flex flex-col"
                             >
-                                <div className="flex flex-col items-start p-6 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.05)] h-full min-h-70">
+                                <div className="flex flex-col items-start p-6 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.02)] h-full min-h-70">
                                     <div className="mb-6 w-10 h-16 relative">
                                         <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                                     </div>
@@ -124,17 +124,20 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false }}
                             transition={{ duration: 0.5, delay: idx * 0.15 }}
-                            className="flex flex-col items-start p-6 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.05)]"
+                            className="flex flex-col items-start justify-between p-6 h-full min-h-70 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.02)]"
                         >
                             <div className="mb-4 w-12 h-12 relative">
                                 <Image src={feature.icon} alt={feature.title} height={500} width={500} />
                             </div>
-                            <h3 className={`${isBlack ? "text-lg text-white" : "text-[25px] text- font-bold"} leading-8 mb-3 mt-8`}>
-                                {feature.title}
-                            </h3>
-                            <p className={`${isBlack ? "text-white" :"text-[#86898C]"} text-[14px] leading-relaxed`}>
-                                {feature.desc}
-                            </p>
+                            <div>
+
+                                <h3 className={`${isBlack ? "text-lg text-white" : "text-[25px] text- font-bold"} leading-8 mb-3 mt-8`}>
+                                    {feature.title}
+                                </h3>
+                                <p className={`${isBlack ? "text-white" : "text-[#86898C]"} text-[14px] leading-relaxed`}>
+                                    {feature.desc}
+                                </p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

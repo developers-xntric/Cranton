@@ -8,26 +8,27 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const solutions = [
     {
-        id: "heliport",
-        title: "Heliport and vertiport",
+        id: "activities",
+        title: "Activities",
         items: [
-            "Helideck Consulting",
-            "Refurbishing Helidecks",
-            "Helideck Manufacturing",
-            "Platform Mounting Helideck",
-            "Fire Fighting System",
-            "Helideck Lighting",
+            { name: "Helideck Consulting", href: "/activities-helideck-consulting" },
+            { name: "Refurbishing Helidecks", href: "/activities-helideck-refurbishing" },
+            { name: "Helideck Manufacturing", href: "/activities-helideck-manufacturing" },
+            { name: "Platform Mounting Helideck", href: "/activities-heliport-platform-mounting" },
+            { name: "Fire Fighting System", href: "/activities-firefighting-system" },
+            { name: "Helideck Lighting", href: "/activities-helideck-lighting" },
+            { name: "Aircraft Warning Lights", href: "/activities-aircraft" },
         ]
     },
     {
         id: "lighting",
         title: "Aircraft Obstructions Lights",
         items: [
-            "Low Intensity Lights",
-            "Medium Intensity Lights",
-            "High Intensity Lights",
-            "Dual Lighting Systems",
-            "Solar Obstruction Lights",
+            { name: "Low Intensity Lights", href: "#" },
+            { name: "Medium Intensity Lights", href: "#" },
+            { name: "High Intensity Lights", href: "#" },
+            { name: "Dual Lighting Systems", href: "#" },
+            { name: "Solar Obstruction Lights", href: "#" },
         ]
     }
 ]
@@ -35,7 +36,7 @@ const solutions = [
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-    const [activeCategory, setActiveCategory] = useState<string | null>("heliport")
+    const [activeCategory, setActiveCategory] = useState<string | null>("activities")
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md">
@@ -48,12 +49,12 @@ export default function Navbar() {
                     </div>
                     <div className="flex items-center gap-3">
                         <Link href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2 text-[#FFF]">
-                            <Mail size={14}  />
+                            <Mail size={14} />
                             info@crantonelectric.com
                         </Link>
                         <div className="h-4 w-px bg-white/20" />
                         <Link href="tel:+441916407503" className="flex items-center gap-2 text-[#FFF]">
-                            <Phone size={14}  />
+                            <Phone size={14} />
                             +44 191 640 75 03
                         </Link>
                     </div>
@@ -123,11 +124,11 @@ export default function Navbar() {
                                                                     {category.items.map((item, i) => (
                                                                         <li key={i}>
                                                                             <Link
-                                                                                href="#"
+                                                                                href={item.href}
                                                                                 className="text-[13px] text-gray-400 hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
                                                                             >
                                                                                 <div className="w-1.5 h-[2px] rounded-full bg-gray-600 transition-all duration-300 group-hover/link:bg-[#168DCA] group-hover/link:w-3" />
-                                                                                {item}
+                                                                                {item.name}
                                                                             </Link>
                                                                         </li>
                                                                     ))}
@@ -218,7 +219,7 @@ export default function Navbar() {
                                                             className="overflow-hidden pl-4 flex flex-col gap-4 text-[16px] text-gray-400 border-l border-[#168DCA]/30"
                                                         >
                                                             {cat.items.map((item, i) => (
-                                                                <Link key={i} href="#" onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">{item}</Link>
+                                                                <Link key={i} href={item.href} onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">{item.name}</Link>
                                                             ))}
                                                         </motion.div>
                                                     )}
