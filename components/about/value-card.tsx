@@ -29,7 +29,7 @@ export function ValueCard({
     description4,
 }: ValueCardProps) {
     return (
-        <section className={`w-full ${isBlack ? "bg-black" : "bg-[#F7F7F7]"} py-12 md:py-20 md:px-8`}>
+        <section className={`w-full ${isBlack ? "bg-black" : "bg-background"} py-12 md:py-20 md:px-8`}>
             <div className="2xl:max-w-350 w-[90%] mx-auto">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 ${isBlack ? ' direction-rtl' : ''} items-center`}>
 
