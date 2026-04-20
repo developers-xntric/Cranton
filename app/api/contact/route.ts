@@ -15,12 +15,13 @@ export async function POST(req: Request) {
 
         // SMTP Configuration
         const transporter = nodemailer.createTransport({
+            to: process.env.CONTACT_EMAIL, // This will be set in mailOptions
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT),
-            secure: false, // true for 465, false for other ports
+            secure: true, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
+                pass: process.env.SMTP_PASSWORD,
             },
         });
 

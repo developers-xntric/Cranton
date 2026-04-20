@@ -64,7 +64,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6 }}
-                    className="text-[16px] leading-[1.2] text-black text-center mb-10"
+                    className="text-[14px] leading-tight text-black/70 text-center mb-10"
                 >
                     {para}
                 </motion.p>}

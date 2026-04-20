@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -36,11 +37,20 @@ const CheckIcon = () => (
     </svg>
 );
 
-const ListBlock = ({ title, description, items, type = "check" }: ListBlockProps) => (
-    <div className="bg-[#f0f0f0] rounded-[15px] p-8 mb-6 border border-gray-100 shadow-sm">
-        <h3 className="text-[20px]  mb-6 text-black">{title}</h3>
+const ListBlock = ({
+    title,
+    description,
+    items,
+    type = "check",
+}: ListBlockProps) => (
+    <div className="bg-[#f0f0f0] rounded-[15px] p-4 md:p-8 mb-6 border border-gray-100 shadow-sm">
+
+        <h3 className="text-[18px] md:text-[20px] mb-4 md:mb-6 text-black">
+            {title}
+        </h3>
+
         {description && (
-            <p className="text-[14px] text-[#636363] mb-6 leading-relaxed font-light">
+            <p className="text-[13px] md:text-[14px] text-[#636363] mb-4 md:mb-6 leading-relaxed font-light">
                 {description}
             </p>
         )}
@@ -48,9 +58,9 @@ const ListBlock = ({ title, description, items, type = "check" }: ListBlockProps
         {type === "check" ? (
             <div className="space-y-3">
                 {items.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
+                    <div key={index} className="flex items-start gap-3 md:gap-4">
                         <CheckIcon />
-                        <p className="text-[14px] font-light text-[#636363] leading-tight pt-0.5">
+                        <p className="text-[13px] md:text-[14px] font-light text-[#636363] leading-tight pt-0.5">
                             {item.title}
                         </p>
                     </div>
@@ -61,12 +71,15 @@ const ListBlock = ({ title, description, items, type = "check" }: ListBlockProps
                 {items.map((item, index) => (
                     <div
                         key={index}
-                        className="flex items-center justify-between bg-white px-5 py-3 rounded-lg border border-gray-200 group hover:border-[#1475AF] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
+                        className="flex items-center justify-between bg-white px-4 md:px-5 py-3 rounded-lg border border-gray-200 group hover:border-[#1475AF] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
                     >
-                        <p className="text-[14px] font-medium text-[#444] group-hover:text-black transition-colors">
+                        <p className="text-[13px] md:text-[14px] font-medium text-[#444] group-hover:text-black transition-colors">
                             {item.title}
                         </p>
-                        <ArrowUpRight size={16} className="text-gray-400 group-hover:text-[#1475AF] group-hover:translate-x-1 transition-all" />
+                        <ArrowUpRight
+                            size={16}
+                            className="text-gray-400 group-hover:text-[#1475AF] group-hover:translate-x-1 transition-all"
+                        />
                     </div>
                 ))}
             </div>
@@ -95,20 +108,22 @@ export default function ActivityContent({
     bottomImage,
 }: ActivityContentProps) {
     return (
-        <section className="w-full bg-white py-16">
-            <div className="mx-auto max-w-[1440px] w-[90%]">
+        <section className="w-full bg-white py-10 md:py-16">
+            <div className="mx-auto max-w-[1440px] w-[92%] md:w-[90%]">
+
                 {/* Images Grid */}
-                <div className={cn(
-                    "grid gap-6 mb-12",
-                    topImages.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
-                )}>
+                <div
+                    className={cn(
+                        "hidden md:grid gap-4 md:gap-6 mb-8 md:mb-12 ",
+                        topImages.length === 1
+                            ? "grid-cols-1"
+                            : "grid-cols-1 md:grid-cols-2"
+                    )}
+                >
                     {topImages.map((src, index) => (
                         <div
                             key={index}
-                            className={cn(
-                                "relative rounded-[20px] overflow-hidden shadow-lg",
-                                topImages.length === 1 ? "aspect-21/9" : "aspect-16/10"
-                            )}
+                            className="relative w-full aspect-[16/10] md:aspect-[16/10] rounded-[16px] md:rounded-[20px] overflow-hidden shadow-lg"
                         >
                             <Image
                                 src={src}
@@ -122,20 +137,46 @@ export default function ActivityContent({
                 </div>
 
                 {/* Text Content */}
-                <div className="mb-12">
-                    <h2 className="text-[32px] md:text-[40px] text-black mb-6 font-rethink">
+                <div className="mb-8 md:mb-12">
+                    <h2 className="text-[22px] md:text-[40px] text-black mb-4 md:mb-6 font-rethink leading-tight">
                         {title}
                     </h2>
-                    <div className="space-y-6 text-[15px] leading-relaxed text-[#333] font-onest">
+
+                    <div className="space-y-4 md:space-y-6 text-[14px] md:text-[15px] leading-relaxed text-[#333] font-onest">
                         {paragraphs.map((para, index) => (
                             <p key={index}>{para}</p>
                         ))}
                     </div>
                 </div>
 
+                {/* Images Grid */}
+                <div
+                    className={cn(
+                        "grid md:hidden gap-4 md:gap-6 mb-8 md:mb-12 ",
+                        topImages.length === 1
+                            ? "grid-cols-1"
+                            : "grid-cols-1 md:grid-cols-2"
+                    )}
+                >
+                    {topImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className="relative w-full aspect-[16/10] md:aspect-[16/10] rounded-[16px] md:rounded-[20px] overflow-hidden shadow-lg"
+                        >
+                            <Image
+                                src={src}
+                                alt={`${title} image ${index + 1}`}
+                                fill
+                                className="object-cover"
+                                priority={index === 0}
+                            />
+                        </div>
+                    ))}
+                </div>
+
                 {/* List Blocks */}
                 {listBlocks.length > 0 && (
-                    <div className="space-y-6">
+                    <div className="space-y-4 md:space-y-6">
                         {listBlocks.map((block, index) => (
                             <ListBlock
                                 key={index}
@@ -150,7 +191,7 @@ export default function ActivityContent({
 
                 {/* Bottom Image */}
                 {bottomImage && (
-                    <div className="relative aspect-21/9 rounded-[20px] overflow-hidden shadow-xl mt-12">
+                    <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-[16px] md:rounded-[20px] overflow-hidden shadow-xl mt-10 md:mt-12">
                         <Image
                             src={bottomImage}
                             alt={`${title} main view`}

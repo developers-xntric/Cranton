@@ -266,7 +266,7 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Navigation Arrows */}
-                    <div className="flex gap-2 self-start sm:self-center shrink-0">
+                    <div className="gap-2 self-start sm:self-center shrink-0 md:flex hidden">
                         <button
                             onClick={prev}
                             disabled={currentIndex === 0}
@@ -339,14 +339,59 @@ export function TestimonialsSection() {
                             </p>
 
                             {/* Author */}
-                            <div className="border-t flex gap-2 items-center border-gray-100 pt-4">
+                            <div className="border-t lg:flex lg:gap-2 items-center border-gray-100 pt-4">
                                 <p className="text-sm font-semibold text-[#1B1B1B]">{t.name}</p>
                                 <p className="text-sm text-[rgba(27,27,27,0.50)]">{t.role}</p>
                             </div>
                         </div>
                     ))}
                 </div>
-
+                <div className="flex md:hidden my-4 gap-2 relative left-[25%]">
+                    <button
+                        onClick={prev}
+                        disabled={currentIndex === 0}
+                        className={`w-16 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex === 0
+                            ? "bg-white border-gray-200 text-gray-300 cursor-not-allowed"
+                            : "bg-white border-[#025094] text-[#025094]"
+                            }`}
+                    >
+                        <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                        onClick={next}
+                        disabled={currentIndex >= maxIndex}
+                        className={`w-16 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex >= maxIndex
+                            ? "bg-gray-300 border-gray-300 text-white cursor-not-allowed"
+                            : "bg-grad text-white"
+                            }`}
+                    >
+                        <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </button>
+                </div>
                 {/* Dot indicators (mobile) */}
                 <div className="flex justify-center gap-1.5 mt-6 sm:hidden">
                     {Array.from({ length: maxIndex + 1 }).map((_, i) => (
