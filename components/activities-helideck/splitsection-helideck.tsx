@@ -36,7 +36,7 @@ export default function SplitSectionHelideck({
       {sections.map((section, index) => (
         <div
           key={index}
-          className="max-w-[1440px] w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center"
+          className="max-w-360 w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center"
         >
 
           {/* CONTENT */}
@@ -78,7 +78,7 @@ export default function SplitSectionHelideck({
 
           {/* IMAGE */}
           <div
-            className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border border-[#D7D7D7] ${
+            className={`relative w-full h-55 sm:h-75 lg:h-full rounded-[24px] overflow-hidden border border-[#D7D7D7] ${
               section.reverse ? "lg:order-1" : ""
             }`}
           >
