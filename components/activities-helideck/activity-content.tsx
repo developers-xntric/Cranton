@@ -114,7 +114,7 @@ export default function ActivityContent({
                 {/* Images Grid */}
                 <div
                     className={cn(
-                        "grid gap-4 md:gap-6 mb-8 md:mb-12",
+                        "hidden md:grid gap-4 md:gap-6 mb-8 md:mb-12 ",
                         topImages.length === 1
                             ? "grid-cols-1"
                             : "grid-cols-1 md:grid-cols-2"
@@ -147,6 +147,31 @@ export default function ActivityContent({
                             <p key={index}>{para}</p>
                         ))}
                     </div>
+                </div>
+
+                {/* Images Grid */}
+                <div
+                    className={cn(
+                        "grid md:hidden gap-4 md:gap-6 mb-8 md:mb-12 ",
+                        topImages.length === 1
+                            ? "grid-cols-1"
+                            : "grid-cols-1 md:grid-cols-2"
+                    )}
+                >
+                    {topImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className="relative w-full aspect-[16/10] md:aspect-[16/10] rounded-[16px] md:rounded-[20px] overflow-hidden shadow-lg"
+                        >
+                            <Image
+                                src={src}
+                                alt={`${title} image ${index + 1}`}
+                                fill
+                                className="object-cover"
+                                priority={index === 0}
+                            />
+                        </div>
+                    ))}
                 </div>
 
                 {/* List Blocks */}
