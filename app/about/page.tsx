@@ -1,6 +1,7 @@
 import FourCards from "@/components/about/four-cards";
 import { ValueCard } from "@/components/about/value-card";
 import { TestimonialsSection, WhyChooseUsSection } from "@/components/about/why-choose";
+import CTASection from "@/components/cta-section";
 import DynamicHero from "@/components/dynamic-hero";
 
 const About = () => {
@@ -78,6 +79,7 @@ const About = () => {
                 },
                 ]} />
             <TestimonialsSection />
+            <CTASection heading="Let’s Build Your Helideck Project" description={"Get in touch with our team to discuss your helideck requirements and receive a tailored solution designed for performance, safety, and long-term reliability."} />
         </div>
     )
 }

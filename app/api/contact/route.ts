@@ -6,7 +6,7 @@ export async function POST(req: Request) {
         const { name, email, subject, message } = await req.json();
 
         // Basic validation
-        if (!name || !email || !subject || !message) {
+        if (!name || !email || !message) {
             return NextResponse.json(
                 { error: "All fields are required" },
                 { status: 400 }
@@ -24,21 +24,23 @@ export async function POST(req: Request) {
             },
         });
 
+        const emailSubject = subject ? `Contact Form: ${subject}` : "Contact Form Submission";
+
         // Email Content
         const mailOptions = {
-            from: `"${name}" <${process.env.SMTP_USER}>`, // Recommended to use SMTP_USER as from for better deliverability
+            from: `"${name}" <${process.env.SMTP_USER}>`,
             to: process.env.CONTACT_EMAIL,
             replyTo: email,
-            subject: `Contact Form: ${subject}`,
-            text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+            subject: emailSubject,
+            text: `Name: ${name}\nEmail: ${email}${subject ? `\nSubject: ${subject}` : ""}\n\nMessage:\n${message}`,
             html: `
                 <h3>New Contact Form Submission</h3>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Subject:</strong> ${subject}</p>
+                ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ""}
                 <br/>
                 <p><strong>Message:</strong></p>
-                <p>${message.replace(/\n/g, '<br/>')}</p>
+                <p>${message.replace(/\n/g, "<br/>")}</p>
             `,
         };
 

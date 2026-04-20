@@ -37,7 +37,7 @@ export default function FourCards({ heading, para, isBlack = false, features }: 
     }, [startAutoplay]);
 
     return (
-        <section className={`relative w-full ${isBlack ? 'bg-[#161616]' : 'bg-white'} py-16 overflow-hidden`}>
+        <section className={`relative w-full ${isBlack ? 'bg-[#161616]' : 'bg-[#F7F7F7]'} py-16 overflow-hidden`}>
             {/* Grid Background */}
             {isBlack && <div
                 className="absolute inset-0 opacity-20"

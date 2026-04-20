@@ -51,7 +51,7 @@ const stats = [
 export default function StatsSection() {
     return (
         <section className="bg-[#EFEFEF] py-16">
-            <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-9 place-items-center">
+            <div className="max-w-360 w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-9 place-items-center">
                 {/* Left: Image */}
                 <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-2xl">
                     <Image
@@ -87,7 +87,7 @@ export default function StatsSection() {
                             <div key={index} className="flex flex-col relative">
                                 {/* Vertical separator for left items in large screens, or just layout discipline */}
                                 {index % 2 === 1 && (
-                                    <div className="absolute left-[-20px] top-2 bottom-2 w-px bg-gray-200 hidden sm:block" />
+                                    <div className="absolute -left-5 top-2 bottom-2 w-px bg-gray-200 hidden sm:block" />
                                 )}
                                 <div className="font-rethink text-4xl md:text-5xl font-bold text-black mb-1 2xl:mb-2 tabular-nums">
                                     <AnimatedNumber value={stat.value} suffix={stat.suffix} />

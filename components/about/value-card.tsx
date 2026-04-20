@@ -54,16 +54,16 @@ export function ValueCard({
                             {title}
                         </h2>
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
+                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
                             {description1 ? description1 : defaultDescription1}
                         </p>
 
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
+                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
                             {description2 ? description2 : defaultDescription2}
                         </p>
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
+                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
                             {description3 ? description3 : defaultDescription3}
                         </p>
 
