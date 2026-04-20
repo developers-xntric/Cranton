@@ -94,7 +94,7 @@ export default function ImageContentSection({
                 {points.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
 
-                    <div className="shrink-0">
+                    <div className="shrink-0 mt-1 md:0">
                       <CheckIcon />
                     </div>
 
