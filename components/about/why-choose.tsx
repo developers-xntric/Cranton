@@ -204,11 +204,11 @@ export function WhyChooseUsSection() {
                 {/* Stats Row */}
                 <div
                     ref={statsRef}
-                    className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-4"
+                    className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-36"
                 >
                     {stats.map((stat, idx) => (
                         <div key={idx} className="text-center sm:text-left mx-auto">
-                            <div className="text-4xl sm:text-6xl font-medium text-black tracking-tight mb-1">
+                            <div className="text-4xl sm:text-7xl font-medium text-black tracking-tight mb-1">
                                 <AnimatedCounter
                                     value={stat.value}
                                     suffix={stat.suffix}
