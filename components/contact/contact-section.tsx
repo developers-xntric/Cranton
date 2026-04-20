@@ -98,12 +98,12 @@ export function ContactSection() {
             </div>
 
             {/* Contact Form Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div className="bg-[#EFEFEF] rounded-xl shadow-lg overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                         {/* Left Side - Illustration and Text */}
                         <div className="p-8 md:p-12 flex flex-col justify-between items-center lg:items-start">
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl text-black mb-8 lg:mb-0 text-center lg:text-left leading-tight">
+                            <h2 className="text-xl md:text-3xl lg:text-5xl text-black mb-8 lg:mb-0 text-center lg:text-left leading-tight">
                                 Have Inquiries?
                                 Reach Out Via
                                 Message
@@ -140,7 +140,7 @@ export function ContactSection() {
                         </div>
 
                         {/* Right Side - Form */}
-                        <div className="p-8 md:p-12 flex flex-col justify-center">
+                        <div className="p-4 md:p-12 flex flex-col justify-center">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Name Input */}
                                 <div>

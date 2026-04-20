@@ -50,7 +50,7 @@ export function ValueCard({
                     <div className="flex flex-col gap-2">
 
                         {/* Title */}
-                        <h2 className={`text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2]  ${isBlack ? 'text-end text-white' : 'text-start text-[#0a0f1e] max-w-1/2'}`}>
+                        <h2 className={`text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2]  ${isBlack ? 'text-end text-white' : 'text-start text-[#0a0f1e] xl:max-w-1/2'}`}>
                             {title}
                         </h2>
 
