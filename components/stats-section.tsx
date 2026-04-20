@@ -50,7 +50,7 @@ const stats = [
 
 export default function StatsSection() {
     return (
-        <section className="bg-[#EFEFEF] py-16">
+        <section className="bg-[#EFEFEF] pt-8 md:pt-16 pb-16">
             <div className="max-w-360 w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-9 place-items-center">
                 {/* Left: Image */}
                 <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-2xl">
@@ -67,19 +67,19 @@ export default function StatsSection() {
                 <div className="flex flex-col">
                     <SectionHeading
                         title="Engineering Precision. Manufacturing Excellence"
-                        className="text-3xl md:text-4xl font-normal text-black mb-4 leading-tight text-left"
+                        className="text-[20px] md:text-4xl font-normal text-black mb-4 leading-tight text-left"
                     />
 
                     <div className="space-y-3 2xl:space-y-6 mb-3 2xl:mb-5">
-                        <p className="font-onest text-[15px] md:text-base leading-relaxed text-[#86898C]">
+                        <p className="font-onest text-[14px] md:text-base leading-relaxed text-[#86898C]">
                             Cranton is a specialist manufacturer and solutions provider for aviation and infrastructure systems, with a strong focus on helideck and helipad solutions, aviation lighting, and electrical safety equipment. We combine engineering expertise with in-house manufacturing to deliver products that meet the highest standards of safety, durability, and compliance.
                         </p>
-                        <p className="font-onest text-[15px] md:text-base leading-relaxed text-[#86898C]">
+                        <p className="font-onest text-[14px] md:text-base leading-relaxed text-[#86898C]">
                             Built on a foundation of technical knowledge and practical experience, Cranton supports clients across aviation, offshore, healthcare, defense, and industrial sectors. Our products are designed to perform in demanding environments where reliability and precision are critical.
                         </p>
                     </div>
 
-                    <Button title="About Us" href="/about" className="w-fit mb-6 2xl:mb-16" />
+                    <Button title="About Us" href="/about" className="w-fit mb-12 md:mb-6 2xl:mb-16" />
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-2 gap-y-6 2xl:gap-y-12 gap-x-8">

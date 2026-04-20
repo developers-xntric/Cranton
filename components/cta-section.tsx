@@ -2,7 +2,7 @@ import Button from "./ui/grad-button";
 
 
 export interface CTASectionProps {
-    
+
     heading?: string;
     description?: any[] | string;
     buttonText?: string;
@@ -10,10 +10,10 @@ export interface CTASectionProps {
 }
 
 export default function CTASection({
-    
+
     heading = "Let's Talk About Your Goals",
     description,
-    buttonText = "Request a Quote",
+    buttonText = "Request a quote",
     buttonHref = "/contact"
 }: CTASectionProps) {
     // Default description if not provided
@@ -29,7 +29,7 @@ export default function CTASection({
             <div className="2xl:max-w-350 w-[90%] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-10 lg:gap-12">
                 {/* Left Side Content */}
                 <div className="flex flex-col gap-4 max-w-[800px]">
-                    
+
 
                     {/* Heading */}
                     <h2 className="text-[20px] md:text-3xl lg:text-[40px] font-Regular leading-[1.2] text-[#ffffff]">

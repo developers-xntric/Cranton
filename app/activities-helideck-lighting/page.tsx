@@ -112,7 +112,7 @@ const ActivitiesHelideckLighting = () => {
             <CTASection
                 heading={"Illuminate Your Flight Operations"}
                 description={"Contact our engineering team to design a complete, compliant lighting solution for your helideck or heliport."}
-                buttonText={"Request a Quote"}
+                buttonText={"Request a quote"}
                 buttonHref={"/contact"}
             />
         </div>

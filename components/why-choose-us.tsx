@@ -70,16 +70,16 @@ export default function WhyChooseUs() {
                 <div className="text-center max-w-4xl mx-auto mb-8">
                     <SectionHeading
                         title="Why Industry Leaders Choose Cranton"
-                        className="text-3xl md:text-4xl f text-black mb-4 leading-tight"
+                        className="text-[20px] md:text-4xl f text-black mb-4 leading-tight"
                     />
-                    <p className="font-onest text-[#7C7E86] text-base md:text-base leading-relaxed max-w-3xl mx-auto">
+                    <p className="font-onest text-[#7C7E86] text-[14px] md:text-base leading-relaxed max-w-3xl mx-auto">
                         From manufacturing precision to on-site readiness, Cranton delivers aviation, Vertiport & heliport solutions engineered for performance, compliance, and long-term reliability.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
                     {/* Left: Main Image */}
-                    <div className="relative aspect-auto w-full rounded-[20px] overflow-hidden min-h-[500px]">
+                    <div className="relative aspect-auto w-full rounded-[20px] overflow-hidden  min-h-[350px] md:min-h-[500px]">
                         <Image
                             src="/home/why-choose-us.png"
                             alt="Futuristic Vertiport"
