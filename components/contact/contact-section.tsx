@@ -15,27 +15,38 @@ export function ContactSection() {
         email: '',
         message: '',
     });
-    const [submitted, setSubmitted] = useState(false);
-
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState("");
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-        setTimeout(() => {
-            setFormData({ name: '', email: '', message: '' });
-            setSubmitted(false);
-        }, 2000);
+        setStatus('loading');
+        setErrorMessage('');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                const data = await response.json();
+                throw new Error(data.error || 'Something went wrong');
+            }
+        } catch (error: any) {
+            setStatus('error');
+            setErrorMessage(error.message);
+        }
     };
 
     return (
@@ -192,12 +203,19 @@ export function ContactSection() {
                                 </div>
 
                                 {/* Submit Button */}
+                                {status === 'error' && (
+                                    <p className="text-red-600 text-sm">{errorMessage}</p>
+                                )}
+                                {status === 'success' && (
+                                    <p className="text-green-600 text-sm">Message sent successfully!</p>
+                                )}
                                 <button
                                     type="submit"
-                                    className="w-full bg-linear-to-r from-[#22A1D8] to-[#025094] hover:from-[#1a8bc4] hover:to-[#014380] text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group"
+                                    disabled={status === 'loading'}
+                                    className={`w-full bg-linear-to-r from-[#22A1D8] to-[#025094] hover:from-[#1a8bc4] hover:to-[#014380] text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group${status === 'loading' ? ' opacity-50 cursor-not-allowed' : ''}`}
                                 >
-                                    {submitted ? 'Message Sent!' : 'Send Message'}
-                                    {!submitted && (
+                                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                                    {status !== 'loading' && (
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     )}
                                 </button>
