@@ -34,7 +34,7 @@ export default function  ObstructionLighting() {
                             className="bg-[#121212] rounded-[16px] p-4 border border-[#222] flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50"
                         >
                             {/* White Image Container */}
-                            <div className="bg-white rounded-[12px] w-full h-60 relative flex items-center justify-center p-6 mb-6">
+                            <div className="bg-white rounded-[12px] w-full h-60 relative flex items-center justify-center p-6 mb-4 md:mb-6">
                                 {/* Next Image with object-contain to ensure product fits without cropping */}
                                 <Image
                                     src={product.image}
@@ -46,8 +46,8 @@ export default function  ObstructionLighting() {
                             </div>
 
                             {/* Content */}
-                            <div className="px-2 pb-2">
-                                <h3 className="text-white text-[25px]  mb-5">
+                            <div className="md:px-2 pb-2">
+                                <h3 className="text-white text-[20px] md:text-[25px]  mb-2 md:mb-5">
                                     {product.title}
                                 </h3>
 

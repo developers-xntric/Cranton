@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, Mail, Phone, MapPin, Menu, X } from "lucide-react"
@@ -37,9 +37,21 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
     const [activeCategory, setActiveCategory] = useState<string | null>("activities")
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md">
+        <nav className={cn(
+            "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+            isMenuOpen ? "bg-[#0A0A0A]" : (isScrolled ? "bg-[#0A0A0A] lg:bg-black/20 lg:backdrop-blur-md" : "bg-black/20 backdrop-blur-md")
+        )}>
             {/* Top Bar */}
             <div className=" text-white py-2.5 hidden md:block">
                 <div className="max-w-[1440px] w-[90%] mx-auto flex justify-between items-center text-[12px] font-onest border-b pb-2">
@@ -65,7 +77,7 @@ export default function Navbar() {
             <div className=" text-white py-2 ">
                 <div className="max-w-[1440px] w-[90%] mx-auto  flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="relative h-12 w-48">
+                    <Link href="/" className="relative h-10 md:h-12 w-48">
                         <Image
                             src="/nav-logo.png"
                             alt="Cranton"
@@ -151,9 +163,9 @@ export default function Navbar() {
                     <div className="hidden lg:block">
                         <Link
                             href="/quote"
-                            className="bg-white text-black px-7 py-2.5 rounded-md font-onest text-[14px] hover:bg-[#1681bc] hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 active:scale-95 block"
+                            className="bg-white text-black px-5 py-2 rounded-md font-onest text-[13px] hover:bg-[#1681bc] hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 active:scale-95 block"
                         >
-                            Request A Quote
+                            Request a Quote
                         </Link>
                     </div>
 
@@ -182,19 +194,19 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed inset-0 bg-black/95 backdrop-blur-2xl z-100 font-onest"
+                        className="fixed inset-0 bg-[#0A0A0A] z-100 font-onest overflow-y-auto"
                     >
                         <div className="flex flex-col h-full p-6 pt-10">
                             <div className="flex justify-between items-center mb-12">
                                 <div className="relative h-10 w-40">
                                     <Image src="/nav-logo.png" alt="Cranton" fill className="object-contain object-left" />
                                 </div>
-                                <button onClick={() => setIsMenuOpen(false)} className="p-3 border border-white/10 rounded-full hover:bg-white/5 transition-colors">
+                                <button onClick={() => setIsMenuOpen(false)} className="p-3 border border-white/10 rounded-full hover:bg-white/5 transition-colors text-white">
                                     <X size={24} />
                                 </button>
                             </div>
 
-                            <div className="flex flex-col gap-6 text-xl font-medium">
+                            <div className="flex flex-col gap-6 text-xl font-medium text-white">
                                 <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-[#168DCA] transition-colors">Home</Link>
                                 <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#168DCA] transition-colors">About Us</Link>
 
@@ -207,8 +219,8 @@ export default function Navbar() {
                                                     onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
                                                     className="flex items-center gap-2 w-full justify-between active:text-[#168DCA]"
                                                 >
-                                                    <span className={cn("text-lg transition-colors", activeCategory === cat.id && "text-[#168DCA]")}>{cat.title}</span>
-                                                    <ChevronDown size={20} className={cn("transition-transform duration-300", activeCategory === cat.id && "rotate-180 text-[#168DCA]")} />
+                                                    <span className={cn("text-lg transition-colors text-white", activeCategory === cat.id && "text-[#168DCA]")}>{cat.title}</span>
+                                                    <ChevronDown size={20} className={cn("transition-transform duration-300 text-white", activeCategory === cat.id && "rotate-180 text-[#168DCA]")} />
                                                 </button>
                                                 <AnimatePresence>
                                                     {activeCategory === cat.id && (
@@ -229,16 +241,16 @@ export default function Navbar() {
                                     </div>
                                 </div>
 
-                                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#168DCA] transition-colors">Contact Us</Link>
+                                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#168DCA] transition-colors text-white">Contact Us</Link>
                             </div>
 
                             <div className="mt-auto pt-10 border-t border-white/10 space-y-8 pb-10">
-                                <div className="flex flex-col gap-5 text-sm text-gray-400">
+                                <div className="flex flex-col gap-5 text-sm text-white/70">
                                     <div className="flex items-center gap-4 group"><div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#168DCA]/10 transition-colors"><Mail size={18} className="text-[#168DCA]" /></div> info@crantonelectric.com</div>
                                     <div className="flex items-center gap-4 group"><div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#168DCA]/10 transition-colors"><Phone size={18} className="text-[#168DCA]" /></div> +44 191 640 75 03</div>
                                 </div>
-                                <Link href="/quote" onClick={() => setIsMenuOpen(false)} className="bg-white text-black w-full py-4 rounded-xl text-center font-bold block hover:bg-gray-200 transition-colors shadow-xl">
-                                    Request A Quote
+                                <Link href="/quote" onClick={() => setIsMenuOpen(false)} className="bg-white text-black w-full py-3 rounded-xl text-center font-bold block hover:bg-gray-200 transition-colors shadow-xl">
+                                    Request a quote
                                 </Link>
                             </div>
                         </div>

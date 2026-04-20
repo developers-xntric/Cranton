@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/grad-button";
 
+import { cn } from "@/lib/utils";
+
 const services = [
     {
         title: "Vertiport & Heliport Consulting and Refurbishment",
@@ -52,7 +54,7 @@ export default function Services() {
     return (
         <section className=" py-16 ">
             <div className="max-w-[1440px] w-[90%] mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                     {services.map((service, index) => {
                         const isCard2 = index === 1;
 
@@ -60,12 +62,12 @@ export default function Services() {
                             return (
                                 <div
                                     key={index}
-                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[370px] 2xl:min-h-[400px] p-7  border border-white/10  transition-all duration-300 "
+                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center md:min-h-[370px] 2xl:min-h-[400px] md:p-7 border border-white/10 transition-all duration-300 order-1 md:order-0  mb-6 md:mb-0"
                                 >
 
                                     <div className="relative z-20 text-center">
-                                        <h3 className="font-rethink text-2xl lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
-                                        <p className="font-onest text-[15px] text-black ">{service.description}</p>
+                                        <h3 className="font-rethink text-[20px] lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
+                                        <p className="font-onest text-[14px] md:text-[15px] text-black ">{service.description}</p>
                                     </div>
 
                                     <Button
@@ -82,7 +84,10 @@ export default function Services() {
                             <Link
                                 href={service.link}
                                 key={index}
-                                className="group relative rounded-2xl overflow-hidden flex flex-col min-h-[370px]  2xl:min-h-[400px] transition-all duration-300 hover:-translate-y-2 shadow-lg"
+                                className={cn(
+                                    "group relative rounded-2xl overflow-hidden flex flex-col min-h-[300px] md:min-h-[370px] 2xl:min-h-[400px] transition-all duration-300 hover:-translate-y-2 shadow-lg",
+                                    index === 0 ? "order-2 xl:order-0" : "order-3 xl:order-0"
+                                )}
                             >
                                 {/* Background Image */}
                                 {service.image && (
@@ -102,8 +107,8 @@ export default function Services() {
 
                                 {/* Bottom Glass Content */}
                                 <div className="relative z-20 mt-auto p-4 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
-                                    <h3 className="font-rethink text-xl md:text-[20px]  text-white mb-1">{service.title}</h3>
-                                    <p className="font-onest text-sm md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
+                                    <h3 className="font-rethink text-[15px] md:text-[20px]  text-white mb-1">{service.title}</h3>
+                                    <p className="font-onest text-[12px] md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
 
                                     {/* Arrow expands beneath text without taking initial space */}
                                     <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">

@@ -95,7 +95,7 @@ const ActivitiesFireFighting = () => {
             <CTASection
                 heading={"Ensure Your Heliport's Safety Today"}
                 description={"Contact our fire safety experts to design a compliant and effective firefighting system for your heliport infrastructure."}
-                buttonText={"Request a Quote"}
+                buttonText={"Request a quote"}
                 buttonHref={"/contact"}
             />
         </div>

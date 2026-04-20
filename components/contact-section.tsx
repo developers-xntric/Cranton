@@ -56,7 +56,7 @@ export default function ContactSection() {
     };
 
     return (
-        <section className="relative w-full min-h-150 flex items-center overflow-hidden py-16">
+        <section className="relative w-full min-h-150 flex items-center overflow-hidden py-10 md:py-16">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -68,11 +68,11 @@ export default function ContactSection() {
                 />
             </div>
 
-            <div className="max-w-360 w-[85%] mx-auto relative z-10">
+            <div className="max-w-360 w-[90%] md:w-[85%] mx-auto relative z-10">
                 <div className="flex justify-center lg:justify-end">
                     {/* Form Card */}
-                    <div className="bg-white rounded-[20px] shadow-2xl p-6  max-w-137.5 w-full mt-10 mb-10 lg:mt-0 lg:mb-0">
-                        <h2 className="font-rethink text-3xl md:text-[32px] text-black mb-1 leading-tight">
+                    <div className="bg-white rounded-[20px] shadow-2xl p-4 md:p-6  max-w-137.5 w-full mt-10 mb-10 lg:mt-0 lg:mb-0">
+                        <h2 className="font-rethink text-[24px] md:text-[32px] text-black mb-1 leading-tight">
                             Tell Us Your Requirements
                         </h2>
                         <p className="font-onest text-black text-sm md:text-base mb-8">
