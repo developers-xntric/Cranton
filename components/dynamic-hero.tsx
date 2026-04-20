@@ -63,13 +63,13 @@ export default function DynamicHero({
                                 <span key={index} className="flex items-center gap-1.5">
                                     <BreadcrumbItem>
                                         {isLast ? (
-                                            <BreadcrumbPage className="text-white/90 text-[13px] md:text-lg font-normal">
+                                            <BreadcrumbPage className="text-[#168DCA] text-[13px] md:text-lg font-normal">
                                                 {crumb.label}
                                             </BreadcrumbPage>
                                         ) : (
                                             <BreadcrumbLink
                                                 href={crumb.href || "#"}
-                                                className="text-[#168DCA] underline text-[13px] md:text-lg font-normal hover:text-white transition-colors duration-200"
+                                                className="text-[#fff] text-[13px] md:text-lg font-normal hover:text-white transition-colors duration-200"
                                             >
                                                 {crumb.label}
                                             </BreadcrumbLink>

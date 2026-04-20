@@ -2,6 +2,7 @@
 
 import { ChevronRight, MapPin, MessageCircle, PhoneCall } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface ContactFormData {
     name: string;
@@ -62,9 +63,14 @@ export function ContactSection() {
                         <h3 className="text-lg md:text-xl text-black mb-3">
                             Our Address
                         </h3>
-                        <p className="text-sm md:text-base text-[#333] leading-relaxed">
+                        <Link
+                            href="https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
+                        >
                             Office 11A, Design Works, William <br /> Street, Felling, NE10 0JP, United <br />  Kingdom.
-                        </p>
+                        </Link>
                     </div>
 
                     {/* Contact Info Card */}

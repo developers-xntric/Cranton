@@ -55,12 +55,17 @@ export default function Navbar() {
             {/* Top Bar */}
             <div className=" text-white py-2.5 hidden md:block">
                 <div className="max-w-[1440px] w-[90%] mx-auto flex justify-between items-center text-[12px] font-onest border-b pb-2">
-                    <div className="flex items-center gap-2 text-[#fff]">
+                    <Link
+                        href="https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-[#fff] hover:text-[#168DCA] transition-colors"
+                    >
                         <MapPin size={14} />
                         Office 11A, Design Works, William Street, Felling, NE10 0JP, United Kingdom.
-                    </div>
+                    </Link>
                     <div className="flex items-center gap-3">
-                        <Link href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2 text-[#FFF]">
+                        <Link href="mailto:info@crantonelectric.com" className="flex items-center gap-2 text-[#FFF]">
                             <Mail size={14} />
                             info@crantonelectric.com
                         </Link>
@@ -106,7 +111,7 @@ export default function Navbar() {
                                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        className="absolute top-[80%] left-0 w-[350px] bg-[#0A0A0A]/95 backdrop-blur-3xl border border-white/10 rounded-2xl p-5 shadow-2xl overflow-hidden"
+                                        className="absolute top-[140%] left-0 w-[350px] bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-5 overflow-hidden"
                                     >
                                         <div className="space-y-3">
                                             {solutions.map((category) => (
@@ -117,8 +122,8 @@ export default function Navbar() {
                                                             setActiveCategory(activeCategory === category.id ? null : category.id);
                                                         }}
                                                         className={cn(
-                                                            "w-full flex justify-between items-center p-3 rounded-xl text-[14px] font-medium transition-all duration-300",
-                                                            activeCategory === category.id ? "bg-white/10 text-white" : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                                            "w-full flex justify-between items-center p-3 rounded-xl text-[14px] font-medium transition-all duration-300 text-white",
+                                                            activeCategory === category.id ? "bg-white/10 text-white" : " hover:bg-white/5 text-white"
                                                         )}
                                                     >
                                                         {category.title}
@@ -137,7 +142,7 @@ export default function Navbar() {
                                                                         <li key={i}>
                                                                             <Link
                                                                                 href={item.href}
-                                                                                className="text-[13px] text-gray-400 hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
+                                                                                className="text-[13px] text-white hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
                                                                             >
                                                                                 <div className="w-1.5 h-[2px] rounded-full bg-gray-600 transition-all duration-300 group-hover/link:bg-[#168DCA] group-hover/link:w-3" />
                                                                                 {item.name}
@@ -162,7 +167,7 @@ export default function Navbar() {
                     {/* Right Action */}
                     <div className="hidden lg:block">
                         <Link
-                            href="/quote"
+                            href="/contact"
                             className="bg-white text-black px-5 py-2 rounded-md font-onest text-[13px] hover:bg-[#1681bc] hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 active:scale-95 block"
                         >
                             Request a Quote
@@ -249,7 +254,7 @@ export default function Navbar() {
                                     <div className="flex items-center gap-4 group"><div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#168DCA]/10 transition-colors"><Mail size={18} className="text-[#168DCA]" /></div> info@crantonelectric.com</div>
                                     <div className="flex items-center gap-4 group"><div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#168DCA]/10 transition-colors"><Phone size={18} className="text-[#168DCA]" /></div> +44 191 640 75 03</div>
                                 </div>
-                                <Link href="/quote" onClick={() => setIsMenuOpen(false)} className="bg-white text-black w-full py-3 rounded-xl text-center font-bold block hover:bg-gray-200 transition-colors shadow-xl">
+                                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="bg-white text-black w-full py-3 rounded-xl text-center font-bold block hover:bg-gray-200 transition-colors shadow-xl">
                                     Request a quote
                                 </Link>
                             </div>

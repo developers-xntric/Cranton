@@ -41,10 +41,15 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <h4 className="font-rethink text-lg font-bold">Office</h4>
                         <div className="font-onest text-[#B8BCC4] text-sm space-y-4">
-                            <p className="leading-relaxed">
+                            <Link
+                                href="https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block leading-relaxed hover:text-white transition-colors"
+                            >
                                 Office 11A, Design Works, William Street,<br />
                                 Felling, NE10 0JP, United Kingdom.
-                            </p>
+                            </Link>
                             <div className="space-y-4">
                                 <Link href="mailto:info@crantonelectric.com" className="hover:text-white transition-colors block border-b border-[#B8BCC4] pb-1 w-fit">
                                     info@crantonelectric.com
@@ -76,19 +81,21 @@ export default function Footer() {
                         <h4 className="font-rethink text-lg font-bold">Get In Touch</h4>
                         <div className="flex flex-wrap gap-1">
                             {[
-                                { name: "Facebook", icon: FacebookIcon, href: "#" },
-                                { name: "Instagram", icon: InstagramIcon, href: "#" },
-                                { name: "Twitter", icon: TwitterIcon, href: "#", label: "X" },
-                                { name: "LinkedIn", icon: LinkedinIcon, href: "#" },
-                                { name: "YouTube", icon: YoutubeIcon, href: "#" },
+                                // { name: "Facebook", icon: FacebookIcon, href: "#" },
+                                // { name: "Instagram", icon: InstagramIcon, href: "#" },
+                                // { name: "Twitter", icon: TwitterIcon, href: "#", label: "X" },
+                                { name: "LinkedIn", icon: LinkedinIcon, href: "https://www.linkedin.com/company/cranton-electrical-limited-uk/" },
+                                // { name: "YouTube", icon: YoutubeIcon, href: "#" },
                             ].map((social, idx) => (
                                 <Link
                                     key={idx}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 group"
                                 >
-                                    {/* <social.icon /> */}
-                                    <span className="text-[12px] font-medium leading-none">{social.label || social.name}</span>
+                                    <social.icon />
+                                    <span className="text-[12px] font-medium leading-none">{social.name}</span>
                                 </Link>
                             ))}
                         </div>
