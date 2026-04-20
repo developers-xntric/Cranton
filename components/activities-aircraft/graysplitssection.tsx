@@ -55,7 +55,7 @@ export default function GraySplitSection() {
 </div>
 
             {/* SECTION 2 */}
-            <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center border-t-1 border-[#D7D7D7] pt-8 md:pt-20">
+            <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center border-t-1 border-[#D7D7D7] pt-8 md:pt-20" id="high-intensity">
 
                 {/* Left: Content */}
                 <div className="flex flex-col">

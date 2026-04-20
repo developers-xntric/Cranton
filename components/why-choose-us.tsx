@@ -112,6 +112,7 @@ export default function WhyChooseUs() {
                                 title="Inquire Now"
                                 size="md"
                                 className="rounded-md"
+                                href="/contact"
                             />
                         </div>
                     </div>

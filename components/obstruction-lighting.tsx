@@ -7,17 +7,17 @@ const products = [
     {
         title: "Low Intensity",
         image: "/home/intensity-card1.png",
-        link: "/products/low-intensity",
+        link: "/activities-aircraft/#essential-visibility",
     },
     {
         title: "Medium Intensity",
         image: "/home/intensity-card2.png",
-        link: "/products/medium-intensity",
+        link: "/activities-aircraft/#robust-signaling",
     },
     {
         title: "High Intensity",
         image: "/home/intensity-card3.png",
-        link: "/products/high-intensity",
+        link: "/activities-aircraft/#high-intensity",
     },
 ];
 
