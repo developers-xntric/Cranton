@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import SectionHeading from "../ui/section-heading";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Stat {
@@ -103,9 +104,9 @@ function StarRating({ count }: { count: number }) {
             {[1, 2, 3, 4, 5].map((i) => (
                 <svg
                     key={i}
-                    className={`w-4 h-4 ${i <= count ? "text-yellow-400" : "text-gray-300"}`}
+                    className={`w-6 h-6 ${i <= count ? "text-yellow-400" : "text-gray-300"}`}
                     fill="currentColor"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 18 18"
                 >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
@@ -253,18 +254,14 @@ export function TestimonialsSection() {
     const visible = testimonials.slice(currentIndex, currentIndex + visibleCount);
 
     return (
-        <section className="bg-gray-50 py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-[#EFEFEF] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+            <div className="2xl:max-w-360 w-[95%] mx-auto">
                 {/* Header Row */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
-                    <div className="max-w-xl">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight leading-tight">
-                            What Our Clients Say
-                        </h2>
-                        <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-                            We are proud to have earned the trust of our clients worldwide.
-                            Read their feedback on how our helideck and heliport solutions
-                            deliver safety, reliability, and innovation across every project.
+                    <div className="max-w-3xl">
+                        <SectionHeading title="What Our Clients Say" className="text-3xl md:text-4xl mb-6" />
+                        <p className="text-sm sm:text-[14px] 2xl:text-[18px] text-[#000000] leading-relaxed">
+                            We are proud to have earned the trust of our clients worldwide. Read their feedback on how our helideck and heliport solutions deliver safety, reliability, and innovation across every project.
                         </p>
                     </div>
 
@@ -273,9 +270,9 @@ export function TestimonialsSection() {
                         <button
                             onClick={prev}
                             disabled={currentIndex === 0}
-                            className={`w-9 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex === 0
+                            className={`w-16 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex === 0
                                 ? "bg-white border-gray-200 text-gray-300 cursor-not-allowed"
-                                : "bg-white border-gray-300 text-gray-600 hover:border-blue-500 hover:text-blue-600"
+                                : "bg-white border-[#025094] text-[#025094]"
                                 }`}
                         >
                             <svg
@@ -295,9 +292,9 @@ export function TestimonialsSection() {
                         <button
                             onClick={next}
                             disabled={currentIndex >= maxIndex}
-                            className={`w-9 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex >= maxIndex
+                            className={`w-16 h-9 rounded flex items-center justify-center border transition-all duration-200 ${currentIndex >= maxIndex
                                 ? "bg-gray-300 border-gray-300 text-white cursor-not-allowed"
-                                : "bg-blue-600 border-blue-600 text-white hover:bg-blue-700"
+                                : "bg-grad text-white"
                                 }`}
                         >
                             <svg
@@ -325,29 +322,26 @@ export function TestimonialsSection() {
                     {visible.map((t) => (
                         <div
                             key={t.id}
-                            className="bg-white rounded-lg border border-gray-200 p-6 sm:p-7 flex flex-col gap-4 shadow-sm"
+                            className="bg-white rounded-lg border border-black p-6 sm:p-10 flex flex-col gap-10 shadow-sm"
                         >
                             {/* Stars + Quote icon */}
                             <div className="flex items-start justify-between">
                                 <StarRating count={t.stars} />
-                                <svg
-                                    className="w-8 h-8 text-gray-200 shrink-0"
-                                    fill="currentColor"
-                                    viewBox="0 0 32 32"
-                                >
-                                    <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7c0-1.654 1.346-3 3-3V8zm14 0c-3.314 0-6 2.686-6 6v10h10V14h-7c0-1.654 1.346-3 3-3V8z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+                                    <path d="M14.7521 8.49168C11.6742 16.0466 5.21067 15.3897 2.12747 11.2463C-0.955727 7.10302 2.90226 1.75794 6.28794 1.10099C9.67361 0.444038 15.0599 2.9076 15.0505 11.1467C15.038 22.1234 4.35214 32.64 3.17789 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M33.9125 8.49168C30.8346 16.0466 24.3711 15.3897 21.2879 11.2463C18.2047 7.10302 22.0627 1.75794 25.4483 1.10099C28.834 0.444038 34.2203 2.9076 34.2109 11.1467C34.1984 22.1234 23.5125 32.64 22.3383 33.5635" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
                                 </svg>
                             </div>
 
                             {/* Text */}
-                            <p className="text-sm sm:text-base text-gray-700 leading-relaxed flex-1">
+                            <p className="text-sm sm:text-xl text-[#64748B] leading-relaxed flex-1">
                                 &ldquo;{t.text}&rdquo;
                             </p>
 
                             {/* Author */}
-                            <div className="border-t border-gray-100 pt-4">
-                                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                                <p className="text-xs text-gray-500 mt-0.5">{t.role}</p>
+                            <div className="border-t flex gap-2 items-center border-gray-100 pt-4">
+                                <p className="text-sm font-semibold text-[#1B1B1B]">{t.name}</p>
+                                <p className="text-sm text-[rgba(27,27,27,0.50)]">{t.role}</p>
                             </div>
                         </div>
                     ))}
@@ -359,7 +353,7 @@ export function TestimonialsSection() {
                         <button
                             key={i}
                             onClick={() => setCurrentIndex(i)}
-                            className={`w-2 h-2 rounded-full transition-all duration-200 ${i === currentIndex ? "bg-blue-600 w-5" : "bg-gray-300"
+                            className={`w-2 h-2 rounded-full transition-all duration-200 ${i === currentIndex ? "bg-grad w-5" : "bg-gray-300"
                                 }`}
                         />
                     ))}

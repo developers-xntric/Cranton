@@ -178,3 +178,8 @@ button {
 .direction-rtl {
   direction: rtl;
 }
+
+.bg-grad {
+  border-radius: 5px;
+  background: var(--Button-Gredient, linear-gradient(93deg, #22A1D8 0.43%, #025094 98.09%));
+}
