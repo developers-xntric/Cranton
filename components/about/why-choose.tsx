@@ -230,7 +230,7 @@ export function WhyChooseUsSection() {
 }
 
 // ─── Testimonials Section ────────────────────────────────────────────────────
-function TestimonialsSection() {
+export function TestimonialsSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // How many cards to show based on screen
