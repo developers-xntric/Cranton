@@ -111,7 +111,6 @@ export default function WhyChooseUs() {
                             <Button
                                 title="Inquire Now"
                                 size="md"
-                                href="/contact"
                                 className="rounded-md"
                                 href="/contact"
                             />
