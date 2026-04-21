@@ -70,8 +70,8 @@ export default function Footer() {
                         <ul className="font-onest text-[#B8BCC4] text-sm space-y-4">
                             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                             <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
-                            <li><Link href="/brochure" className="hover:text-white transition-colors">E-Brochure</Link></li>
+                            {/* <li><Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link></li> */}
+                            <li><a href="/Cranton-E-Brochure.pdf" download="Cranton-E-Brochure.pdf" className="hover:text-white transition-colors">E-Brochure</a></li>
                             <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>

@@ -144,7 +144,7 @@ export default function Navbar() {
                                                                                 href={item.href}
                                                                                 className="text-[13px] text-white hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
                                                                             >
-                                                                                <div className="w-1.5 h-[2px] rounded-full bg-gray-600 transition-all duration-300 group-hover/link:bg-[#168DCA] group-hover/link:w-3" />
+                                                                                <div className="w-0.85 h-[0.85px] rounded-full bg-white transition-all duration-300 group-hover/link:bg-[#168DCA]" />
                                                                                 {item.name}
                                                                             </Link>
                                                                         </li>
