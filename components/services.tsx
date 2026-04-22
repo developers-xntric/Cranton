@@ -9,37 +9,37 @@ const services = [
         title: "Vertiport & Heliport Consulting and Refurbishment",
         description: "Our industry experts provide tailored consulting and refurbishment services to deliver reliable Vertiport & Heliport solutions.",
         image: "/home/service-card1.png",
-        link: "/services/consulting",
+        link: "#",
     },
     {
         title: "End-to-End Aviation, Vertiport & Heliport Solutions",
         description: "Cranton offers focused, high-quality services supporting Vertiport, Heliport  and aviation infrastructure. Our team ensures every project benefits from expert engineering, certified systems, and dependable execution.",
         image: null,
-        link: "/services/management",
+        link: "#",
     },
     {
         title: "Vertiport & Heliport Lighting",
         description: "Reliable and well-functioning LED lighting system is an essential factor in case of vertiport & heliport operation. An effective vertiport & heliport lighting system ensures the safe operation.",
         image: "/home/service-card3.png",
-        link: "/services/lighting",
+        link: "#",
     },
     {
         title: "Heliport and Vertiport Solutions",
         description: "MESH is an innovative solution for creating safe landing sites for helicopters and future eVTOL aircraft. It enables low-impact deployment for floating, surface, and elevated heliports.",
         image: "/home/service-card4.png",
-        link: "/services/solutions",
+        link: "#",
     },
     {
         title: "Advanced Air Mobility (AAM)",
         description: "We support the future of urban air transportation by enabling the development of AAM infrastructure, vehicle integration, and regulatory readiness.",
         image: "/home/service-card5.png",
-        link: "/services/aam",
+       link: "#",
     },
     {
         title: "Vertiport & Heliport Fire Fighting System",
         description: "As per the norms of International Civil Aviation Organization, vertiport & heliport should be equipped with Fire Fighting System on two sides.",
         image: "/home/service-card6.png",
-        link: "/services/fire-fighting",
+        link: "#",
     },
 ];
 
