@@ -16,7 +16,7 @@ const ActivitiesHeliportPlatformMounting = () => {
                 backgroundImage={"/heliport-mounting/hero.png"}
             />
             <ImageContentSection
-                image="/heliport-mounting/heliport-mounting.png"
+                image="/heliport-mounting/helipad.webp"
                 imageAlt="Heliport Platform Mounting"
                 title="Heliport Platform Mounting"
                 paragraphs={[
