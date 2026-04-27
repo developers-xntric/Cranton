@@ -20,7 +20,7 @@ const ActivitiesHelideck = () => {
         backgroundImage={"/activities-helideck/hero.png"}
       />
       <ImageContentSection
-        image="/activities-helideck/helideck.png"
+        image="/helideck-consulting/helideck-consulting.png"
         imageAlt="Advanced Oncology Center building"
         title="Helideck Consulting"
         paragraphs={[
