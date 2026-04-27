@@ -10,7 +10,7 @@ export default function Hero() {
                     muted
                     playsInline
                 >
-                    <source src="/home/hero-bg.webm" type="video/webm" />
+                    <source src="/home/hero-bg.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 {/* Gradient overlays to match the design's dark bottom edge for text readability */}
