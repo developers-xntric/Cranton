@@ -73,7 +73,7 @@ export default function ServiceInquiryModal({
     return (
         <div className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-lg shadow-xl max-w-sm w-full">
-                {/* Header */}
+                
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
                     <h2 className="text-lg font-semibold text-black">Service Inquiry</h2>
                     <button
