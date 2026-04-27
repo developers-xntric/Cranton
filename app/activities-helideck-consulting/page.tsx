@@ -79,7 +79,7 @@ const ActivitiesHelideck = () => {
           },
           {
             title: "Applications",
-            image: "/activities-helideck/application.png",
+            image: "/helideck-consulting/applications.png",
             imageAlt: "Engineering Precision",
             reverse: true, // 👈 flips layout
             paragraphs: [

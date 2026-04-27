@@ -18,7 +18,7 @@ const ActivitiesHelideckLighting = () => {
 
             <ActivityContent
                 topImages={[
-                    "/helideck-lighting/helideck-lighting.png"
+                    "/helideck-lighting/helipad.png"
                 ]}
                 title="Helideck Lighting"
                 paragraphs={[

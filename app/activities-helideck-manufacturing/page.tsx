@@ -18,8 +18,8 @@ const ActivitiesHelideckManufacturing = () => {
 
             <ActivityContent
                 topImages={[
-                    "/helideck-manufacturing/left.png",
-                    "/helideck-manufacturing/right.png"
+                    "/helideck-manufacturing/manufacturing-1.png",
+                    "/helideck-manufacturing/manufacturing-2.png"
                 ]}
                 title="Manufacturing & Construction Of Helidecks"
                 paragraphs={[

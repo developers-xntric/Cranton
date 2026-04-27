@@ -17,10 +17,10 @@ const ActivitiesRefurbishing = () => {
           { label: "Home", href: "/" },
           { label: "Refurbishing Helidecks" },
         ]}
-        backgroundImage={"/activities-helideck/hero.png"}
+        backgroundImage={"/activities-refurbishing/banner.png"}
       />
       <ImageContentSection
-        image="/activities-refurbishing/activities-refurbishing.png"
+        image="/activities-refurbishing/refurbishing-existing-helidecks.png"
         imageAlt="Refurbishing Existing Helidecks"
         title="Refurbishing Existing Helidecks"
         paragraphs={[

@@ -81,11 +81,12 @@ export function ContactSection() {
                         <h3 className="text-lg md:text-xl text-black mb-3">
                             Contact Info
                         </h3>
-                        <p className="text-sm md:text-base text-[#333] leading-relaxed">
-                            Open a chat or give us a call
-                            <br />
+                        <Link
+                            href="tel:+441916407603"
+                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
+                        >
                             +44 191 640 76 03
-                        </p>
+                        </Link>
                     </div>
 
                     {/* Live Support Card */}
@@ -94,11 +95,20 @@ export function ContactSection() {
                             <MessageCircle className="w-8 h-8 md:w-7 md:h-7 text-white" />
                         </div>
                         <h3 className="text-lg md:text-xl text-black mb-3">
-                            Live Support
+                            E-mail Us
                         </h3>
-                        <p className="text-sm md:text-base text-[#333] leading-relaxed">
-                            live-chat service info@cornatelecrix.com
-                        </p>
+                        <Link
+                            href="mailto:info@crantonelectric.com"
+                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
+                        >
+                            info@crantonelectric.com
+                        </Link>
+                        <Link
+                            href="mailto:stuart@crantonelectric.com"
+                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
+                        >
+                            stuart@crantonelectric.com
+                        </Link>
                     </div>
                 </div>
             </div>

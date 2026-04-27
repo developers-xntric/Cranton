@@ -26,7 +26,7 @@ const ActivitiesFireFighting = () => {
                     "As per the norms of International Civil Aviation Organization, heliports should be equipped with Firefighting system on two sides. Both manual and automatic control systems could be used to operate firefighting systems at the heliport. Based on the length of helicopters, the firefighting systems are categorized to three. H1 (250 LPM), H2 (500 LPM) and H3 (800 LPM) - (LPM refers to Liter per Minute). The method of using heavy foam in the system ensures that it takes less than five minutes to control advancing helicopter.",
                     "Firefighting monitors installed on the aluminum landing platforms ensure that the system works without delay, thereby minimizing damages. Firefighting system includes water tanks, extinguishing agent (foam), firefighting monitors, pumping and mixing station and the complete pipe work. Since safety comes first, our team of experts check and ensure that the firefighting systems meet international regulations and recommendations."
                 ]}
-                bottomImage="/firefighting-system/firefighting-system.png"
+                // bottomImage="/firefighting-system/firefighting-system.png"
             />
 
             <FourCards
