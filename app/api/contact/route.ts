@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
     try {
-        const { name, email, subject, message } = await req.json();
+        const { name, email, subject, message, service } = await req.json();
 
         // Basic validation
         if (!name || !email || !message) {
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
             },
         });
 
-        const emailSubject = subject ? `Contact Form: ${subject}` : "Contact Form Submission";
+        const emailSubject = subject ? `Contact Form: ${subject}` : service ? `Service Inquiry: ${service}` : "Contact Form Submission";
 
         // Email Content
         const mailOptions = {
@@ -33,12 +33,13 @@ export async function POST(req: Request) {
             to: process.env.CONTACT_EMAIL,
             replyTo: email,
             subject: emailSubject,
-            text: `Name: ${name}\nEmail: ${email}${subject ? `\nSubject: ${subject}` : ""}\n\nMessage:\n${message}`,
+            text: `Name: ${name}\nEmail: ${email}${subject ? `\nSubject: ${subject}` : ""}${service ? `\nService: ${service}` : ""}\n\nMessage:\n${message}`,
             html: `
                 <h3>New Contact Form Submission</h3>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ""}
+                ${service ? `<p><strong>Service:</strong> ${service}</p>` : ""}
                 <br/>
                 <p><strong>Message:</strong></p>
                 <p>${message.replace(/\n/g, "<br/>")}</p>

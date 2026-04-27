@@ -26,10 +26,13 @@ const ActivitiesHelideckLighting = () => {
                     "Cranton Electrical helipad lighting offers a range of perimeter lights configured in green, yellow and blue. By providing good colour contrast throughout approach and landing at night and in poor visibility conditions, these lights will help the pilot side the helideck in great efforts to helideck to. Additionally, standard versions of the green perimeter lights are available in order to meet our customers' requirements with quick delivery service. We consistently keep an intensive research of the lighting products to easily find how to provide directly for the mechanical circuit specifications in order to perform and maintain the quality of products. We keep ourselves updated with latest industry standards in helipad lighting solutions. Once the lighting system is installed, we start working but the system is built with highly efficient speed and reliability and design standards; we ensure the capacity for error-free operations even in bad weather conditions.",
                     "Cranton Electrical helipad lighting designs and manufactures Helideck and a wide helipad lights and equipment for commercial private, government, military, hospitals and other applications. Lights comply with helipad light characteristics under ICAO and FAA standards and as the certain aviation rules of many additional countries."
                 ]}
+                
                 listBlocks={[
                     {
                         title: "Our Helipad Lighting Products Includes",
+                        description: "Get detailed technical specifications tailored to your project requirements. Submit your request and our team will share the relevant documents with you.",
                         type: "product",
+                         halfWidthDescription: true, // 👈 add here
                         items: [
                             { title: "LED Perimeter Lights (Surface Mounted)" },
                             { title: "LED Identification Beacon" },

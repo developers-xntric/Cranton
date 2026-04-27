@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ServiceInquiryModal from "@/components/service-inquiry-modal";
 
 type ListItem = {
     title: string;
@@ -11,8 +13,10 @@ type ListItem = {
 type ListBlockProps = {
     title: string;
     description?: string;
+     halfWidthDescription?: boolean; // 👈 add this
     items: ListItem[];
     type?: "check" | "product";
+    onItemClick?: (itemTitle: string) => void;
 };
 
 const CheckIcon = () => (
@@ -38,53 +42,60 @@ const CheckIcon = () => (
 );
 
 const ListBlock = ({
-    title,
-    description,
-    items,
-    type = "check",
+  title,
+  description,
+  items,
+  type = "check",
+  halfWidthDescription = false, // default false
+  onItemClick,
 }: ListBlockProps) => (
-    <div className="bg-[#f0f0f0] rounded-[15px] p-4 md:p-8 mb-6 border border-gray-100 shadow-sm">
+  <div className="bg-[#f0f0f0] rounded-[15px] p-4 md:p-8 mb-6 border border-gray-100 shadow-sm">
 
-        <h3 className="text-[18px] md:text-[20px] mb-4 md:mb-6 text-black">
-            {title}
-        </h3>
+    <h3 className="text-[18px] md:text-[20px] mb-4 md:mb-6 text-black">
+      {title}
+    </h3>
 
-        {description && (
-            <p className="text-[13px] md:text-[14px] text-[#636363] mb-4 md:mb-6 leading-relaxed font-light">
-                {description}
+    {description && (
+      <p
+        className={`text-[13px] md:text-[14px]  mb-4 md:mb-6 leading-relaxed font-light ${
+          halfWidthDescription ? "w-full md:w-[50%] text-[#333333]" : "w-full text-[#636363]"
+        }`}
+      >
+        {description}
+      </p>
+    )}
+
+    {type === "check" ? (
+      <div className="space-y-3">
+        {items.map((item, index) => (
+          <div key={index} className="flex items-start gap-3 md:gap-4">
+            <CheckIcon />
+            <p className="text-[13px] md:text-[14px] font-light text-[#636363] leading-tight pt-0.5">
+              {item.title}
             </p>
-        )}
-
-        {type === "check" ? (
-            <div className="space-y-3">
-                {items.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3 md:gap-4">
-                        <CheckIcon />
-                        <p className="text-[13px] md:text-[14px] font-light text-[#636363] leading-tight pt-0.5">
-                            {item.title}
-                        </p>
-                    </div>
-                ))}
-            </div>
-        ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {items.map((item, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center justify-between bg-white px-4 md:px-5 py-3 rounded-lg border border-gray-200 group hover:border-[#1475AF] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
-                    >
-                        <p className="text-[13px] md:text-[14px] font-medium text-[#444] group-hover:text-black transition-colors">
-                            {item.title}
-                        </p>
-                        <ArrowUpRight
-                            size={16}
-                            className="text-gray-400 group-hover:text-[#1475AF] group-hover:translate-x-1 transition-all"
-                        />
-                    </div>
-                ))}
-            </div>
-        )}
-    </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => onItemClick?.(item.title)}
+            className="flex items-center justify-between bg-white px-4 md:px-5 py-3 rounded-lg border border-gray-200 group hover:border-[#1475AF] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
+          >
+            <p className="text-[13px] md:text-[14px] font-medium text-[#444] group-hover:text-black transition-colors">
+              {item.title}
+            </p>
+            <ArrowUpRight
+              size={16}
+              className="text-gray-400 group-hover:text-[#1475AF] group-hover:translate-x-1 transition-all"
+            />
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
 );
 
 type ActivityContentProps = {
@@ -94,6 +105,7 @@ type ActivityContentProps = {
     listBlocks?: {
         title: string;
         description?: string;
+        halfWidthDescription?: boolean;
         items: ListItem[];
         type?: "check" | "product";
     }[];
@@ -107,8 +119,22 @@ export default function ActivityContent({
     listBlocks = [],
     bottomImage,
 }: ActivityContentProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState("");
+
+    const handleItemClick = (itemTitle: string) => {
+        setSelectedService(itemTitle);
+        setIsModalOpen(true);
+    };
+
     return (
-        <section className="w-full bg-white py-10 md:py-16">
+        <>
+            <ServiceInquiryModal
+                isOpen={isModalOpen}
+                selectedService={selectedService}
+                onClose={() => setIsModalOpen(false)}
+            />
+            <section className="w-full bg-white py-10 md:py-16">
             <div className="mx-auto max-w-[1440px] w-[92%] md:w-[90%]">
 
                 {/* Images Grid */}
@@ -184,6 +210,8 @@ export default function ActivityContent({
                                 description={block.description}
                                 items={block.items}
                                 type={block.type}
+                                halfWidthDescription={block.halfWidthDescription}
+                                onItemClick={handleItemClick}
                             />
                         ))}
                     </div>
@@ -201,6 +229,7 @@ export default function ActivityContent({
                     </div>
                 )}
             </div>
-        </section>
+            </section>
+        </>
     );
 }
