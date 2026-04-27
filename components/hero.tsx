@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="relative w-full h-[600px] md:h-screen md:min-h-[600px] overflow-hidden flex items-end">
+        <section className="relative w-full h-150 md:h-screen md:min-h-150 overflow-hidden flex items-end">
             {/* Background Video */}
             <div className="absolute inset-0 z-0 bg-black">
                 <video
@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
 
             {/* Hero Content */}
-            <div className="relative z-10  max-w-[1440px] w-[90%] mx-auto pb-8 md:pb-16 ">
+            <div className="relative z-10 max-w-360 w-[90%] mx-auto pb-8 md:pb-16 ">
                 <h1 className="text-white text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  tracking-tight">
                     Vertiport & Heliport
                     <br />
