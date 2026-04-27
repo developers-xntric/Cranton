@@ -6,6 +6,8 @@ import ObstructionLighting from "@/components/obstruction-lighting";
 import WhyChooseUs from "@/components/why-choose-us";
 import InsightsSection from "@/components/insights-section";
 import ContactSection from "@/components/contact-section";
+import { ValueCard } from "@/components/about/value-card";
+import HomeValue from "@/components/home-value";
 
 export default function Home() {
   return (
@@ -16,6 +18,10 @@ export default function Home() {
       <BuildingBlocks />
       <StatsSection />
       <WhyChooseUs />
+      <HomeValue
+        title="Modular Environmentally Sustainable Hybrid (MESH) Landing System"
+        image="/home/1.png"
+      />
       <InsightsSection />
       <ContactSection />
     </main>
