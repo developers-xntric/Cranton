@@ -20,8 +20,7 @@ interface Testimonial {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const stats: Stat[] = [
-    { value: 800, suffix: "+", label: "Completed Projects" },
-    { value: 43, suffix: "+", label: "Heliports Equipped" },
+    { value: 450, suffix: "", label: "Completed Projects" },
     { value: 32, suffix: "+", label: "Countries Served" },
     { value: 8, suffix: "+", label: "Years Of Experience" },
 ];
@@ -205,7 +204,7 @@ export function WhyChooseUsSection() {
                 {/* Stats Row */}
                 <div
                     ref={statsRef}
-                    className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-36"
+                    className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-36"
                 >
                     {stats.map((stat, idx) => (
                         <div key={idx} className="text-center sm:text-left mx-auto">
