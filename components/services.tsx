@@ -33,7 +33,7 @@ const services = [
         title: "Advanced Air Mobility (AAM)",
         description: "We support the future of urban air transportation by enabling the development of AAM infrastructure, vehicle integration, and regulatory readiness.",
         image: "/home/service-card5.png",
-       link: "#",
+        link: "#",
     },
     {
         title: "Vertiport & Heliport Fire Fighting System",
@@ -53,7 +53,7 @@ const ArrowUpRight = () => (
 export default function Services() {
     return (
         <section className=" py-16 ">
-            <div className="max-w-[1440px] w-[90%] mx-auto">
+            <div className="max-w-360 w-[90%] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                     {services.map((service, index) => {
                         const isCard2 = index === 1;
@@ -62,7 +62,7 @@ export default function Services() {
                             return (
                                 <div
                                     key={index}
-                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center md:min-h-[370px] 2xl:min-h-[400px] md:p-7 border border-white/10 transition-all duration-300 order-1 md:order-0  mb-6 md:mb-0"
+                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center md:min-h-92.5 2xl:min-h-100 md:p-7 border border-white/10 transition-all duration-300 order-1 md:order-0  mb-6 md:mb-0"
                                 >
 
                                     <div className="relative z-20 text-center">
@@ -85,7 +85,7 @@ export default function Services() {
                                 href={service.link}
                                 key={index}
                                 className={cn(
-                                    "group relative rounded-2xl overflow-hidden flex flex-col min-h-[300px] md:min-h-[370px] 2xl:min-h-[400px] transition-all duration-300 hover:-translate-y-2 shadow-lg",
+                                    "group relative rounded-2xl overflow-hidden flex flex-col min-h-75 md:min-h-92.5 2xl:min-h-100 transition-all duration-300 hover:-translate-y-2 shadow-lg",
                                     index === 0 ? "order-2 xl:order-0" : "order-3 xl:order-0"
                                 )}
                             >
