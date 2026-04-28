@@ -1,56 +1,60 @@
 import Image from "next/image"
 
-const HomeValue = ({ image, title }: { image: string; title: string }) => {
+const HomeValue = ({
+    image,
+    title,
+    paragraphs,
+    reverse = false,
+}: {
+    image: string
+    title: string
+    paragraphs: string[]
+    reverse?: boolean
+}) => {
+    const textContent = (
+        <div className="flex flex-col gap-4">
+            <h2 className={`text-3xl md:text-3xl lg:text-[40px] font-normal leading-[1.2] ${reverse ? "xl:w-full" : "xl:w-[90%]"}`}>
+                {title}
+            </h2>
+            <div className="flex flex-col gap-6 mt-4">
+                {paragraphs.map((para, i) => (
+                    <p key={i} className="text-[14px] md:text-[16px] 2xl:text-[18px] leading-relaxed text-[#7C7E86]">
+                        {para}
+                    </p>
+                ))}
+            </div>
+        </div>
+    )
+
+    const imageContent = (
+        <div className="relative rounded-lg overflow-hidden shadow-lg w-full h-full min-h-[300px]">
+            <Image
+                fill
+                src={image}
+                alt={title}
+                className="object-cover"
+            />
+        </div>
+    )
+
     return (
-        <section className={`w-full py-12 md:py-20 md:px-8`}>
+        <section className="w-full py-3 md:py-8 ">
             <div className="2xl:max-w-350 w-[90%] mx-auto">
-                <div className={`grid grid-cols-1 lg:grid-cols-2  gap-8 lg:gap-6 items-center`}>
-                    {/* Content */}
-                    <div className="flex flex-col gap-2">
-                        {/* Title */}
-                        <h2 className={`text-[20px] md:text-3xl lg:text-[40px] font-normal leading-[1.2]`}>
-                            {title}
-                        </h2>
-
-                        <p className={`text-[14px] md:text-[16px] 2xl:text-[18px] leading-relaxed text-[#7C7E86] mb-2`}>
-                            MESH is a patented, field-proven modular heliport and vertiport system developed by Unified Aviation. Designed for helicopters and future eVTOL aircraft, it provides a modern, safe, and sustainable alternative to traditional concrete landing platforms.
-                        </p>
-
-
-                        <p className={`text-[14px] md:text-[16px] 2xl:text-[18px] leading-relaxed text-[#7C7E86] } mb-2`}>
-                            Already deployed and fully certified at the King Abdullah Financial District rooftop heliport in Riyadh, MESH is built for rapid deployment, long-term durability, and low environmental impact.
-                        </p>
-
-                        <p className={`text-[14px] md:text-[16px] 2xl:text-[18px] leading-relaxed text-[#7C7E86] }`}>
-                            As a complete self-contained landing system, MESH includes the key components required for safe vertical aviation operations and sets a new standard for next-generation heliports and vertiports.
-                        </p>
-                    </div>
-
-                    {/* Desktop Image */}
-                    <div className="hidden md:flex justify-center">
-                        <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-m">
-                            <Image
-                                width={2000}
-                                height={2000}
-                                src={image}
-                                alt={title}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
-                    {/* Mobile Image */}
-                    <div className="flex md:hidden justify-center">
-                        <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-m">
-                            <Image
-                                width={2000}
-                                height={2000}
-                                src={image}
-                                alt={title}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
-
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-stretch">
+                    {reverse ? (
+                        <>
+                            <div className="hidden md:flex">{imageContent}</div>
+                            {textContent}
+                            <div className="md:hidden min-h-[300px] relative rounded-lg overflow-hidden shadow-lg">
+                                <Image fill src={image} alt={title} className="object-cover" />
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            {textContent}
+                            <div className="flex">{imageContent}</div>
+                        </>
+                    )}
                 </div>
             </div>
         </section>

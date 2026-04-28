@@ -95,7 +95,7 @@ export default function InsightsSection() {
     }, [startAutoplay]);
 
     return (
-        <section className=" md:pt-6 pb-16 overflow-hidden">
+        <section className=" pt-7 md:pt-6 pb-16 overflow-hidden">
             <div className="max-w-360 w-[90%] mx-auto">
                 <div className="text-center mb-10">
                     <SectionHeading
