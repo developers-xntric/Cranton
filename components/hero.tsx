@@ -30,7 +30,7 @@ export default function Hero() {
                     Heliports, Vertiports, Obstruction Lighting, and AAM Landing Systems Built for Safety, Precision, and Performance
                 </p>
 
-                <Button href={"/contact"} className="px-6 py-3 mt-3">
+                <Button href={"/about"} className="px-6 py-3 mt-3">
                     Explore Solutions
                 </Button>
             </div>
