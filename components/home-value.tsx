@@ -16,7 +16,7 @@ const HomeValue = ({
             <h2 className={`text-3xl md:text-3xl lg:text-[40px] font-normal leading-[1.2] ${reverse ? "xl:w-full" : "xl:w-[90%]"}`}>
                 {title}
             </h2>
-            <div className="flex flex-col gap-6 mt-4">
+            <div className="flex flex-col gap-4 mt-4">
                 {paragraphs.map((para, i) => (
                     <p key={i} className="text-[14px] md:text-[16px] 2xl:text-[18px] leading-relaxed text-[#7C7E86]">
                         {para}
