@@ -14,7 +14,7 @@ interface InsightCardProps {
 }
 
 const InsightCard = ({ title, image, className = "", isLarge = false }: InsightCardProps) => (
-    <div className={`group relative rounded-[10px] overflow-hidden cursor-pointer ${className} ${isLarge ? 'h-full min-h-[300px] md:min-h-[400px]' : 'h-[250px]'}`}>
+    <div className={`group relative rounded-[10px] overflow-hidden cursor-pointer ${className} ${isLarge ? 'h-full min-h-75 md:min-h-100' : 'h-62.5'}`}>
         <Image
             src={image}
             alt={title}
@@ -95,8 +95,8 @@ export default function InsightsSection() {
     }, [startAutoplay]);
 
     return (
-        <section className=" md:pt-6 pb-16 overflow-hidden">
-            <div className="max-w-[1440px] w-[90%] mx-auto">
+        <section className=" pt-7 md:pt-6 pb-16 overflow-hidden">
+            <div className="max-w-360 w-[90%] mx-auto">
                 <div className="text-center mb-10">
                     <SectionHeading
                         title="Insights That Power Smarter Decisions"
@@ -160,7 +160,7 @@ export default function InsightsSection() {
                             title={insights[2].title}
                         />
                         <InsightCard
-                            className="md:col-span-2 h-[200px] md:h-[250px]"
+                            className="md:col-span-2 h-50 md:h-62.5"
                             image={insights[3].image}
                             title={insights[3].title}
                         />

@@ -17,7 +17,7 @@ const About = () => {
             />
             <ValueCard
                 title="About Cranton Electrical Limited"
-                image="/about/2.png"
+                image="/about/1.png"
             />
             <ValueCard
                 title="Our Story"

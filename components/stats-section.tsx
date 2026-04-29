@@ -42,8 +42,7 @@ const AnimatedNumber = ({ value, suffix = "+" }: { value: number, suffix?: strin
 };
 
 const stats = [
-    { label: "Completed Projects", value: 800, suffix: "+" },
-    { label: "Heliports Equipped", value: 43, suffix: "+" },
+    { label: "Completed Projects", value: 450, suffix: "" },
     { label: "Countries Served", value: 32, suffix: "+" },
     { label: "Years of Experience", value: 8, suffix: "+" },
 ];

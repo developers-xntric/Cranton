@@ -69,7 +69,7 @@ export default function DynamicHero({
                                         ) : (
                                             <BreadcrumbLink
                                                 href={crumb.href || "#"}
-                                                className="text-[#fff] text-[13px] md:text-lg font-normal hover:text-white transition-colors duration-200"
+                                                className="text-white text-[13px] md:text-lg font-normal hover:text-white transition-colors duration-200"
                                             >
                                                 {crumb.label}
                                             </BreadcrumbLink>
