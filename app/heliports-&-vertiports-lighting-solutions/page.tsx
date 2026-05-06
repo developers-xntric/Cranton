@@ -3,10 +3,12 @@ import GraySplitSection from "@/components/activities-aircraft/graysplitssection
 import SplitSection from "@/components/activities-aircraft/splitsection";
 import SplitSectionHelideck from "@/components/activities-helideck/splitsection-helideck";
 import DynamicHero from "@/components/dynamic-hero";
+import Faqs from "@/components/faqs";
 import HvGrey from "@/components/hv-grey";
 import HvLeftRight from "@/components/hv-left-right";
 import ITValueCard from "@/components/it-value-card";
 import ThreeCards from "@/components/three-cards";
+import Urban from "@/components/urban";
 
 
 const HeliportsLightingSolutions = () => {
@@ -179,6 +181,35 @@ const HeliportsLightingSolutions = () => {
                            
                           
                       ]} />
+                      <Urban
+       btn="Inquire Now"
+        title={
+          
+          "Built for the Future of Urban Air Mobility"
+        }
+        subtitle={
+          "Supporting Next-Generation Aviation"
+        }
+        description1={
+        
+          "Crantron’s lighting solutions are designed to support the growth of Urban Air Mobility (UAM) and electric aviation infrastructure."
+        }
+        description2={
+        
+          ""
+        }
+        solutions={[
+        "Compatible with modern eVTOL platforms",
+        "Designed for high-frequency operations",
+        "Scalable for future expansion",
+        "Low maintenance with long operational life",
+        "Proven performance in critical aviation environments",
+      ]}
+        image1={ "/hv1.png"}
+        image2={ "/hv2.png"}
+        
+      />
+      <Faqs  />
             
         </div>
     )
