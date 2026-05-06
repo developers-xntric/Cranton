@@ -2,6 +2,7 @@ import DynamicHero from "@/components/dynamic-hero";
 import ReliableSurveillance from "@/components/reliable-surveillance";
 import FourCards from "@/components/about/four-cards";
 import BlackSplitSection from "@/components/activities-aircraft/black-split-section";
+import SingleSplitSection from "@/components/activities-aircraft/single-split-section";
 import InstallationProcess from "@/components/installation-process";
 import IndustriesServe from "@/components/industries-serve";
 import Faqs from "@/components/faqs";
@@ -75,7 +76,8 @@ const ObstructionLightingSolutions = () => {
           {
             title: "Medium Intensity Obstruction Lights",
             model: "Balanced Visibility for Mid-Height Structures",
-            description: "Medium intensity lights provide higher brightness and are typically used on structures of moderate height. They offer flashing or steady modes to enhance visibility during both day and night operations.",
+            description:
+              "Medium intensity lights provide higher brightness and are typically used on structures of moderate height. They offer flashing or steady modes to enhance visibility during both day and night operations.",
             features: [
               "High-visibility flashing or steady modes",
               "Designed for mid-range obstruction marking",
@@ -106,7 +108,8 @@ const ObstructionLightingSolutions = () => {
           {
             title: "Solar-Powered Obstruction Lights",
             model: "Energy-Efficient & Independent Operation",
-            description: "Solar obstruction lights provide a sustainable solution by operating independently of grid power. Ideal for remote locations, they ensure continuous operation using solar energy and battery storage.",
+            description:
+              "Solar obstruction lights provide a sustainable solution by operating independently of grid power. Ideal for remote locations, they ensure continuous operation using solar energy and battery storage.",
             features: [
               "Solar-powered with battery backup",
               "No external power required",
@@ -117,6 +120,21 @@ const ObstructionLightingSolutions = () => {
             imageAlt: "High Intensity Obstruction Light",
           },
         ]}
+      />
+
+      <SingleSplitSection
+        isBlack={false}
+        title="LED Obstruction Lighting Systems"
+        model="Advanced Technology for Long-Term Performance"
+        description="LED-based obstruction lighting systems deliver superior efficiency, longer lifespan, and consistent performance. They are the preferred choice for modern aviation safety applications."
+        features={[
+          "Long operational life",
+          "Low power consumption",
+          "High reliability",
+          "Minimal maintenance",
+        ]}
+        image="/obstruction-lighting/2.png"
+        imageAlt="Aviation Warning Light"
       />
 
       <InstallationProcess
