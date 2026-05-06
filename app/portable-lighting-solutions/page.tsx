@@ -16,13 +16,13 @@ const PortableLightingSolutions = () => {
                     { label: "Home", href: "/" },
                     { label: "Portable Lighting Solutions" },
                 ]}
-                backgroundImage={"/helideck-lighting/hero.png"}
+                backgroundImage={"/portable-lighting/hero.png"}
             />
 
             <ReliableSurveillance
                 title="Portable Lighting Solutions for Safe & Reliable Operations"
                 description="Engineered for high visibility and rapid deployment, our portable lighting systems ensure safe aviation operations in remote, temporary, and emergency environments without the need for fixed infrastructure"
-                image="/helideck-lighting/specification.png"
+                image="/portable-lighting/specification.png"
                 buttonText="Request a Quote"
                 buttonHref="/contact"
             />
@@ -59,7 +59,7 @@ const PortableLightingSolutions = () => {
                 sections={[
                     {
                         title: "Reliable Lighting Where You Need It Most",
-                        image: "/helideck-lighting/specification.png",
+                        image: "/portable-lighting/specs.png",
                         imageAlt: "Portable Lighting Specifications",
                         paragraphs: [
                             "Cranton portable lighting solutions are designed to provide dependable illumination for aviation operations where traditional power sources are unavailable or impractical. Built with advanced LED technology and integrated power systems, these lights deliver consistent performance in demanding conditions.",
@@ -111,11 +111,11 @@ const PortableLightingSolutions = () => {
                 badge=""
                 heading="Where It’s Used"
                 industries={[
-                    { name: "Temporary Helipads & Vertipads", image: "/portable-lighting/use1.png" },
-                    { name: "Remote & Off-Grid Locations", image: "/portable-lighting/use2.png" },
-                    { name: "Airfield & Taxiway Lighting", image: "/portable-lighting/use3.png" },
-                    { name: "Disaster Response & Rapid Deployment", image: "/portable-lighting/use4.png" },
-                    { name: "Emergency & Medical Evacuation Operations", image: "/portable-lighting/use1.png" },
+                    { name: "Temporary Helipads & Vertipads", image: "/portable-lighting/img1.png" },
+                    { name: "Remote & Off-Grid Locations", image: "/portable-lighting/img2.png" },
+                    { name: "Airfield & Taxiway Lighting", image: "/portable-lighting/img3.png" },
+                    { name: "Disaster Response & Rapid Deployment", image: "/portable-lighting/img4.png" },
+                    { name: "Emergency & Medical Evacuation Operations", image: "/portable-lighting/img5.png" },
                 ]}
             />
 

@@ -27,7 +27,7 @@ const services = [
         title: "Helideck Platform Solutions",
         description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
         image: "/home/service-4.png",
-        link: "#",
+        link: "helideck-platform-solutions",
     },
     {
         title: "Heliports & Vertiports Lighting Solutions",
