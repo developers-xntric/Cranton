@@ -37,37 +37,47 @@ interface BlackSplitSectionProps {
   sections: [Section, Section];
 }
 
-export default function BlackSplitSection({ isBlack = true, sections }: BlackSplitSectionProps) {
+export default function BlackSplitSection({
+  isBlack = true,
+  sections,
+}: BlackSplitSectionProps) {
   return (
-    <section className={`relative ${isBlack ? 'bg-[#161616]' : 'bg-white'} py-10 md:py-16 space-y-5 md:space-y-20 `}>
+    <section
+      className={`relative ${isBlack ? "bg-[#161616]" : "bg-white"} py-10 md:py-16 space-y-5 md:space-y-20 `}
+    >
       {/* Grid Background */}
-      {isBlack && <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `linear-gradient(to right, #333131 1px, transparent 1px), linear-gradient(to bottom, #333131 1px, transparent 1px)`,
-          backgroundSize: "50px 100px",
-        }}
-      />}
+      {isBlack && (
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `linear-gradient(to right, #333131 1px, transparent 1px), linear-gradient(to bottom, #333131 1px, transparent 1px)`,
+            backgroundSize: "50px 100px",
+          }}
+        />
+      )}
 
       {/* SECTION 1 */}
       <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center relative z-10">
         {/* Content (RIGHT on desktop, TOP on mobile) */}
-        <div className="flex flex-col order-1 lg:order-2">
+        <div className="flex flex-col order-1 ">
           <SectionHeading
             title={sections[0].title}
-            className={`text-[18px] md:text-4xl ${isBlack ? 'text-white' : 'text-black'} mb-2 leading-tight text-left`}
+            className={`text-[18px] md:text-4xl ${isBlack ? "text-white" : "text-black"} mb-2 leading-tight text-left`}
           />
 
           <h2 className="text-[16px] md:text-2xl text-[#1475AF] py-2">
-            <span className="font-semibold">Model: </span>
             {sections[0].model}
           </h2>
 
-          <p className={`text-[14px] md:text-[16px] leading-relaxed ${isBlack ? 'text-gray-300' : 'text-[#333333]'} mb-2`}>
+          <p
+            className={`text-[14px] md:text-[16px] leading-relaxed ${isBlack ? "text-white" : "text-[#333333]"} mb-2`}
+          >
             {sections[0].description}
           </p>
 
-          <h3 className={`text-[16px] md:text-[18px] ${isBlack ? 'text-white' : 'text-black'} mt-4 mb-3`}>
+          <h3
+            className={`text-[16px] md:text-[18px] ${isBlack ? "text-white" : "text-black"} mt-4 mb-3`}
+          >
             Key Features:
           </h3>
           <div className="space-y-3">
@@ -76,7 +86,9 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
                 <div className="shrink-0">
                   <CheckIcon />
                 </div>
-                <p className={`text-[14px] md:text-[17px] ${isBlack ? 'text-gray-300' : 'text-[#333333]'} leading-snug`}>
+                <p
+                  className={` text-[14px] md:text-[17px] ${isBlack ? "text-white" : "text-[#333333]"} leading-snug`}
+                >
                   {feature}
                 </p>
               </div>
@@ -85,7 +97,9 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
         </div>
 
         {/* Image (LEFT on desktop, BOTTOM on mobile) */}
-        <div className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? 'border-[#333131]' : 'border-[#D7D7D7]'} order-2 lg:order-1`}>
+        <div
+          className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} order-2 lg:order-1`}
+        >
           <Image
             src={sections[0].image}
             alt={sections[0].imageAlt}
@@ -98,14 +112,14 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
 
       {/* SECTION 2 */}
       <div
-        className={`max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center ${isBlack ? 'border-[#333131]' : 'border-[#D7D7D7]'} pt-2 relative z-10`}
+        className={`max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} pt-2 relative z-10`}
         id="high-intensity"
       >
         {/* Left: Content */}
-        <div className="flex flex-col">
+        <div className="flex flex-col md:order-2">
           <SectionHeading
             title={sections[1].title}
-            className={`text-[20px] md:text-4xl ${isBlack ? 'text-white' : 'text-black'} mb-2 leading-tight text-left`}
+            className={`text-[20px] md:text-4xl ${isBlack ? "text-white" : "text-black"} mb-2 leading-tight text-left`}
           />
 
           <h2 className="text-[16px] md:text-2xl text-[#1475AF] py-2">
@@ -113,7 +127,15 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
             {sections[1].model}
           </h2>
 
-          <h3 className={`text-[16px] md:text-[18px] ${isBlack ? 'text-white' : 'text-black'} mt-4 mb-3`}>
+          <p
+            className={`text-[14px] md:text-[16px] font-normal leading-relaxed ${isBlack ? "text-white" : "text-[#333333]"} mb-2`}
+          >
+            {sections[1].description}
+          </p>
+
+          <h3
+            className={`text-[16px] md:text-[18px] ${isBlack ? "text-white" : "text-black"} mt-4 mb-3`}
+          >
             Key Features:
           </h3>
           <div className="space-y-3">
@@ -122,7 +144,9 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
                 <div className="shrink-0">
                   <CheckIcon />
                 </div>
-                <p className={`text-[14px] md:text-[17px] ${isBlack ? 'text-gray-300' : 'text-[#333333]'} leading-snug`}>
+                <p
+                  className={`text-[14px] md:text-[17px] ${isBlack ? "text-gray-300" : "text-[#333333]"} leading-snug`}
+                >
                   {feature}
                 </p>
               </div>
@@ -131,7 +155,9 @@ export default function BlackSplitSection({ isBlack = true, sections }: BlackSpl
         </div>
 
         {/* Right: Image */}
-        <div className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? 'border-[#333131]' : 'border-[#D7D7D7]'}`}>
+        <div
+          className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"}`}
+        >
           <Image
             src={sections[1].image}
             alt={sections[1].imageAlt}
