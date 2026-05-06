@@ -1,3 +1,4 @@
+import FourCards from '@/components/about/four-cards';
 import DynamicHero from '@/components/dynamic-hero';
 import SecondHeli from '@/components/second-heli';
 
@@ -18,6 +19,31 @@ const PortableHelipadsAndVertipads = () => {
                 para={["Deploy landing platforms quickly in remote or temporary locations, ensuring immediate access for helicopters.", "Eliminates the need for complex civil works, significantly lowering installation costs while accelerating project timelines.", "Provides stable, anti-slip, and load-tested surfaces that maintain safety standards even in non-permanent environments.", "Designed for high-pressure scenarios such as emergency response and defense operations where reliability and speed are essential."]}
                 titles={["Enables rapid aviation access anywhere", "Reduces infrastructure cost and time", "Ensures safe operations in temporary setups", "Supports mission-critical deployments"]}
             />
+            <FourCards
+                heading="Engineered for Performance"
+                para={null}
+                isBlack={true}
+                features={[{
+                    icon: "/2.png",
+                    title: "Modular & Scalable Design",
+                    desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
+                },
+                {
+                    icon: "/3.png",
+                    title: "High Load-Bearing Strength",
+                    desc: "Built to support heavy helicopter operations with structural stability.",
+                },
+                {
+                    icon: "/4.png",
+                    title: "Anti-Slip & Weather Resistant",
+                    desc: "Durable surface ensures safe operations in all environmental conditions.",
+                },
+                {
+                    icon: "/5.png",
+                    title: "Rapid Installation",
+                    desc: "Quick assembly and dismantling for time-critical deployments.",
+                },
+                ]} />
         </div>
     )
 }
