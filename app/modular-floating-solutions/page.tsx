@@ -10,18 +10,18 @@ const ModularFloatingSolutions = () => {
     return (
         <div>
             <DynamicHero
-                title={"Portable Helipads & Vertipads"}
+                title={"Modular Floating Solutions"}
                 breadcrumbs={[
                     { label: "Home", href: "/" },
-                    { label: "Portable Helipads & Vertipads" },
+                    { label: "Modular Floating Solutions" },
                 ]}
                 backgroundImage={"/heli.png"}
             />
             <SecondHeli
-                heading2="Built for Critical Operations"
-                desc2="Catobo’s portable helipad and vertipad solutions are designed to deliver stable and compliant landing platforms where permanent infrastructure is not feasible. Using modular, high-strength systems, these platforms can be deployed quickly with minimal site preparation. <br/> <br/> Whether for emergency response, construction sites, or remote operations, our solutions ensure consistent performance and operational safety."
-                para={["Deploy landing platforms quickly in remote or temporary locations, ensuring immediate access for helicopters.", "Eliminates the need for complex civil works, significantly lowering installation costs while accelerating project timelines.", "Provides stable, anti-slip, and load-tested surfaces that maintain safety standards even in non-permanent environments.", "Designed for high-pressure scenarios such as emergency response and defense operations where reliability and speed are essential."]}
-                titles={["Enables rapid aviation access anywhere", "Reduces infrastructure cost and time", "Ensures safe operations in temporary setups", "Supports mission-critical deployments"]}
+                heading2="Built for Versatility on Water"
+                desc2="Catobo’s modular floating solutions are designed to create stable and scalable platforms for a wide range of water-based applications. Using interlocking, high-strength units, these systems can be deployed quickly without the need for complex marine construction. <br/> <br/> From industrial operations to leisure and temporary installations, our solutions ensure consistent performance, safety, and flexibility in dynamic environments."
+                para={["Easily deploy modular floating platforms across various water bodies, enabling stable operations without permanent marine.", "Reduces the need for heavy marine construction, offering a more efficient and budget-friendly solution.", "Engineered for buoyancy and balance, the system provides a secure, anti-slip surface suitable for both operational and recreational use.", "Adaptable for industrial, marine, leisure, and temporary setups, making it ideal for a wide range of floating applications."]}
+                titles={["Flexible Deployment on Water Surfaces", "Cost-Effective Alternative to Fixed Structures", "Stable and Safe Platform Design", "Supports Diverse Applications"]}
             />
             <FourCards
                 heading="Engineered for Performance"
@@ -70,11 +70,11 @@ const ModularFloatingSolutions = () => {
                 badge=""
                 heading="Where It's Used"
                 industries={[
-                    { name: "Emergency & Medical Operations", image: "/portable-lighting/use1.png" },
-                    { name: "Remote & Off-Grid Locations", image: "/portable-lighting/use2.png" },
-                    { name: "Construction & Infrastructure Projects", image: "/portable-lighting/use3.png" },
-                    { name: "Temporary Aviation Facilities", image: "/portable-lighting/use4.png" },
-                    { name: "Defense & Rapid Response", image: "/portable-lighting/use1.png" },
+                    { name: "Marinas & Floating Docks", image: "/portable-lighting/use1.png" },
+                    { name: "Industrial & Work Platforms", image: "/portable-lighting/use2.png" },
+                    { name: "Temporary Floating Structures", image: "/portable-lighting/use3.png" },
+                    { name: "Leisure & Recreational Facilities", image: "/portable-lighting/use4.png" },
+                    { name: "Events & Specialized Installations", image: "/portable-lighting/use1.png" },
                 ]}
             />
 
@@ -83,19 +83,19 @@ const ModularFloatingSolutions = () => {
                 description=""
                 faqs={[
                     {
-                        question: "What is a portable helipad or vertipad?",
+                        question: "What are modular floating solutions?",
                         answer: "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
                     },
                     {
-                        question: "Where can portable helipads be used?",
+                        question: "Where can these floating systems be used?",
                         answer: "They can be deployed in remote locations, construction sites, emergency zones, offshore areas, and any environment where permanent infrastructure is not feasible."
                     },
                     {
-                        question: "How long does it take to install a portable helipad?",
+                        question: "How easy is the installation process?",
                         answer: "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
                     },
                     {
-                        question: "Are these systems safe for heavy helicopters?",
+                        question: "Are the platforms stable in water?",
                         answer: "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
                     },
                     {
