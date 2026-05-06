@@ -31,7 +31,7 @@ const cards: CardItem[] = [
 export default function AirCraftWarningLights() {
   return (
     <section id="about" className="w-full bg-white py-10 md:py-12">
-      <div className="mx-auto max-w-[1440px] w-[90%]">
+      <div className="mx-auto max-w-360 w-[90%]">
 
         {/* Layout */}
         <div className="flex flex-col lg:flex-row gap-6">

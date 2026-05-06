@@ -6,40 +6,46 @@ import { cn } from "@/lib/utils";
 
 const services = [
     {
-        title: "Vertiport & Heliport Consulting and Refurbishment",
-        description: "Our industry experts provide tailored consulting and refurbishment services to deliver reliable Vertiport & Heliport solutions.",
-        image: "/home/service-card1.png",
-        link: "#",
+        title: "Portable Helipads & Vertipads",
+        description: "Rapid-deploy, modular landing solutions designed for temporary and emergency operations, ensuring safe and stable helicopter access across diverse terrains.",
+        image: "/home/service-1.png",
+        link: "/portable-helipads-and-vertipads",
     },
     {
         title: "End-to-End Solutions for Heliports, Vertiports & AAM",
-        description: "Cranton offers focused, high-quality services supporting Vertiport, Heliport  and aviation infrastructure. Our team ensures every project benefits from expert engineering, certified systems, and dependable execution.",
+        description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
         image: null,
         link: "#",
     },
     {
-        title: "Vertiport & Heliport Lighting",
-        description: "Reliable and well-functioning LED lighting system is an essential factor in case of vertiport & heliport operation. An effective vertiport & heliport lighting system ensures the safe operation.",
-        image: "/home/service-card3.png",
+        title: "Modular Floating Solutions",
+        description: "Modular, easy-to-deploy floating systems designed for stability and versatility. Ideal for helipads, platforms, and marine applications, delivering reliable performance.",
+        image: "/home/service-3.png",
+        link: "/modular-floating-solutions",
+    },
+    {
+        title: "Helideck Platform Solutions",
+        description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
+        image: "/home/service-4.png",
         link: "#",
     },
     {
-        title: "Heliport and Vertiport Solutions",
-        description: "MESH is an innovative solution for creating safe landing sites for helicopters and future eVTOL aircraft. It enables low-impact deployment for floating, surface, and elevated heliports.",
-        image: "/home/service-card4.png",
-        link: "#",
+        title: "Heliports & Vertiports Lighting Solutions",
+        description: "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations.",
+        image: "/home/service-5.png",
+        link: "/heliports-&-vertiports-lighting-solutions",
     },
     {
-        title: "Advanced Air Mobility (AAM)",
-        description: "We support the future of urban air transportation by enabling the development of AAM infrastructure, vehicle integration, and regulatory readiness.",
-        image: "/home/service-card5.png",
-        link: "#",
+        title: "Obstruction Lighting Solutions",
+        description: "High-performance warning lights designed to enhance visibility of structures, ensuring aviation safety and regulatory compliance.",
+        image: "/home/service-6.png",
+        link: "/obstruction-lighting-solutions",
     },
     {
-        title: "Vertiport & Heliport Fire Fighting System",
-        description: "As per the norms of International Civil Aviation Organization, vertiport & heliport should be equipped with Fire Fighting System on two sides.",
-        image: "/home/service-card6.png",
-        link: "#",
+        title: "Portable Lighting Solutions",
+        description: "Self-powered, high-intensity lighting systems built for quick setup, enabling safe aviation operations in remote or time-critical environments.",
+        image: "/home/service-7.png",
+        link: "/portable-lighting-solutions",
     },
 ];
 
@@ -54,15 +60,15 @@ export default function Services() {
     return (
         <section className=" py-16 ">
             <div className="max-w-360 w-[90%] mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    {services.map((service, index) => {
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+                    {services.slice(0, 3).map((service, index) => {
                         const isCard2 = index === 1;
 
                         if (isCard2) {
                             return (
                                 <div
                                     key={index}
-                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center md:min-h-92.5 2xl:min-h-100 md:p-7 border border-white/10 transition-all duration-300 order-1 md:order-0  mb-6 md:mb-0"
+                                    className="group relative rounded-2xl overflow-hidden flex flex-col justify-center md:min-h-92.5 2xl:min-h-100 md:p-7 border border-white/10 transition-all duration-300 order-1 md:order-0 mb-6 md:mb-0 lg:col-span-2"
                                 >
 
                                     <div className="relative z-20 text-center">
@@ -106,8 +112,8 @@ export default function Services() {
 
 
                                 {/* Bottom Glass Content */}
-                                <div className="relative z-20 mt-auto p-4 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
-                                    <h3 className="font-rethink text-[15px] md:text-[20px] text-white mb-1">{service.title}</h3>
+                                <div className="relative z-20 mt-auto p-3 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
+                                    <h3 className="font-rethink text-[15px] md:text-[20px] md:leading-[26px] text-white mb-1">{service.title}</h3>
                                     <p className="font-onest text-[12px] md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
 
                                     {/* Arrow expands beneath text without taking initial space */}
@@ -122,6 +128,47 @@ export default function Services() {
                             </Link>
                         );
                     })}
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4">
+                    {services.slice(3).map((service, index) => (
+                        <Link
+                            href={service.link}
+                            key={index + 3}
+                            className="group relative rounded-2xl overflow-hidden flex flex-col min-h-75 md:min-h-92.5 2xl:min-h-100 transition-all duration-300 hover:-translate-y-2 shadow-lg"
+                        >
+                            {/* Background Image */}
+                            {service.image && (
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        unoptimized
+                                    />
+                                    {/* Gradient overlay for text readability */}
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
+                                </div>
+                            )}
+
+
+                            {/* Bottom Glass Content */}
+                            <div className="relative z-20 mt-auto p-3 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
+                                <h3 className="font-rethink text-[15px] md:text-[20px] text-white mb-1">{service.title}</h3>
+                                <p className="font-onest text-[12px] md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
+
+                                {/* Arrow expands beneath text without taking initial space */}
+                                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
+                                    <div className="overflow-hidden">
+                                        <div className="w-fit p-2.5 mt-3 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center">
+                                            <ArrowUpRight />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </div>
         </section>

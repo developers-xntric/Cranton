@@ -29,6 +29,8 @@ const solutions = [
             { name: "High Intensity Lights", href: "#" },
             { name: "Dual Lighting Systems", href: "#" },
             { name: "Solar Obstruction Lights", href: "#" },
+            { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions" },
+            { name: "Obstruction Lighting Solutions", href: "/obstruction-lighting-solutions" },
         ]
     }
 ]
