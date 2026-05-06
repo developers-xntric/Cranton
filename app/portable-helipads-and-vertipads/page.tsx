@@ -1,4 +1,5 @@
 import FourCards from '@/components/about/four-cards';
+import SplitSectionHelideck from '@/components/activities-helideck/splitsection-helideck';
 import DynamicHero from '@/components/dynamic-hero';
 import SecondHeli from '@/components/second-heli';
 
@@ -44,6 +45,24 @@ const PortableHelipadsAndVertipads = () => {
                     desc: "Quick assembly and dismantling for time-critical deployments.",
                 },
                 ]} />
+            <SplitSectionHelideck
+                sections={[
+                    {
+                        title: "Designed for Demanding Environments",
+                        image: "/6.png",
+                        imageAlt: "Engineering Precision",
+                        paragraphs: [
+                            "Our systems are engineered to deliver consistent performance under demanding conditions, combining strength, durability, and operational efficiency.",
+                        ],
+                        points: [
+                            { title: "High-strength modular materials" },
+                            { title: "Optimized load distribution" },
+                            { title: "Long operational lifespan" },
+                            { title: "Minimal maintenance requirements" },
+                        ],
+                    },
+                ]}
+            />
         </div>
     )
 }
