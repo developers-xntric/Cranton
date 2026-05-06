@@ -1,0 +1,116 @@
+import FourCards from '@/components/about/four-cards';
+import SplitSectionHelideck from '@/components/activities-helideck/splitsection-helideck';
+import CTASection from '@/components/cta-section';
+import DynamicHero from '@/components/dynamic-hero';
+import Faqs from '@/components/faqs';
+import IndustriesServe from '@/components/industries-serve';
+import SecondHeli from '@/components/second-heli';
+
+const ModularFloatingSolutions = () => {
+    return (
+        <div>
+            <DynamicHero
+                title={"Modular Floating Solutions"}
+                breadcrumbs={[
+                    { label: "Home", href: "/" },
+                    { label: "Modular Floating Solutions" },
+                ]}
+                backgroundImage={"/heli.png"}
+            />
+            <SecondHeli
+                heading2="Built for Versatility on Water"
+                desc2="Catobo’s modular floating solutions are designed to create stable and scalable platforms for a wide range of water-based applications. Using interlocking, high-strength units, these systems can be deployed quickly without the need for complex marine construction. <br/> <br/> From industrial operations to leisure and temporary installations, our solutions ensure consistent performance, safety, and flexibility in dynamic environments."
+                para={["Easily deploy modular floating platforms across various water bodies, enabling stable operations without permanent marine.", "Reduces the need for heavy marine construction, offering a more efficient and budget-friendly solution.", "Engineered for buoyancy and balance, the system provides a secure, anti-slip surface suitable for both operational and recreational use.", "Adaptable for industrial, marine, leisure, and temporary setups, making it ideal for a wide range of floating applications."]}
+                titles={["Flexible Deployment on Water Surfaces", "Cost-Effective Alternative to Fixed Structures", "Stable and Safe Platform Design", "Supports Diverse Applications"]}
+            />
+            <FourCards
+                heading="Engineered for Performance"
+                para={null}
+                isBlack={true}
+                features={[{
+                    icon: "/2.png",
+                    title: "Modular & Scalable Design",
+                    desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
+                },
+                {
+                    icon: "/3.png",
+                    title: "High Load-Bearing Strength",
+                    desc: "Built to support heavy helicopter operations with structural stability.",
+                },
+                {
+                    icon: "/4.png",
+                    title: "Anti-Slip & Weather Resistant",
+                    desc: "Durable surface ensures safe operations in all environmental conditions.",
+                },
+                {
+                    icon: "/5.png",
+                    title: "Rapid Installation",
+                    desc: "Quick assembly and dismantling for time-critical deployments.",
+                },
+                ]} />
+            <SplitSectionHelideck
+                sections={[
+                    {
+                        title: "Designed for Demanding Environments",
+                        image: "/6.png",
+                        imageAlt: "Engineering Precision",
+                        paragraphs: [
+                            "Our systems are engineered to deliver consistent performance under demanding conditions, combining strength, durability, and operational efficiency.",
+                        ],
+                        points: [
+                            { title: "High-strength modular materials" },
+                            { title: "Optimized load distribution" },
+                            { title: "Long operational lifespan" },
+                            { title: "Minimal maintenance requirements" },
+                        ],
+                    },
+                ]}
+            />
+            <IndustriesServe
+                badge=""
+                heading="Where It's Used"
+                industries={[
+                    { name: "Marinas & Floating Docks", image: "/portable-lighting/use1.png" },
+                    { name: "Industrial & Work Platforms", image: "/portable-lighting/use2.png" },
+                    { name: "Temporary Floating Structures", image: "/portable-lighting/use3.png" },
+                    { name: "Leisure & Recreational Facilities", image: "/portable-lighting/use4.png" },
+                    { name: "Events & Specialized Installations", image: "/portable-lighting/use1.png" },
+                ]}
+            />
+
+            <Faqs
+                heading="Frequently Asked Questions"
+                description=""
+                faqs={[
+                    {
+                        question: "What are modular floating solutions?",
+                        answer: "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
+                    },
+                    {
+                        question: "Where can these floating systems be used?",
+                        answer: "They can be deployed in remote locations, construction sites, emergency zones, offshore areas, and any environment where permanent infrastructure is not feasible."
+                    },
+                    {
+                        question: "How easy is the installation process?",
+                        answer: "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
+                    },
+                    {
+                        question: "Are the platforms stable in water?",
+                        answer: "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
+                    },
+                    {
+                        question: "Can the system be reused or relocated?",
+                        answer: "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations."
+                    }
+                ]}
+                assistanceHeading="Need a Help ?"
+                assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
+                contactPhone="+44 191 640 75 03"
+                contactEmail="info@crantonelectric.com"
+            />
+            <CTASection heading="Need a Portable Helipad Solution?" description={"Tell us about your project requirements and our experts will help you design the right solution for your operational needs."} />
+        </div>
+    )
+}
+
+export default ModularFloatingSolutions
