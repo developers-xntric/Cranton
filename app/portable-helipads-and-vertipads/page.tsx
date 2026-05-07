@@ -15,7 +15,7 @@ const PortableHelipadsAndVertipads = () => {
                     { label: "Home", href: "/" },
                     { label: "Portable Helipads & Vertipads" },
                 ]}
-                backgroundImage={"/phero.png"}
+                backgroundImage={"/ph.png"}
             />
             <SecondHeli
                 heading="Portable Helipads & Vertipads <br/> for Rapid Deployment"
