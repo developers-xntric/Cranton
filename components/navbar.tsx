@@ -10,27 +10,28 @@ import { motion, AnimatePresence } from "framer-motion"
 const solutions = [
     {
         id: "activities",
-        title: "Heliport and Vertiport",
+        title: "Solutions",
         defaultImage: "/navbar/helideck-vertiport.png",
         items: [
-            { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png " },
+            { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
             { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
             { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/navbar/portable-lighting.png" },
             { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
             { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/navbar/moduler-floating.png" },
+            { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/navbar/obstruction-lighting.png" },
         ]
     },
-    { 
-        id: "lighting",
-        title: "Aircraft Obstructions Lights",
-        defaultImage: "/navbar/obstruction-lighting.png",
-        items: [
-            { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-            { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-            { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-            { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/navbar/obstruction-lighting.png" },
-        ]
-    }
+    // { 
+    //     id: "lighting",
+    //     title: "Aircraft Obstructions Lights",
+    //     defaultImage: "/navbar/obstruction-lighting.png",
+    //     items: [
+    //         { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+    //         { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+    //         { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+    //         { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/navbar/obstruction-lighting.png" },
+    //     ]
+    // }
 ]
 
 export default function Navbar() {
