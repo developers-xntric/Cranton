@@ -24,10 +24,10 @@ const services = [
         link: "/modular-floating-solutions",
     },
     {
-        title: "Helideck Platform Solutions",
+        title: "Heliports & Vertiports Solutions",
         description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
         image: "/home/service-4.png",
-        link: "helideck-platform-solutions",
+        link: "heliports-&-vertiports-solutions",
     },
     {
         title: "Heliports & Vertiports Lighting Solutions",

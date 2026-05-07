@@ -10,18 +10,18 @@ const HelideckPlatformSolutions = () => {
     return (
         <div>
             <DynamicHero
-                title={"Helideck Platform Solutions"}
+                title={"Heliports & Vertiports Solutions"}
                 breadcrumbs={[
                     { label: "Home", href: "/" },
-                    { label: "Helideck Platform Solutions" },
+                    { label: "Heliports & Vertiports Solutions" },
                 ]}
                 backgroundImage={"/hhero.png"}
             />
             <SecondHeli
-                heading="Reliable Helideck Platforms for Offshore & Onshore <br/> Operations"
-                desc="Engineered for safety, durability, and operational efficiency, our helideck platform solutions support secure helicopter landing operations across offshore, marine, industrial, and remote environments."
+                heading="Reliable Heliports & Vertiports for Offshore & Onshore <br/> Operations"
+                desc="Engineered for safety, durability, and operational efficiency, our heliport and vertiport solutions support secure helicopter landing operations across offshore, marine, industrial, and remote environments."
                 heading2="Built for Safe Aviation Operations"
-                desc2="Cranton’s helideck platform solutions are designed to deliver stable, compliant, and high-performance landing areas for helicopters operating in demanding environments. Built using durable materials and precision engineering, our systems ensure long-term reliability, operational safety, and efficient deployment. <br /> <br /> From offshore energy facilities to temporary remote operations, our helideck platforms are tailored to meet aviation standards while supporting safe and uninterrupted helicopter access."
+                desc2="Cranton’s heliport and vertiport solutions are designed to deliver stable, compliant, and high-performance landing areas for helicopters operating in demanding environments. Built using durable materials and precision engineering, our systems ensure long-term reliability, operational safety, and efficient deployment. <br /> <br /> From offshore energy facilities to temporary remote operations, our heliports and vertiports are tailored to meet aviation standards while supporting safe and uninterrupted helicopter access."
                 para={[
                     "Designed for offshore platforms, vessels, and remote industrial sites where reliable helicopter access is essential.",
                     "Manufactured using high-strength materials to withstand harsh marine, weather, and operational conditions.",

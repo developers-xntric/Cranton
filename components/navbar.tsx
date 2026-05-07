@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const defaultSolutionImage = "/navbar/helideck-vertiport.png"
 
 const solutionItems = [
-    { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
+    { name: "Heliports & Vertiports Solutions", href: "/heliports-&-vertiports-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
     { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
     { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/navbar/portable-lighting.png" },
     { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
