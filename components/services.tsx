@@ -58,7 +58,7 @@ const ArrowUpRight = () => (
 
 export default function Services() {
     return (
-        <section className=" py-16 ">
+        <section className=" py-8 md:py-16 ">
             <div className="max-w-360 w-[90%] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                     {services.slice(0, 3).map((service, index) => {

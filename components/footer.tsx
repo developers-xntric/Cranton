@@ -32,8 +32,8 @@ export default function Footer() {
                                 className="object-contain object-left"
                             />
                         </Link>
-                        <p className="font-onest text-[#FFF] text-sm md:text-base leading-relaxed max-w-[280px]">
-                            Strong Connectivity And Shortest Time Span In Commissioning Helidecks.
+                        <p className="font-onest text-[#FFF] font-normal text-sm md:text-[14px] leading-relaxed max-w-[280px]">
+                            From manufacturing precision to on-site readiness, Cranton delivers aviation, vertiport, and heliport solutions built for performance, compliance, and long-term reliability.
                         </p>
                     </div>
 

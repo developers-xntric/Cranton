@@ -60,7 +60,7 @@ export default function BuildingBlocks() {
     }, [startAutoplay]);
 
     return (
-        <section className="bg-white py-16 overflow-hidden">
+        <section className="bg-white pb-8 md:pb-16 overflow-hidden">
             <div className="max-w-[1440px] w-[90%] mx-auto">
                 <div className="text-center max-w-[90%] mx-auto mb-10">
                     <SectionHeading
@@ -80,7 +80,7 @@ export default function BuildingBlocks() {
                     >
                         {blocks.map((block, idx) => (
                             <div key={idx} className="w-full shrink-0 px-2 flex flex-col">
-                                <div className="group p-4 md:p-6 rounded-[20px] border border-[#969696] bg-white transition-all duration-300 flex flex-col h-full min-h-[340px]">
+                                <div className="group p-4 md:p-6 rounded-[20px] border border-[#969696] bg-white transition-all duration-300 flex flex-col h-full ">
                                     <div className="mb-8 relative w-16 h-16">
                                         <Image
                                             src={block.icon}
@@ -97,7 +97,7 @@ export default function BuildingBlocks() {
                                     <p className="font-onest text-[#86898C] text-[14px] mb-auto">
                                         {block.description}
                                     </p>
-                                    <div className="mt-4">
+                                    {/* <div className="mt-4">
                                         <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-[#168DCA] group-hover:border-[#168DCA]">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export default function BuildingBlocks() {
                                                 <path d="M7 17L17 7M7 7h10v10" />
                                             </svg>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
@@ -139,7 +139,7 @@ export default function BuildingBlocks() {
                     {blocks.map((block, index) => (
                         <div
                             key={index}
-                            className="group p-5 rounded-[20px] border border-[#969696]  transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 flex flex-col min-h-[340px]"
+                            className="group p-5 rounded-[20px] border border-[#969696]  transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 flex flex-col"
                         >
                             <div className="mb-8 relative w-20 h-20">
                                 <Image
@@ -160,7 +160,7 @@ export default function BuildingBlocks() {
                                 {block.description}
                             </p>
 
-                            <div className="mt-2">
+                            {/* <div className="mt-2">
                                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-[#168DCA] group-hover:border-[#168DCA]">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -172,7 +172,7 @@ export default function BuildingBlocks() {
                                         <path d="M7 17L17 7M7 7h10v10" />
                                     </svg>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
