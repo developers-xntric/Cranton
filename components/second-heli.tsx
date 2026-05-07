@@ -24,7 +24,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                         </div>
 
                         {/* Vertical Divider (Hidden on mobile, visible on desktop) */}
-                        <div className="hidden md:block w-px bg-gray-200 min-h-full my-2"></div>
+                        <div className="hidden md:block w-px relative right-7 bg-gray-200 min-h-full my-2"></div>
 
                         {/* Right Column: Description & Button */}
                         <div className="w-full md:w-1/2 flex flex-col justify-center space-y-5 md:pl-4">
@@ -67,7 +67,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[0]}
                                     </h4>
-                                    <p className="text-[12px] md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
                                         {props.para[0]}
                                     </p>
                                 </div>
@@ -79,7 +79,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[1]}
                                     </h4>
-                                    <p className="text-[12px] md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
                                         {props.para[1]}
                                     </p>
                                 </div>
@@ -91,7 +91,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[2]}
                                     </h4>
-                                    <p className="text-[12px] md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
                                         {props.para[2]}
                                     </p>
                                 </div>
@@ -103,7 +103,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[3]}
                                     </h4>
-                                    <p className="text-[12px] md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
                                         {props.para[3]}
                                     </p>
                                 </div>

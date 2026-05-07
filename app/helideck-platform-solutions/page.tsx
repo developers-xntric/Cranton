@@ -15,7 +15,7 @@ const HelideckPlatformSolutions = () => {
                     { label: "Home", href: "/" },
                     { label: "Helideck Platform Solutions" },
                 ]}
-                backgroundImage={"/heli.png"}
+                backgroundImage={"/hhero.png"}
             />
             <SecondHeli
                 heading="Reliable Helideck Platforms for Offshore & Onshore <br/> Operations"
@@ -34,7 +34,7 @@ const HelideckPlatformSolutions = () => {
                     "Safe Landing Surface",
                     "Custom Platform Solutions"
                 ]}
-                image="/hs.png"
+                image="/hs1.png"
             />
             <FourCards
                 heading="Engineered for Performance"
