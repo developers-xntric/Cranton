@@ -7,46 +7,29 @@ import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 
 
-const solutions = [
-    {
-        id: "activities",
-        title: "Solutions",
-        defaultImage: "/navbar/helideck-vertiport.png",
-        items: [
-            { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
-            { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
-            { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/navbar/portable-lighting.png" },
-            { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
-            { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/navbar/moduler-floating.png" },
-            { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/navbar/obstruction-lighting.png" },
-        ]
-    },
-    // { 
-    //     id: "lighting",
-    //     title: "Aircraft Obstructions Lights",
-    //     defaultImage: "/navbar/obstruction-lighting.png",
-    //     items: [
-    //         { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-    //         { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-    //         { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
-    //         { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/navbar/obstruction-lighting.png" },
-    //     ]
-    // }
+const defaultSolutionImage = "/navbar/helideck-vertiport.png"
+
+const solutionItems = [
+    { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
+    { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
+    { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/navbar/portable-lighting.png" },
+    { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
+    { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/navbar/moduler-floating.png" },
+    { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/navbar/obstruction-lighting.png" },
 ]
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-    const [activeCategory, setActiveCategory] = useState<string | null>("activities")
     const [isScrolled, setIsScrolled] = useState(false)
-    const [dropdownImage, setDropdownImage] = useState(solutions[0].defaultImage)
+    const [dropdownImage, setDropdownImage] = useState(defaultSolutionImage)
     const solutionsRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (solutionsRef.current && !solutionsRef.current.contains(e.target as Node)) {
                 setIsSolutionsOpen(false)
-                setDropdownImage(solutions[0].defaultImage)
+                setDropdownImage(defaultSolutionImage)
             }
         }
         document.addEventListener("mousedown", handler)
@@ -119,7 +102,7 @@ export default function Navbar() {
                                 Solutions <ChevronDown size={14} className={cn("transition-transform duration-300", isSolutionsOpen && "rotate-180")} />
                             </button>
 
-                            {/* Dropdown Menu (Accordion Style) */}
+                            {/* Dropdown Menu */}
                             <AnimatePresence>
                                 {isSolutionsOpen && (
                                     <motion.div
@@ -141,53 +124,22 @@ export default function Navbar() {
                                             </div>
 
                                             {/* Links Panel */}
-                                            <div className="flex-1 p-5 space-y-3">
-                                                {solutions.map((category) => (
-                                                    <div
-                                                        key={category.id}
-                                                        className="overflow-hidden"
-                                                    >
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.preventDefault();
-                                                                setActiveCategory(activeCategory === category.id ? null : category.id);
-                                                            }}
-                                                            onMouseEnter={() => setDropdownImage(category.defaultImage)}
-                                                            className={cn(
-                                                                "w-full flex justify-between items-center p-3 rounded-xl text-[14px] font-medium transition-all duration-300",
-                                                                activeCategory === category.id ? "bg-gray-100 text-gray-900" : "text-gray-700 hover:bg-gray-50"
-                                                            )}
-                                                        >
-                                                            {category.title}
-                                                            <ChevronDown size={14} className={cn("transition-transform duration-300", activeCategory === category.id && "rotate-180")} />
-                                                        </button>
-                                                        <AnimatePresence>
-                                                            {activeCategory === category.id && category.items.length > 0 && (
-                                                                <motion.div
-                                                                    initial={{ height: 0, opacity: 0 }}
-                                                                    animate={{ height: "auto", opacity: 1 }}
-                                                                    exit={{ height: 0, opacity: 0 }}
-                                                                    className="overflow-hidden"
-                                                                >
-                                                                    <ul className="px-5 py-3 space-y-3 mt-1">
-                                                                        {category.items.map((item, i) => (
-                                                                            <li key={i}>
-                                                                                <Link
-                                                                                    href={item.href}
-                                                                                    onMouseEnter={() => setDropdownImage(item.hoverImage)}
-                                                                                    className="text-[13px] text-gray-600 hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
-                                                                                >
-                                                                                    <div className="w-0.85 h-[0.85px] rounded-full bg-gray-400 transition-all duration-300 group-hover/link:bg-[#168DCA]" />
-                                                                                    {item.name}
-                                                                                </Link>
-                                                                            </li>
-                                                                        ))}
-                                                                    </ul>
-                                                                </motion.div>
-                                                            )}
-                                                        </AnimatePresence>
-                                                    </div>
-                                                ))}
+                                            <div className="flex-1 p-5">
+                                                <ul className="space-y-3">
+                                                    {solutionItems.map((item, i) => (
+                                                        <li key={i}>
+                                                            <Link
+                                                                href={item.href}
+                                                                onClick={() => setIsSolutionsOpen(false)}
+                                                                onMouseEnter={() => setDropdownImage(item.hoverImage)}
+                                                                className="text-[13px] text-gray-600 hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
+                                                            >
+                                                                <div className="w-0.85 h-[0.85px] rounded-full bg-gray-400 transition-all duration-300 group-hover/link:bg-[#168DCA]" />
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -251,31 +203,9 @@ export default function Navbar() {
 
                                 <div className="space-y-4">
                                     <div className="hover:text-[#168DCA] transition-colors">Solutions</div>
-                                    <div className="flex flex-col gap-3">
-                                        {solutions.map((cat) => (
-                                            <div key={cat.id} className="space-y-2">
-                                                <button
-                                                    onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-                                                    className="flex items-center pl-2 w-full justify-between active:text-[#168DCA]"
-                                                >
-                                                    <span className={cn("text-[16px] transition-colors text-white", activeCategory === cat.id && "text-[#168DCA]")}>{cat.title}</span>
-                                                    <ChevronDown size={20} className={cn("transition-transform duration-300 text-white", activeCategory === cat.id && "rotate-180 text-[#168DCA]")} />
-                                                </button>
-                                                <AnimatePresence>
-                                                    {activeCategory === cat.id && (
-                                                        <motion.div
-                                                            initial={{ height: 0, opacity: 0 }}
-                                                            animate={{ height: "auto", opacity: 1 }}
-                                                            exit={{ height: 0, opacity: 0 }}
-                                                            className="overflow-hidden pl-4 flex flex-col gap-4 text-[16px] text-gray-400 border-l border-[#168DCA]/30"
-                                                        >
-                                                            {cat.items.map((item, i) => (
-                                                                <Link key={i} href={item.href} onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">{item.name}</Link>
-                                                            ))}
-                                                        </motion.div>
-                                                    )}
-                                                </AnimatePresence>
-                                            </div>
+                                    <div className="pl-4 flex flex-col gap-4 text-[16px] text-gray-400 border-l border-[#168DCA]/30">
+                                        {solutionItems.map((item, i) => (
+                                            <Link key={i} href={item.href} onClick={() => setIsMenuOpen(false)} className="hover:text-white transition-colors">{item.name}</Link>
                                         ))}
                                     </div>
                                 </div>
