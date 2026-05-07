@@ -15,9 +15,10 @@ const PortableHelipadsAndVertipads = () => {
                     { label: "Home", href: "/" },
                     { label: "Portable Helipads & Vertipads" },
                 ]}
-                backgroundImage={"/heli.png"}
+                backgroundImage={"/phero.png"}
             />
             <SecondHeli
+                image="/ps.png"
                 heading2="Built for Critical Operations"
                 desc2="Catobo’s portable helipad and vertipad solutions are designed to deliver stable and compliant landing platforms where permanent infrastructure is not feasible. Using modular, high-strength systems, these platforms can be deployed quickly with minimal site preparation. <br/> <br/> Whether for emergency response, construction sites, or remote operations, our solutions ensure consistent performance and operational safety."
                 para={["Deploy landing platforms quickly in remote or temporary locations, ensuring immediate access for helicopters.", "Eliminates the need for complex civil works, significantly lowering installation costs while accelerating project timelines.", "Provides stable, anti-slip, and load-tested surfaces that maintain safety standards even in non-permanent environments.", "Designed for high-pressure scenarios such as emergency response and defense operations where reliability and speed are essential."]}
@@ -28,22 +29,22 @@ const PortableHelipadsAndVertipads = () => {
                 para={null}
                 isBlack={true}
                 features={[{
-                    icon: "/2.png",
+                    icon: "/22.png",
                     title: "Modular & Scalable Design",
                     desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
                 },
                 {
-                    icon: "/3.png",
+                    icon: "/33.png",
                     title: "High Load-Bearing Strength",
                     desc: "Built to support heavy helicopter operations with structural stability.",
                 },
                 {
-                    icon: "/4.png",
+                    icon: "/44.png",
                     title: "Anti-Slip & Weather Resistant",
                     desc: "Durable surface ensures safe operations in all environmental conditions.",
                 },
                 {
-                    icon: "/5.png",
+                    icon: "/55.png",
                     title: "Rapid Installation",
                     desc: "Quick assembly and dismantling for time-critical deployments.",
                 },
@@ -70,11 +71,11 @@ const PortableHelipadsAndVertipads = () => {
                 badge=""
                 heading="Where It's Used"
                 industries={[
-                    { name: "Emergency & Medical Operations", image: "/portable-lighting/use1.png" },
-                    { name: "Remote & Off-Grid Locations", image: "/portable-lighting/use2.png" },
-                    { name: "Construction & Infrastructure Projects", image: "/portable-lighting/use3.png" },
-                    { name: "Temporary Aviation Facilities", image: "/portable-lighting/use4.png" },
-                    { name: "Defense & Rapid Response", image: "/portable-lighting/use1.png" },
+                    { name: "Emergency & Medical Operations", image: "/w1.png" },
+                    { name: "Remote & Off-Grid Locations", image: "/w2.png" },
+                    { name: "Construction & Infrastructure Projects", image: "/w3.png" },
+                    { name: "Temporary Aviation Facilities", image: "/w4.png" },
+                    { name: "Defense & Rapid Response", image: "/w5.png" },
                 ]}
             />
 
