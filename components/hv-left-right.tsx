@@ -46,7 +46,7 @@ export default function HvLeftRight({
       {sections.map((section, index) => (
         <div
           key={index}
-          className="max-w-360 w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5 items-center"
+          className="max-w-360 w-[92%] sm:w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center"
         >
 
           {/* CONTENT */}
@@ -56,7 +56,7 @@ export default function HvLeftRight({
               title={section.title}
               className={`text-[20px] md:text-[43px] font-normal ${isBlack ? 'text-white' : 'text-black'} mb-3 leading-tight text-left`}
             />
-            <p className={`text-[16px] md:text-[18px] font-medium ${isBlack ? 'text-white' : 'text-[#1475AF]'}`}>
+            <p className={`text-[16px] md:text-[18px] font-medium  text-[#1475AF]`}>
               {section.subtitle}
             </p>
             <div className="space-y-3 md:space-y-3 pt-2 mb-4">
@@ -80,7 +80,7 @@ export default function HvLeftRight({
                     <CheckIcon />
                   </div>
 
-                  <p className={`text-[14px] md:text-[17px] font-medium ${isBlack ? 'text-white' : 'text-black'} leading-snug`}>
+                  <p className={`text-[14px] md:text-[15px]  ${isBlack ? 'text-white' : 'text-black'} leading-snug`}>
                     {item.title}
                   </p>
 
@@ -89,7 +89,7 @@ export default function HvLeftRight({
             </div>
 
             <div className={`${isBlack ? 'bg-[#333333]' : 'bg-[#F5F5F5]'} p-3 mb-0 rounded-lg space-y-2`} >
-            <p className={`text-[16px] md:text-[18px] font-medium ${isBlack ? 'text-white' : 'text-black'} mb-2`}>
+            <p className={`text-[16px] md:text-[18px] font-medium font-rethink  ${isBlack ? 'text-white' : 'text-black'} mb-2`}>
               {section.greytitle}
             </p>
              <p className={`text-[14px] md:text-[15px] font-normal ${isBlack ? 'text-white' : 'text-black'}`}>

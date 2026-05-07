@@ -61,7 +61,7 @@ export default function HvGrey({
                     <CheckIcon />
                   </div>
 
-                  <p className="text-[14px] md:text-[17px] font-normal text-black leading-snug">
+                  <p className="text-[14px] md:text-[15px] font-normal text-black leading-snug">
                     {item.title}
                   </p>
 
@@ -73,7 +73,7 @@ export default function HvGrey({
               {section.paragraphs.map((para, i) => (
                 <p
                   key={i}
-                  className="text-[14px] md:text-[16px] leading-relaxed text-[#333333]"
+                  className="text-[14px] md:text-[16px] leading-relaxed text-[#000]"
                 >
                   {para}
                 </p>
@@ -84,7 +84,7 @@ export default function HvGrey({
 
           {/* IMAGE */}
           <div
-            className={`relative w-full h-55 sm:h-75 lg:h-full rounded-[24px] overflow-hidden border border-[#D7D7D7] ${
+            className={`relative w-full h-55 sm:h-75 lg:h-full rounded-[10px] overflow-hidden border border-[#D7D7D7] ${
               section.reverse ? "lg:order-1" : ""
             }`}
           >

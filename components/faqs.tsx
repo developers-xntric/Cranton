@@ -73,8 +73,8 @@ export default function Faqs({
     ));
 
     return (
-        <section className="bg-white py-8 md:py-14 ">
-            <div className="2xl:max-w-350 w-[90%] mx-auto flex flex-col lg:flex-row items-center md:gap-12 gap-6 ">
+        <section className="bg-white py-6 md:py-14 ">
+            <div className="2xl:max-w-360 w-[90%] mx-auto flex flex-col lg:flex-row items-center md:gap-12 gap-6 ">
 
                 <div className="flex flex-col w-full lg:w-[40%] xl:w-[35%]">
                     <h2 className="text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] text-[#0a0f1e] mb-3 whitespace-pre-line">
