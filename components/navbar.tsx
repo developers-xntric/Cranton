@@ -239,15 +239,15 @@ export default function Navbar() {
                                 <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#168DCA] transition-colors">About Us</Link>
 
                                 <div className="space-y-4">
-                                    <div className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em] pl-1">Solutions</div>
-                                    <div className="flex flex-col gap-5">
+                                    <div className="hover:text-[#168DCA] transition-colors">Solutions</div>
+                                    <div className="flex flex-col gap-3">
                                         {solutions.map((cat) => (
-                                            <div key={cat.id} className="space-y-4">
+                                            <div key={cat.id} className="space-y-2">
                                                 <button
                                                     onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-                                                    className="flex items-center gap-2 w-full justify-between active:text-[#168DCA]"
+                                                    className="flex items-center pl-2 w-full justify-between active:text-[#168DCA]"
                                                 >
-                                                    <span className={cn("text-lg transition-colors text-white", activeCategory === cat.id && "text-[#168DCA]")}>{cat.title}</span>
+                                                    <span className={cn("text-[16px] transition-colors text-white", activeCategory === cat.id && "text-[#168DCA]")}>{cat.title}</span>
                                                     <ChevronDown size={20} className={cn("transition-transform duration-300 text-white", activeCategory === cat.id && "rotate-180 text-[#168DCA]")} />
                                                 </button>
                                                 <AnimatePresence>
