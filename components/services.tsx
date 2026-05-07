@@ -113,7 +113,7 @@ export default function Services() {
 
                                 {/* Bottom Glass Content */}
                                 <div className="relative z-20 mt-auto p-3 bg-white/10 backdrop-blur-lg border-t border-white/20 transition-all duration-300 group-hover:bg-white/20 m-3 rounded-[8px]">
-                                    <h3 className="font-rethink text-[15px] md:text-[20px] md:leading-[26px] text-white mb-1">{service.title}</h3>
+                                    <h3 className="font-rethink text-[15px] md:text-[20px] md:leading-6.5 text-white mb-1">{service.title}</h3>
                                     <p className="font-onest text-[12px] md:text-[13px] text-white font-light line-clamp-3">{service.description}</p>
 
                                     {/* Arrow expands beneath text without taking initial space */}
