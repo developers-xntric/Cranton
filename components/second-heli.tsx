@@ -24,7 +24,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                         </div>
 
                         {/* Vertical Divider (Hidden on mobile, visible on desktop) */}
-                        <div className="hidden md:block w-px bg-gray-200 min-h-full my-2"></div>
+                        <div className="hidden md:block w-px relative right-7 bg-gray-200 min-h-full my-2"></div>
 
                         {/* Right Column: Description & Button */}
                         <div className="w-full md:w-1/2 flex flex-col justify-center space-y-5 md:pl-4">

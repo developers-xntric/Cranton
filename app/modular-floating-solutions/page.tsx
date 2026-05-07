@@ -79,6 +79,7 @@ const ModularFloatingSolutions = () => {
                     { name: "Leisure & Recreational Facilities", image: "/w9.png" },
                     { name: "Events & Specialized Installations", image: "/w10.png" },
                 ]}
+                className="md:py-0! md:pb-10!"
             />
 
             <Faqs

@@ -79,6 +79,7 @@ const PortableHelipadsAndVertipads = () => {
                     { name: "Temporary Aviation Facilities", image: "/w4.png" },
                     { name: "Defense & Rapid Response", image: "/w5.png" },
                 ]}
+                className="md:py-0! md:pb-10!"
             />
 
             <Faqs
