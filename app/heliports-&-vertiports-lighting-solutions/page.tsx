@@ -1,7 +1,3 @@
-import AirCraftWarningLights from "@/components/activities-aircraft/aircraft-warning-lights";
-import GraySplitSection from "@/components/activities-aircraft/graysplitssection";
-import SplitSection from "@/components/activities-aircraft/splitsection";
-import SplitSectionHelideck from "@/components/activities-helideck/splitsection-helideck";
 import DynamicHero from "@/components/dynamic-hero";
 import Faqs from "@/components/faqs";
 import HvGrey from "@/components/hv-grey";
