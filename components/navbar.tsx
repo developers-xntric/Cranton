@@ -1,37 +1,34 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronDown, Mail, Phone, MapPin, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 
-const DEFAULT_DROPDOWN_IMAGE = "/activities-helideck-consulting.png"
 
 const solutions = [
     {
         id: "activities",
-        title: "Activities",
-        defaultImage: "/activities-default.png",
+        title: "Heliport and Vertiport",
+        defaultImage: "/navbar/helideck-vertiport.png",
         items: [
-            { name: "Helideck Consulting", href: "/activities-helideck-consulting", hoverImage: "/activities-helideck-consulting.png" },
-            { name: "Refurbishing Helidecks", href: "/activities-helideck-refurbishing", hoverImage: "/activities-helideck-refurbishing.png" },
-            { name: "Helideck Manufacturing", href: "/activities-helideck-manufacturing", hoverImage: "/activities-helideck-manufacturing.png" },
-            { name: "Platform Mounting Helideck", href: "/activities-heliport-platform-mounting", hoverImage: "/activities-heliport-platform-mounting.png" },
-            { name: "Fire Fighting System", href: "/activities-firefighting-system", hoverImage: "/activities-firefighting-system.png" },
-            { name: "Helideck Lighting", href: "/activities-helideck-lighting", hoverImage: "/activities-helideck-lighting.png" },
-            { name: "Aircraft Warning Lights", href: "/activities-aircraft", hoverImage: "/activities-aircraft.png" },
+            { name: "Helideck and Vertiport Platform Solutions", href: "/helideck-platform-solutions", hoverImage: "/navbar/helideck-vertiport.png " },
+            { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
+            { name: "Portable Lighting Solutions", href: "/portable-lighitng-solutions", hoverImage: "/navbar/portable-lighting.png" },
+            { name: "Heliports & Vertiports Lighting Solutions", href: "/heliport-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
+            { name: "Moduler Floating Solutions", href: "/activities-firefighting-system", hoverImage: "/navbar/moduler-floating.png" },
         ]
     },
-    {
+    { 
         id: "lighting",
         title: "Aircraft Obstructions Lights",
-        defaultImage: "/lighting-default.png",
+        defaultImage: "/navbar/obstruction-lighting.png",
         items: [
-            { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/low-intensity-lights.png" },
-            { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/medium-intensity-lights.png" },
-            { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/high-intensity-lights.png" },
-            { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/obstruction-lighting-solutions.png" },
+            { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+            { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+            { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/navbar/obstruction-lighting.png" },
+            { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/navbar/obstruction-lighting.png" },
         ]
     }
 ]
@@ -41,7 +38,19 @@ export default function Navbar() {
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
     const [activeCategory, setActiveCategory] = useState<string | null>("activities")
     const [isScrolled, setIsScrolled] = useState(false)
-    const [dropdownImage, setDropdownImage] = useState(DEFAULT_DROPDOWN_IMAGE)
+    const [dropdownImage, setDropdownImage] = useState(solutions[0].defaultImage)
+    const solutionsRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const handler = (e: MouseEvent) => {
+            if (solutionsRef.current && !solutionsRef.current.contains(e.target as Node)) {
+                setIsSolutionsOpen(false)
+                setDropdownImage(solutions[0].defaultImage)
+            }
+        }
+        document.addEventListener("mousedown", handler)
+        return () => document.removeEventListener("mousedown", handler)
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -101,8 +110,9 @@ export default function Navbar() {
                         <Link href="/" className="hover:text-[#168DCA] transition-colors">Home</Link>
                         <Link href="/about" className="hover:text-[#168DCA] transition-colors">About Us</Link>
 
-                        <div className="relative" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => { setIsSolutionsOpen(false); setDropdownImage(DEFAULT_DROPDOWN_IMAGE); }}>
+                        <div className="relative" ref={solutionsRef}>
                             <button
+                                onClick={() => setIsSolutionsOpen(o => !o)}
                                 className="flex items-center gap-1 hover:text-[#168DCA] transition-all duration-300 "
                             >
                                 Solutions <ChevronDown size={14} className={cn("transition-transform duration-300", isSolutionsOpen && "rotate-180")} />
