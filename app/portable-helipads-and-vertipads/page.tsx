@@ -18,6 +18,8 @@ const PortableHelipadsAndVertipads = () => {
                 backgroundImage={"/phero.png"}
             />
             <SecondHeli
+                heading="Portable Helipads & Vertipads <br/> for Rapid Deployment"
+                desc="Engineered for speed, safety, and reliability, our modular landing systems enable secure helicopter operations in temporary, remote, and high-demand environments."
                 image="/ps.png"
                 heading2="Built for Critical Operations"
                 desc2="Catobo’s portable helipad and vertipad solutions are designed to deliver stable and compliant landing platforms where permanent infrastructure is not feasible. Using modular, high-strength systems, these platforms can be deployed quickly with minimal site preparation. <br/> <br/> Whether for emergency response, construction sites, or remote operations, our solutions ensure consistent performance and operational safety."
