@@ -22,33 +22,43 @@ const HelideckPlatformSolutions = () => {
                 desc="Engineered for safety, durability, and operational efficiency, our helideck platform solutions support secure helicopter landing operations across offshore, marine, industrial, and remote environments."
                 heading2="Built for Safe Aviation Operations"
                 desc2="Cranton’s helideck platform solutions are designed to deliver stable, compliant, and high-performance landing areas for helicopters operating in demanding environments. Built using durable materials and precision engineering, our systems ensure long-term reliability, operational safety, and efficient deployment. <br /> <br /> From offshore energy facilities to temporary remote operations, our helideck platforms are tailored to meet aviation standards while supporting safe and uninterrupted helicopter access."
-                para={["Easily deploy modular floating platforms across various water bodies, enabling stable operations without permanent marine.", "Reduces the need for heavy marine construction, offering a more efficient and budget-friendly solution.", "Engineered for buoyancy and balance, the system provides a secure, anti-slip surface suitable for both operational and recreational use.", "Adaptable for industrial, marine, leisure, and temporary setups, making it ideal for a wide range of floating applications."]}
-                titles={["Flexible Deployment on Water Surfaces", "Cost-Effective Alternative to Fixed Structures", "Stable and Safe Platform Design", "Supports Diverse Applications"]}
-                image="/ms.png"
+                para={[
+                    "Designed for offshore platforms, vessels, and remote industrial sites where reliable helicopter access is essential.",
+                    "Manufactured using high-strength materials to withstand harsh marine, weather, and operational conditions.",
+                    "Engineered with anti-slip surfaces, integrated lighting compatibility, and balanced structural stability for safe helicopter operations.",
+                    "Available in multiple sizes and configurations to suit operational, industrial, and aviation requirements."
+                ]}
+                titles={[
+                    "Offshore & Remote Deployment",
+                    "Durable Structural Engineering",
+                    "Safe Landing Surface",
+                    "Custom Platform Solutions"
+                ]}
+                image="/hs.png"
             />
             <FourCards
                 heading="Engineered for Performance"
                 para={null}
                 isBlack={true}
                 features={[{
-                    icon: "/22.png",
-                    title: "Modular & Scalable Design",
-                    desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
+                    icon: "/h1.png",
+                    title: "High Load Capacity",
+                    desc: "Built to support demanding helicopter operations with stable load distribution and structural integrity.",
                 },
                 {
-                    icon: "/333.png",
-                    title: "High Load-Bearing Strength",
-                    desc: "Built to support heavy helicopter operations with structural stability.",
+                    icon: "/h2.png",
+                    title: "Weather & Corrosion Resistant",
+                    desc: "Designed to perform in challenging marine and offshore environments with long-lasting durability.",
                 },
                 {
-                    icon: "/444.png",
-                    title: "Anti-Slip & Weather Resistant",
-                    desc: "Durable surface ensures safe operations in all environmental conditions.",
+                    icon: "/h3.png",
+                    title: "Compliance Ready",
+                    desc: "Manufactured to align with aviation and heliport operational standards for safe and reliable performance.",
                 },
                 {
-                    icon: "/555.png",
-                    title: "Rapid Installation",
-                    desc: "Quick assembly and dismantling for time-critical deployments.",
+                    icon: "/h4.png",
+                    title: "Fast Installation",
+                    desc: "Efficient assembly and deployment process minimizes operational downtime and installation complexity.",
                 },
                 ]} />
             <SplitSectionHelideck
