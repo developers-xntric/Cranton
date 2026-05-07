@@ -10,209 +10,228 @@ import ITValueCard from "@/components/it-value-card";
 import ThreeCards from "@/components/three-cards";
 import Urban from "@/components/urban";
 
-
 const HeliportsLightingSolutions = () => {
-    return (
-        <div>
-            <DynamicHero
-                title={"Heliports & Vertiports Lighting Solutions"}
-                breadcrumbs={[
-                    { label: "Home", href: "/" },
-                    { label: "Heliports & Vertiports Lighting Solutions" },
-                ]}
-                backgroundImage={"/activities-aircraft/herobanner.png"}
-            />
-            <ITValueCard
-       btn="Inquire Now"
-        title={
-          
-          "Heliports & Vertiports Lighting Solutions"
-        }
-        subtitle={
-          "Smart, Safe & Future-Ready Air Mobility Infrastructure"
-        }
+  return (
+    <div>
+      <DynamicHero
+        title={"Heliports & Vertiports Lighting Solutions"}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Heliports & Vertiports Lighting Solutions" },
+        ]}
+        backgroundImage={"/heliport-vertiports/hero.png"}
+      />
+      <ITValueCard
+        btn="Inquire Now"
+        title={"Heliports & Vertiports Lighting Solutions"}
+        subtitle={"Smart, Safe & Future-Ready Air Mobility Infrastructure"}
         description1={
-        
-          "Americana Computers provides enterprise IT infrastructure solutions and cloud solutions across the United Arab Emirates. We help organizations design, deploy, and operate secure digital infrastructure environments that are critical to business continuity, operational efficiency, and future readiness.\nHere are some of the cloud service solutions we implement:"
+          "Crantron delivers advanced lighting systems engineered for modern heliports and next-generation vertiports. Designed to meet international aviation standards, our solutions ensure maximum visibility, operational safety, and energy efficiency across all landing environments—day or night."
         }
         description2={
-        
-          "Our team of certified professionals ensures that your lighting systems meet the highest standards of safety and performance."
+          "From precision landing guidance to environmental awareness, our lighting portfolio supports safe aircraft operations in even the most demanding conditions."
         }
-        image1={ "/hv1.png"}
-        image2={ "/hv2.png"}
-        
+        image2={"/heliport-vertiports/right.jpg"}
+        image1={"/heliport-vertiports/left.png"}
       />
       <HvGrey
-                      sections={[
-                          {
-                              title: "Complete Lighting Ecosystem",
-                              subtitle: "End-to-End Airside Visibility.",
-                              image: "/heliport-mounting/specification.png",
-                              imageAlt: "Engineering Precision",
-                              
-                              points: [
-                                  { title: "Service Type: Platform Mounting" },
-                                  { title: "Process: Site Analysis & Engineering" },
-                                  { title: "Compliance: Aviation Standards" },
-                                  { title: "Outcome: Stable & Secure Infrastructure" },
-                              ],
-                              paragraphs: [
-                                  "Each component is engineered to integrate seamlessly, delivering consistent performance and unified control.",
-                                  
-                              ],
-                              
-                          },
-                          
-                      ]}
-                  />
-                 <ThreeCards
-                                 isBlack={true}
-                                 heading="Engineered for Reliability, Efficiency & Safety"
-                                 para=""
-                                 features={[
-                                     {
-                                         icon: "/helideck-lighting/1.png",
-                                         title: "High-Performance LED Technology",
-                                         desc: "Up to 100,000-hour lifespan with consistent brightness",
-                                     },
-                                     {
-                                         icon: "/helideck-lighting/2.png",
-                                         title: "Energy Efficiency",
-                                         desc: "Low power consumption reduces operational costs",
-                                     },
-                                     {
-                                         icon: "/helideck-lighting/3.png",
-                                         title: "Rugged Construction",
-                                         desc: "Corrosion-resistant materials designed for demanding environments",
-                                     },
-                                     {
-                                         icon: "/helideck-lighting/4.png",
-                                         title: "Environmental Protection",
-                                         desc: "IP-rated systems for resistance against dust and water ingress",
-                                     },
-                                     {
-                                         icon: "/helideck-lighting/4.png",
-                                         title: "Flexible Control Options",
-                                         desc: "Adjustable light intensity for different operational requirements",
-                                     },
-                                     {
-                                         icon: "/helideck-lighting/4.png",
-                                         title: "Pilot-Centric Design",
-                                         desc: "Glare reduction and NVG compatibility for enhanced safety",
-                                     },
-                                 ]}
-                             />
-                 <HvLeftRight 
-                  sections={[
-                          {
-                              title: "Hooded LED Floodlights",
-                              subtitle: "High-Performance Surface Illumination",
-                              paragraphs: [
-                                  "Crantron’s hooded LED floodlights are engineered to illuminate landing zones, surrounding terrain, and potential obstacles, providing pilots with enhanced situational awareness during approach and landing.",
-                                  "The integrated hood minimizes glare, ensuring visibility without compromising pilot comfort or safety."
-                                  
-                              ],
-                              image: "/heliport-mounting/specification.png",
-                              imageAlt: "Engineering Precision",
-                              keytitle: "Key Features:",
-                              points: [
-                                  { title: "Service Type: Platform Mounting" },
-                                  { title: "Process: Site Analysis & Engineering" },
-                                  { title: "Compliance: Aviation Standards" },
-                                  { title: "Outcome: Stable & Secure Infrastructure" },
-                              ],
-                              greytitle: "Why It Matters",
-                              greypara: "Improves landing accuracy by giving pilots a clear, well-lit view of terrain conditions and potential hazards",
-                              
-                              
-                          },
-                           {
-                            reverse: true,
-                              title: "Hooded LED Floodlights",
-                              subtitle: "High-Performance Surface Illumination",
-                              paragraphs: [
-                                  "Crantron’s hooded LED floodlights are engineered to illuminate landing zones, surrounding terrain, and potential obstacles, providing pilots with enhanced situational awareness during approach and landing.",
-                                  "The integrated hood minimizes glare, ensuring visibility without compromising pilot comfort or safety."
-                                  
-                              ],
-                              image: "/heliport-mounting/specification.png",
-                              imageAlt: "Engineering Precision",
-                              keytitle: "Key Features:",
-                              points: [
-                                  { title: "Service Type: Platform Mounting" },
-                                  { title: "Process: Site Analysis & Engineering" },
-                                  { title: "Compliance: Aviation Standards" },
-                                  { title: "Outcome: Stable & Secure Infrastructure" },
-                              ],
-                              greytitle: "Why It Matters",
-                              greypara: "Improves landing accuracy by giving pilots a clear, well-lit view of terrain conditions and potential hazards",
-                              
-                              
-                          },
-                          
-                      ]} />
-                      <HvLeftRight 
-                     isBlack={true}
-                  sections={[
-                            
-                          {
-                              title: "Hooded LED Floodlights",
-                              subtitle: "High-Performance Surface Illumination",
-                              paragraphs: [
-                                  "Crantron’s hooded LED floodlights are engineered to illuminate landing zones, surrounding terrain, and potential obstacles, providing pilots with enhanced situational awareness during approach and landing.",
-                                  "The integrated hood minimizes glare, ensuring visibility without compromising pilot comfort or safety."
-                                  
-                              ],
-                              image: "/heliport-mounting/specification.png",
-                              imageAlt: "Engineering Precision",
-                              keytitle: "Key Features:",
-                              points: [
-                                  { title: "Service Type: Platform Mounting" },
-                                  { title: "Process: Site Analysis & Engineering" },
-                                  { title: "Compliance: Aviation Standards" },
-                                  { title: "Outcome: Stable & Secure Infrastructure" },
-                              ],
-                              greytitle: "Why It Matters",
-                              greypara: "Improves landing accuracy by giving pilots a clear, well-lit view of terrain conditions and potential hazards",
-                              
-                              
-                          },
-                           
-                          
-                      ]} />
-                      <Urban
-       btn="Inquire Now"
-        title={
-          
-          "Built for the Future of Urban Air Mobility"
-        }
-        subtitle={
-          "Supporting Next-Generation Aviation"
-        }
+        sections={[
+          {
+            title: "Complete Lighting Ecosystem",
+            subtitle: "End-to-End Airside Visibility.",
+            image: "/heliport-vertiports/hv-gray.png",
+            imageAlt: "Engineering Precision",
+
+            points: [
+              {
+                title:
+                  "Approach & Guidance Lighting – Clear visual cues for pilots",
+              },
+              {
+                title:
+                  "FATO & TLOF Lighting – Accurate landing and lift-off zone marking",
+              },
+              {
+                title:
+                  "Floodlighting Systems – Surface and obstacle visibility",
+              },
+              {
+                title:
+                  "Wind Direction Indicators – Real-time environmental awareness",
+              },
+              { title: "Perimeter Lighting – Enhanced safety boundaries" },
+            ],
+            paragraphs: [
+              "Each component is engineered to integrate seamlessly, delivering consistent performance and unified control.",
+            ],
+          },
+        ]}
+      />
+      <ThreeCards
+        isBlack={true}
+        heading="Engineered for Reliability, Efficiency & Safety"
+        para=""
+        features={[
+          {
+            icon: "/heliport-vertiports/1.png",
+            title: "High-Performance LED Technology",
+            desc: "Up to 100,000-hour lifespan with consistent brightness",
+          },
+          {
+            icon: "/heliport-vertiports/2.png",
+            title: "Energy Efficiency",
+            desc: "Low power consumption reduces operational costs",
+          },
+          {
+            icon: "/heliport-vertiports/3.png",
+            title: "Rugged Construction",
+            desc: "Corrosion-resistant materials designed for demanding environments",
+          },
+          {
+            icon: "/heliport-vertiports/4.png",
+            title: "Environmental Protection",
+            desc: "IP-rated systems for resistance against dust and water ingress",
+          },
+          {
+            icon: "/heliport-vertiports/5.png",
+            title: "Flexible Control Options",
+            desc: "Adjustable light intensity for different operational requirements",
+          },
+          {
+            icon: "/heliport-vertiports/6.png",
+            title: "Pilot-Centric Design",
+            desc: "Glare reduction and NVG compatibility for enhanced safety",
+          },
+        ]}
+      />
+      <HvLeftRight
+        sections={[
+          {
+            title: "Hooded LED Floodlights",
+            subtitle: "High-Performance Surface Illumination",
+            paragraphs: [
+              "Crantron’s hooded LED floodlights are engineered to illuminate landing zones, surrounding terrain, and potential obstacles, providing pilots with enhanced situational awareness during approach and landing.",
+              "The integrated hood minimizes glare, ensuring visibility without compromising pilot comfort or safety.",
+            ],
+            image: "/heliport-vertiports/hooded.png",
+            imageAlt: "Engineering Precision",
+            keytitle: "Key Features:",
+            points: [
+              {
+                title:
+                  "High-intensity LED lighting with up to 100,000-hour lifespan      ",
+              },
+              { title: "Anti-glare hood design for pilot-friendly operation" },
+              { title: "IP65-rated for outdoor durability" },
+              {
+                title:
+                  "High-efficiency optical system with minimal light spill",
+              },
+              {
+                title:
+                  "Designed for operation in harsh environments (-30°C to +70°C)",
+              },
+              { title: "Stable performance in high wind conditions" },
+              { title: "Adjustable light intensity options" },
+            ],
+            greytitle: "Why It Matters",
+            greypara:
+              "Improves landing accuracy by giving pilots a clear, well-lit view of terrain conditions and potential hazards",
+          },
+          {
+            reverse: true,
+            title: "Illuminated Wind Direction Indicator (Windcone)",
+            subtitle: "Accurate Wind Visibility for Safer Landings",
+            paragraphs: [
+              "Wind awareness is critical for safe helicopter and eVTOL operations. Crantron’s illuminated wind direction indicators provide clear, real-time wind visibility—even in low-light and challenging weather conditions.",
+              "Fully aligned with aviation requirements, these systems ensure pilots can easily interpret wind conditions from a distance.",
+            ],
+            image: "/heliport-vertiports/wind.png",
+            imageAlt: "Engineering Precision",
+            keytitle: "Key Features:",
+            points: [
+              {
+                title: "Clearly visible from long distances (up to 200 meters)",
+              },
+              {
+                title:
+                  "Available in internally and externally illuminated configurations",
+              },
+              {
+                title:
+                  "Constructed with stainless steel or marine-grade coated poles",
+              },
+              { title: "Designed to withstand extreme wind speeds" },
+              { title: "Smooth 360° rotation for accurate wind indication" },
+              { title: "Multiple windsock sizes available" },
+              { title: "Optional tiltable pole for simplified maintenance" },
+            ],
+            greytitle: "Why It Matters",
+            greypara:
+              "Provides essential environmental information, enabling safer, more controlled landing and take-off operations.",
+          },
+        ]}
+      />
+      <HvLeftRight
+        isBlack={true}
+        sections={[
+          {
+            title: "FATO / TLOF Flush Mounted Helipad Lights",
+            subtitle: "Precision Guidance Without Obstruction",
+            paragraphs: [
+              "Crantron’s flush mounted helipad lights are designed for seamless integration into landing surfaces, providing clear visual guidance without creating physical obstacles for aircraft or ground operations.",
+              "Ideal for Final Approach and Take-Off (FATO) and Touchdown and Lift-Off (TLOF) areas, these lights deliver dependable performance in both day and night operations.",
+            ],
+            image: "/heliport-vertiports/fato.png",
+            imageAlt: "Engineering Precision",
+            keytitle: "Key Features:",
+            points: [
+              { title: "Omnidirectional light output for uniform visibility" },
+              { title: "Low power consumption (approximately 15W)" },
+              { title: "Long-life integrated LED (up to 100,000 hours)" },
+              { title: "IP67-rated for dust and water protection" },
+              { title: "High-strength cast aluminium construction" },
+              {
+                title:
+                  "Night Vision Goggle (NVG) compatibility with optional IR LED",
+              },
+              {
+                title:
+                  "Designed to withstand extreme temperatures (-40°C to +60°C)",
+              },
+            ],
+            greytitle: "Why It Matters",
+            greypara:
+              "Flush-mounted lighting eliminates surface obstructions while maintaining optimal visibility making it ideal for high-traffic or space-constrained heliports and vertiports.",
+          },
+        ]}
+      />
+      <Urban
+        btn="Inquire Now"
+        title={"Built for the Future of Urban Air Mobility"}
+        subtitle={"Supporting Next-Generation Aviation"}
         description1={
-        
           "Crantron’s lighting solutions are designed to support the growth of Urban Air Mobility (UAM) and electric aviation infrastructure."
         }
-        description2={
-        
-          ""
-        }
+        description2={""}
         solutions={[
-        "Compatible with modern eVTOL platforms",
-        "Designed for high-frequency operations",
-        "Scalable for future expansion",
-        "Low maintenance with long operational life",
-        "Proven performance in critical aviation environments",
-      ]}
-        image1={ "/hv1.png"}
-        image2={ "/hv2.png"}
-        
+          "Compatible with modern eVTOL platforms",
+          "Designed for high-frequency operations",
+          "Scalable for future expansion",
+          "Low maintenance with long operational life",
+          "Proven performance in critical aviation environments",
+        ]}
+        image1={"/hv1.png"}
+        image2={"/hv2.png"}
       />
-      <Faqs  />
-            
-        </div>
-    )
-}
+      <Faqs
+        assistanceHeading="Need a Help ?"
+        assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
+        contactPhone="+44 191 640 75 03"
+        contactEmail="info@crantonelectric.com"
+      />
+    </div>
+  );
+};
 
 export default HeliportsLightingSolutions;
