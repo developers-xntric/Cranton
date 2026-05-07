@@ -18,6 +18,8 @@ const ModularFloatingSolutions = () => {
                 backgroundImage={"/mhero.png"}
             />
             <SecondHeli
+                heading="Modular Floating Solutions for Flexible Water-Based Operations"
+                desc="Engineered for stability, adaptability, and durability, our modular floating systems enable reliable performance across marine, industrial, and temporary applications."
                 heading2="Built for Versatility on Water"
                 desc2="Catobo’s modular floating solutions are designed to create stable and scalable platforms for a wide range of water-based applications. Using interlocking, high-strength units, these systems can be deployed quickly without the need for complex marine construction. <br/> <br/> From industrial operations to leisure and temporary installations, our solutions ensure consistent performance, safety, and flexibility in dynamic environments."
                 para={["Easily deploy modular floating platforms across various water bodies, enabling stable operations without permanent marine.", "Reduces the need for heavy marine construction, offering a more efficient and budget-friendly solution.", "Engineered for buoyancy and balance, the system provides a secure, anti-slip surface suitable for both operational and recreational use.", "Adaptable for industrial, marine, leisure, and temporary setups, making it ideal for a wide range of floating applications."]}
