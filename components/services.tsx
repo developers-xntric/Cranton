@@ -12,7 +12,7 @@ const services = [
         link: "/portable-helipads-and-vertipads",
     },
     {
-        title: "End-to-End Solutions for Heliports, Vertiports & AAM",
+        title: "End-to-End Solutions for Heliports, Vertiports",
         description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
         image: null,
         link: "#",
