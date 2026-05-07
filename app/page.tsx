@@ -14,11 +14,11 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      <ObstructionLighting />
+      {/* <ObstructionLighting /> */}
       <BuildingBlocks />
       <StatsSection />
       <WhyChooseUs />
-      <HomeValue
+      {/* <HomeValue
         title="Modular Floating Platform System"
         image="/home/1.png"
         paragraphs={[
@@ -34,7 +34,7 @@ export default function Home() {
           "Our tactical portable helipad solutions are purpose-built to deliver safe, stable, and high-performance landing platforms in time-critical environments. Constructed using high-strength modular systems, they enable fast assembly and deployment with minimal site preparation. The interlocking design ensures structural integrity while maintaining flexibility for use across diverse terrains.",
           "Designed for both emergency and temporary operations, these systems provide exceptional load-bearing capacity, anti-skid safety surfaces, and long-term durability in demanding conditions. With integrated features supporting day and night visibility, Catobo’s portable helipad solutions ensure consistent, reliable performance—helping operators maintain seamless and secure helicopter operations wherever they are needed.",
         ]}
-      />
+      /> */}
       <InsightsSection />
       <ContactSection />
     </main>
