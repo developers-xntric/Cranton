@@ -30,6 +30,7 @@ interface Section {
   features: string[];
   image: string;
   imageAlt: string;
+  id?: string;
 }
 
 interface BlackSplitSectionProps {
@@ -57,7 +58,7 @@ export default function BlackSplitSection({
       )}
 
       {/* SECTION 1 */}
-      <div className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center relative z-10">
+      <div id={sections[0].id} className="max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center relative z-10 scroll-mt-24">
         {/* Content (RIGHT on desktop, TOP on mobile) */}
         <div className="flex flex-col order-1 ">
           <SectionHeading
@@ -112,8 +113,8 @@ export default function BlackSplitSection({
 
       {/* SECTION 2 */}
       <div
-        className={`max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} pt-2 relative z-10`}
-        id="high-intensity"
+        id={sections[1].id}
+        className={`max-w-[1440px] w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-center ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} pt-2 relative z-10 scroll-mt-24`}
       >
         {/* Left: Content */}
         <div className="flex flex-col md:order-2">

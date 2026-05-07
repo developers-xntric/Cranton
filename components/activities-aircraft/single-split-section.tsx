@@ -25,6 +25,7 @@ const CheckIcon = () => (
 
 interface SingleSplitSectionProps {
   isBlack?: boolean;
+  id?: string;
   title: string;
   model: string;
   description: string;
@@ -35,6 +36,7 @@ interface SingleSplitSectionProps {
 
 export default function SingleSplitSection({
   isBlack = true,
+  id,
   title,
   model,
   description,
@@ -44,7 +46,8 @@ export default function SingleSplitSection({
 }: SingleSplitSectionProps) {
   return (
     <section
-      className={`relative ${isBlack ? "bg-[#161616]" : "bg-white"} py-10 md:py-16`}
+      id={id}
+      className={`relative ${isBlack ? "bg-[#161616]" : "bg-white"} py-10 md:py-16 scroll-mt-24`}
     >
       {isBlack && (
         <div
