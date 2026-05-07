@@ -148,7 +148,7 @@ export default function Services() {
                                         unoptimized
                                     />
                                     {/* Gradient overlay for text readability */}
-                                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
+                                    {/* <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-300 group-hover:opacity-80" /> */}
                                 </div>
                             )}
 
