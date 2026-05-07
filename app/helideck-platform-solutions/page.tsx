@@ -64,17 +64,17 @@ const HelideckPlatformSolutions = () => {
             <SplitSectionHelideck
                 sections={[
                     {
-                        title: "Designed for Demanding Environments",
-                        image: "/mb.png",
-                        imageAlt: "Engineering Precision",
+                        title: "Designed for Demanding Aviation Environments",
+                        image: "/hb.png",
+                        imageAlt: "Engineering",
                         paragraphs: [
-                            "Our systems are engineered to deliver consistent performance under demanding conditions, combining strength, durability, and operational efficiency.",
+                            "Our helideck systems are engineered to provide dependable helicopter access across offshore, marine, industrial, and emergency response operations. Combining structural reliability with aviation-focused safety, the platforms are built for continuous performance in critical environments.",
                         ],
                         points: [
-                            { title: "High-strength modular materials" },
-                            { title: "Optimized load distribution" },
+                            { title: "High-strength structural framework" },
+                            { title: "Optimized stability and safety" },
                             { title: "Long operational lifespan" },
-                            { title: "Minimal maintenance requirements" },
+                            { title: "Low maintenance requirements" },
                         ],
                     },
                 ]}
@@ -83,12 +83,13 @@ const HelideckPlatformSolutions = () => {
                 badge=""
                 heading="Where It's Used"
                 industries={[
-                    { name: "Marinas & Floating Docks", image: "/w6.png" },
-                    { name: "Industrial & Work Platforms", image: "/w7.png" },
-                    { name: "Temporary Floating Structures", image: "/w8.png" },
-                    { name: "Leisure & Recreational Facilities", image: "/w9.png" },
-                    { name: "Events & Specialized Installations", image: "/w10.png" },
+                    { name: "Offshore Oil & Gas Platforms", image: "/w11.png" },
+                    { name: "Marine & Vessel Operations", image: "/w12.png" },
+                    { name: "Industrial & Remote Facilities", image: "/w13.png" },
+                    { name: "Temporary Aviation Installations", image: "/w14.png" },
+                    { name: "Emergency Response Sites", image: "/w15.png" },
                 ]}
+                className="md:py-0! md:pb-10!"
             />
 
             <Faqs
@@ -96,23 +97,23 @@ const HelideckPlatformSolutions = () => {
                 description=""
                 faqs={[
                     {
-                        question: "What are modular floating solutions?",
+                        question: "What are helideck platform solutions?",
                         answer: "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
                     },
                     {
-                        question: "Where can these floating systems be used?",
-                        answer: "They can be deployed in remote locations, construction sites, emergency zones, offshore areas, and any environment where permanent infrastructure is not feasible."
+                        question: "Where can helideck platforms be installed?",
+                        answer: "They can be installed on offshore platforms, vessels, industrial facilities, remote sites, and temporary operational locations."
                     },
                     {
-                        question: "How easy is the installation process?",
+                        question: "Are the platforms compliant with aviation standards?",
                         answer: "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
                     },
                     {
-                        question: "Are the platforms stable in water?",
+                        question: "Can the platforms be customized?",
                         answer: "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
                     },
                     {
-                        question: "Can the system be reused or relocated?",
+                        question: "Are the platforms suitable for long-term use?",
                         answer: "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations."
                     }
                 ]}

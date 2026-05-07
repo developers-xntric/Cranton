@@ -9,13 +9,14 @@ interface IndustriesServeProps {
     badge: string;
     heading: string;
     industries: Industry[];
+    className?: string
 }
 
-export default function IndustriesServe({ badge, heading, industries }: IndustriesServeProps) {
+export default function IndustriesServe({ badge, heading, industries, className }: IndustriesServeProps) {
     return (
-        <section className="bg-white py-14 md:py-16 w-full">
-            <div className="2xl:max-w-[1100px] w-[90%] md:w-[70%] mx-auto">
-                <div className="flex items-center gap-2 mb-6 border border-gray-200 px-4 py-2 rounded-full w-fit hidden">
+        <section className={`bg-white py-14 md:py-16 w-full ${className}`}>
+            <div className="2xl:max-w-275 w-[90%] md:w-[70%] mx-auto">
+                <div className="items-center gap-2 mb-6 border border-gray-200 px-4 py-2 rounded-full w-fit hidden">
                     <span className="w-2 h-2 rounded-full bg-[#168DCA]" />
                     <span className="text-xs md:font-semibold text-black tracking-normal lg:tracking-wide">
                         {badge}
