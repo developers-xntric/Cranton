@@ -17,13 +17,13 @@ const ObstructionLightingSolutions = () => {
           { label: "Home", href: "/" },
           { label: "Obstruction Lighting Solutions" },
         ]}
-        backgroundImage={"/helideck-lighting/hero.png"}
+        backgroundImage={"/obstruction-lighting/hero.png"}
       />
 
       <ReliableSurveillance
         title="Obstruction Lighting Solutions for Safer Airspace"
         description="Cranton obstruction lighting solutions are engineered to mark tall structures and potential hazards, helping pilots maintain safe navigation in all conditions. Designed for reliability and long-term performance, our systems support aviation safety across a wide range of environments."
-        image="/helideck-lighting/specification.png"
+        image="/obstruction-lighting/obstract.png"
         buttonText="Request a Quote"
         buttonHref="/contact"
       />

@@ -15,35 +15,36 @@ const ModularFloatingSolutions = () => {
                     { label: "Home", href: "/" },
                     { label: "Modular Floating Solutions" },
                 ]}
-                backgroundImage={"/heli.png"}
+                backgroundImage={"/mhero.png"}
             />
             <SecondHeli
                 heading2="Built for Versatility on Water"
                 desc2="Catobo’s modular floating solutions are designed to create stable and scalable platforms for a wide range of water-based applications. Using interlocking, high-strength units, these systems can be deployed quickly without the need for complex marine construction. <br/> <br/> From industrial operations to leisure and temporary installations, our solutions ensure consistent performance, safety, and flexibility in dynamic environments."
                 para={["Easily deploy modular floating platforms across various water bodies, enabling stable operations without permanent marine.", "Reduces the need for heavy marine construction, offering a more efficient and budget-friendly solution.", "Engineered for buoyancy and balance, the system provides a secure, anti-slip surface suitable for both operational and recreational use.", "Adaptable for industrial, marine, leisure, and temporary setups, making it ideal for a wide range of floating applications."]}
                 titles={["Flexible Deployment on Water Surfaces", "Cost-Effective Alternative to Fixed Structures", "Stable and Safe Platform Design", "Supports Diverse Applications"]}
+                image="/ms.png"
             />
             <FourCards
                 heading="Engineered for Performance"
                 para={null}
                 isBlack={true}
                 features={[{
-                    icon: "/2.png",
+                    icon: "/22.png",
                     title: "Modular & Scalable Design",
                     desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
                 },
                 {
-                    icon: "/3.png",
+                    icon: "/333.png",
                     title: "High Load-Bearing Strength",
                     desc: "Built to support heavy helicopter operations with structural stability.",
                 },
                 {
-                    icon: "/4.png",
+                    icon: "/444.png",
                     title: "Anti-Slip & Weather Resistant",
                     desc: "Durable surface ensures safe operations in all environmental conditions.",
                 },
                 {
-                    icon: "/5.png",
+                    icon: "/555.png",
                     title: "Rapid Installation",
                     desc: "Quick assembly and dismantling for time-critical deployments.",
                 },
@@ -52,7 +53,7 @@ const ModularFloatingSolutions = () => {
                 sections={[
                     {
                         title: "Designed for Demanding Environments",
-                        image: "/6.png",
+                        image: "/mb.png",
                         imageAlt: "Engineering Precision",
                         paragraphs: [
                             "Our systems are engineered to deliver consistent performance under demanding conditions, combining strength, durability, and operational efficiency.",
@@ -70,11 +71,11 @@ const ModularFloatingSolutions = () => {
                 badge=""
                 heading="Where It's Used"
                 industries={[
-                    { name: "Marinas & Floating Docks", image: "/portable-lighting/use1.png" },
-                    { name: "Industrial & Work Platforms", image: "/portable-lighting/use2.png" },
-                    { name: "Temporary Floating Structures", image: "/portable-lighting/use3.png" },
-                    { name: "Leisure & Recreational Facilities", image: "/portable-lighting/use4.png" },
-                    { name: "Events & Specialized Installations", image: "/portable-lighting/use1.png" },
+                    { name: "Marinas & Floating Docks", image: "/w6.png" },
+                    { name: "Industrial & Work Platforms", image: "/w7.png" },
+                    { name: "Temporary Floating Structures", image: "/w8.png" },
+                    { name: "Leisure & Recreational Facilities", image: "/w9.png" },
+                    { name: "Events & Specialized Installations", image: "/w10.png" },
                 ]}
             />
 

@@ -19,9 +19,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
 
                         {/* Left Column: Heading */}
                         <div className="w-full md:w-1/2 flex items-center">
-                            <h2 className="text-3xl lg:text-4xl leading-[1.3] tracking-tight">
-                                Portable Helipads & Vertipads <br className="hidden lg:block" />
-                                For Rapid Deployment
+                            <h2 className="text-3xl lg:text-4xl leading-[1.3] tracking-tight" dangerouslySetInnerHTML={{ __html: props.heading || "" }}>
                             </h2>
                         </div>
 
@@ -31,9 +29,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                         {/* Right Column: Description & Button */}
                         <div className="w-full md:w-1/2 flex flex-col justify-center space-y-5 md:pl-4">
                             <p className="text-[15px] text-gray-800 leading-relaxed font-medium">
-                                Engineered for speed, safety, and reliability, our modular landing systems
-                                enable secure helicopter operations in temporary, remote, and high-demand
-                                environments.
+                                {props.desc}
                             </p>
                             <div>
                                 {/* Gradient Button with SVG Icon */}
@@ -68,7 +64,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             {/* Feature 1 */}
                             <div className="flex flex-col gap-4">
                                 <div>
-                                    <h4 className="font-semibold text-foreground mb-2">
+                                    <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[0]}
                                     </h4>
                                     <p className="text-[12px] md:text-sm text-black">
@@ -80,7 +76,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             {/* Feature 2 */}
                             <div className="flex flex-col gap-4">
                                 <div>
-                                    <h4 className="font-semibold text-foreground mb-2">
+                                    <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[1]}
                                     </h4>
                                     <p className="text-[12px] md:text-sm text-black">
@@ -92,7 +88,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             {/* Feature 3 */}
                             <div className="flex flex-col gap-4">
                                 <div>
-                                    <h4 className="font-semibold text-foreground mb-2">
+                                    <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[2]}
                                     </h4>
                                     <p className="text-[12px] md:text-sm text-black">
@@ -104,7 +100,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             {/* Feature 4 */}
                             <div className="flex flex-col gap-4">
                                 <div>
-                                    <h4 className="font-semibold text-foreground mb-2">
+                                    <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[3]}
                                     </h4>
                                     <p className="text-[12px] md:text-sm text-black">
