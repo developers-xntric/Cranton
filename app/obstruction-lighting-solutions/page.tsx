@@ -60,6 +60,7 @@ const ObstructionLightingSolutions = () => {
         isBlack={false}
         sections={[
           {
+            id: "low-intensity",
             title: "Low Intensity Obstruction Lights",
             model: "For Close-Range Visibility & Marking",
             description:
@@ -74,6 +75,7 @@ const ObstructionLightingSolutions = () => {
             imageAlt: "Low Intensity Obstruction Light",
           },
           {
+            id: "medium-intensity",
             title: "Medium Intensity Obstruction Lights",
             model: "Balanced Visibility for Mid-Height Structures",
             description:
@@ -92,6 +94,7 @@ const ObstructionLightingSolutions = () => {
       <BlackSplitSection
         sections={[
           {
+            id: "high-intensity",
             title: "High Intensity Obstruction Lights",
             model: "Maximum Visibility for Tall Structures",
             description:
@@ -106,6 +109,7 @@ const ObstructionLightingSolutions = () => {
             imageAlt: "Medium Intensity Obstruction Light",
           },
           {
+            id: "solar-obstruction",
             title: "Solar-Powered Obstruction Lights",
             model: "Energy-Efficient & Independent Operation",
             description:
@@ -123,6 +127,7 @@ const ObstructionLightingSolutions = () => {
       />
 
       <SingleSplitSection
+        id="dual-lighting"
         isBlack={false}
         title="LED Obstruction Lighting Systems"
         model="Advanced Technology for Long-Term Performance"

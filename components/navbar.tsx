@@ -6,31 +6,32 @@ import { ChevronDown, Mail, Phone, MapPin, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 
+const DEFAULT_DROPDOWN_IMAGE = "/activities-helideck-consulting.png"
+
 const solutions = [
     {
         id: "activities",
         title: "Activities",
+        defaultImage: "/activities-default.png",
         items: [
-            { name: "Helideck Consulting", href: "/activities-helideck-consulting" },
-            { name: "Refurbishing Helidecks", href: "/activities-helideck-refurbishing" },
-            { name: "Helideck Manufacturing", href: "/activities-helideck-manufacturing" },
-            { name: "Platform Mounting Helideck", href: "/activities-heliport-platform-mounting" },
-            { name: "Fire Fighting System", href: "/activities-firefighting-system" },
-            { name: "Helideck Lighting", href: "/activities-helideck-lighting" },
-            { name: "Aircraft Warning Lights", href: "/activities-aircraft" },
+            { name: "Helideck Consulting", href: "/activities-helideck-consulting", hoverImage: "/activities-helideck-consulting.png" },
+            { name: "Refurbishing Helidecks", href: "/activities-helideck-refurbishing", hoverImage: "/activities-helideck-refurbishing.png" },
+            { name: "Helideck Manufacturing", href: "/activities-helideck-manufacturing", hoverImage: "/activities-helideck-manufacturing.png" },
+            { name: "Platform Mounting Helideck", href: "/activities-heliport-platform-mounting", hoverImage: "/activities-heliport-platform-mounting.png" },
+            { name: "Fire Fighting System", href: "/activities-firefighting-system", hoverImage: "/activities-firefighting-system.png" },
+            { name: "Helideck Lighting", href: "/activities-helideck-lighting", hoverImage: "/activities-helideck-lighting.png" },
+            { name: "Aircraft Warning Lights", href: "/activities-aircraft", hoverImage: "/activities-aircraft.png" },
         ]
     },
     {
         id: "lighting",
         title: "Aircraft Obstructions Lights",
+        defaultImage: "/lighting-default.png",
         items: [
-            { name: "Low Intensity Lights", href: "#" },
-            { name: "Medium Intensity Lights", href: "#" },
-            { name: "High Intensity Lights", href: "#" },
-            { name: "Dual Lighting Systems", href: "#" },
-            { name: "Solar Obstruction Lights", href: "#" },
-            { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions" },
-            { name: "Obstruction Lighting Solutions", href: "/obstruction-lighting-solutions" },
+            { name: "Low Intensity Lights", href: "/obstruction-lighting-solutions#low-intensity", hoverImage: "/low-intensity-lights.png" },
+            { name: "Medium Intensity Lights", href: "/obstruction-lighting-solutions#medium-intensity", hoverImage: "/medium-intensity-lights.png" },
+            { name: "High Intensity Lights", href: "/obstruction-lighting-solutions#high-intensity", hoverImage: "/high-intensity-lights.png" },
+            { name: "Control Systems", href: "/obstruction-lighting-solutions#dual-lighting", hoverImage: "/obstruction-lighting-solutions.png" },
         ]
     }
 ]
@@ -40,6 +41,7 @@ export default function Navbar() {
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
     const [activeCategory, setActiveCategory] = useState<string | null>("activities")
     const [isScrolled, setIsScrolled] = useState(false)
+    const [dropdownImage, setDropdownImage] = useState(DEFAULT_DROPDOWN_IMAGE)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -99,7 +101,7 @@ export default function Navbar() {
                         <Link href="/" className="hover:text-[#168DCA] transition-colors">Home</Link>
                         <Link href="/about" className="hover:text-[#168DCA] transition-colors">About Us</Link>
 
-                        <div className="relative" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)}>
+                        <div className="relative" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => { setIsSolutionsOpen(false); setDropdownImage(DEFAULT_DROPDOWN_IMAGE); }}>
                             <button
                                 className="flex items-center gap-1 hover:text-[#168DCA] transition-all duration-300 "
                             >
@@ -113,50 +115,69 @@ export default function Navbar() {
                                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        className="absolute top-[140%] left-0 w-[350px] bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-5 overflow-hidden"
+                                        className="absolute top-[140%] -left-16 w-[500px] bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl"
                                     >
-                                        <div className="space-y-3">
-                                            {solutions.map((category) => (
-                                                <div key={category.id} className="overflow-hidden">
-                                                    <button
-                                                        onClick={(e) => {
-                                                            e.preventDefault();
-                                                            setActiveCategory(activeCategory === category.id ? null : category.id);
-                                                        }}
-                                                        className={cn(
-                                                            "w-full flex justify-between items-center p-3 rounded-xl text-[14px] font-medium transition-all duration-300 text-white",
-                                                            activeCategory === category.id ? "bg-white/10 text-white" : " hover:bg-white/5 text-white"
-                                                        )}
+                                        <div className="flex">
+                                            {/* Image Panel */}
+                                            <div className="relative w-44 shrink-0">
+                                                <Image
+                                                    src={dropdownImage}
+                                                    alt="Solutions"
+                                                    fill
+                                                    className="object-cover transition-all duration-500 ease-in-out"
+                                                    sizes="176px"
+                                                />
+                                            </div>
+
+                                            {/* Links Panel */}
+                                            <div className="flex-1 p-5 space-y-3">
+                                                {solutions.map((category) => (
+                                                    <div
+                                                        key={category.id}
+                                                        className="overflow-hidden"
                                                     >
-                                                        {category.title}
-                                                        <ChevronDown size={14} className={cn("transition-transform duration-300", activeCategory === category.id && "rotate-180")} />
-                                                    </button>
-                                                    <AnimatePresence>
-                                                        {activeCategory === category.id && category.items.length > 0 && (
-                                                            <motion.div
-                                                                initial={{ height: 0, opacity: 0 }}
-                                                                animate={{ height: "auto", opacity: 1 }}
-                                                                exit={{ height: 0, opacity: 0 }}
-                                                                className="overflow-hidden"
-                                                            >
-                                                                <ul className="px-5 py-3 space-y-3 mt-1">
-                                                                    {category.items.map((item, i) => (
-                                                                        <li key={i}>
-                                                                            <Link
-                                                                                href={item.href}
-                                                                                className="text-[13px] text-white hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
-                                                                            >
-                                                                                <div className="w-0.85 h-[0.85px] rounded-full bg-white transition-all duration-300 group-hover/link:bg-[#168DCA]" />
-                                                                                {item.name}
-                                                                            </Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </motion.div>
-                                                        )}
-                                                    </AnimatePresence>
-                                                </div>
-                                            ))}
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.preventDefault();
+                                                                setActiveCategory(activeCategory === category.id ? null : category.id);
+                                                            }}
+                                                            onMouseEnter={() => setDropdownImage(category.defaultImage)}
+                                                            className={cn(
+                                                                "w-full flex justify-between items-center p-3 rounded-xl text-[14px] font-medium transition-all duration-300",
+                                                                activeCategory === category.id ? "bg-gray-100 text-gray-900" : "text-gray-700 hover:bg-gray-50"
+                                                            )}
+                                                        >
+                                                            {category.title}
+                                                            <ChevronDown size={14} className={cn("transition-transform duration-300", activeCategory === category.id && "rotate-180")} />
+                                                        </button>
+                                                        <AnimatePresence>
+                                                            {activeCategory === category.id && category.items.length > 0 && (
+                                                                <motion.div
+                                                                    initial={{ height: 0, opacity: 0 }}
+                                                                    animate={{ height: "auto", opacity: 1 }}
+                                                                    exit={{ height: 0, opacity: 0 }}
+                                                                    className="overflow-hidden"
+                                                                >
+                                                                    <ul className="px-5 py-3 space-y-3 mt-1">
+                                                                        {category.items.map((item, i) => (
+                                                                            <li key={i}>
+                                                                                <Link
+                                                                                    href={item.href}
+                                                                                    onMouseEnter={() => setDropdownImage(item.hoverImage)}
+                                                                                    className="text-[13px] text-gray-600 hover:text-[#168DCA] transition-colors flex items-center gap-3 relative group/link"
+                                                                                >
+                                                                                    <div className="w-0.85 h-[0.85px] rounded-full bg-gray-400 transition-all duration-300 group-hover/link:bg-[#168DCA]" />
+                                                                                    {item.name}
+                                                                                </Link>
+                                                                            </li>
+                                                                        ))}
+                                                                    </ul>
+                                                                </motion.div>
+                                                            )}
+                                                        </AnimatePresence>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </motion.div>
                                 )}
