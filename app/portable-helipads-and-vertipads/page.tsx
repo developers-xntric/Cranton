@@ -20,7 +20,7 @@ const PortableHelipadsAndVertipads = () => {
             <SecondHeli
                 heading="Portable Helipads & Vertipads <br/> for Rapid Deployment"
                 desc="Engineered for speed, safety, and reliability, our modular landing systems enable secure helicopter operations in temporary, remote, and high-demand environments."
-                image="/ps.png"
+                image="/ps1.png"
                 heading2="Built for Critical Operations"
                 desc2="Catobo’s portable helipad and vertipad solutions are designed to deliver stable and compliant landing platforms where permanent infrastructure is not feasible. Using modular, high-strength systems, these platforms can be deployed quickly with minimal site preparation. <br/> <br/> Whether for emergency response, construction sites, or remote operations, our solutions ensure consistent performance and operational safety."
                 para={["Deploy landing platforms quickly in remote or temporary locations, ensuring immediate access for helicopters.", "Eliminates the need for complex civil works, significantly lowering installation costs while accelerating project timelines.", "Provides stable, anti-slip, and load-tested surfaces that maintain safety standards even in non-permanent environments.", "Designed for high-pressure scenarios such as emergency response and defense operations where reliability and speed are essential."]}
@@ -55,7 +55,7 @@ const PortableHelipadsAndVertipads = () => {
                 sections={[
                     {
                         title: "Designed for Demanding Environments",
-                        image: "/6.png",
+                        image: "/pb.png",
                         imageAlt: "Engineering Precision",
                         paragraphs: [
                             "Our systems are engineered to deliver consistent performance under demanding conditions, combining strength, durability, and operational efficiency.",
