@@ -33,7 +33,7 @@ export default function Footer() {
                             />
                         </Link>
                         <p className="font-onest text-[#FFF] font-normal text-sm md:text-[14px] leading-relaxed max-w-[280px]">
-                            From manufacturing precision to on-site readiness, Cranton delivers aviation, vertiport, and heliport solutions built for performance, compliance, and long-term reliability.
+                            From precision-engineered deck platforms to advanced fixed and portable lighting systems, Cranton delivers aviation, vertiport, and heliport solutions built for safety, compliance, and long-term operational reliability.
                         </p>
                     </div>
 

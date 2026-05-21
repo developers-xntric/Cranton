@@ -28,37 +28,43 @@ const HeliportsLightingSolutions = () => {
           "From precision landing guidance to environmental awareness, our lighting portfolio supports safe aircraft operations in even the most demanding conditions."
         }
         image2={"/heliport-vertiports/right.jpg"}
-        image1={"/heliport-vertiports/left.png"}
+        image1={"/heliport-vertiports/newleft.png"}
       />
       <HvGrey
         sections={[
           {
             title: "Complete Lighting Ecosystem",
             subtitle: "End-to-End Airside Visibility.",
-            image: "/heliport-vertiports/hv-gray.png",
+            image: "/heliport-vertiports/secondsection.png",
             imageAlt: "Engineering Precision",
-
             points: [
               {
-                title:
-                  "Approach & Guidance Lighting – Clear visual cues for pilots",
+                title: "LED Perimeter Lights (Surface Mounted)",
+                description: "Elevated lighting systems designed to clearly define helideck and landing area boundaries for safe operations."
               },
               {
-                title:
-                  "FATO & TLOF Lighting – Accurate landing and lift-off zone marking",
+                title: "LED Perimeter Lights (Flush Mounted)",
+                description: "Low-profile inset lighting solutions that provide clear visual guidance while maintaining a smooth deck surface. "
               },
               {
-                title:
-                  "Floodlighting Systems – Surface and obstacle visibility",
+                title: "LED Wind Direction Indicator",
+                description: "Illuminated wind indication systems that provide pilots with clear wind direction visibility in all operating conditions. "
               },
               {
-                title:
-                  "Wind Direction Indicators – Real-time environmental awareness",
+                title: "LED Wind Direction Indicator",
+                description: "Illuminated wind indication systems that provide pilots with clear wind direction visibility in all operating conditions. "
               },
-              { title: "Perimeter Lighting – Enhanced safety boundaries" },
+              {
+                title: "LED H and Circle Lights",
+                description: "Aviation beacons designed to improve site identification and visibility from long operational distances."
+              },
+              {
+                title: "LED Low Intensity Obstruction Lights",
+                description: "Reliable obstruction warning lights developed to improve visibility and enhance aviation safety around structures and elevated areas."
+              },
             ],
             paragraphs: [
-              "Each component is engineered to integrate seamlessly, delivering consistent performance and unified control.",
+              "",
             ],
           },
         ]}
@@ -103,6 +109,40 @@ const HeliportsLightingSolutions = () => {
       <HvLeftRight
         sections={[
           {
+            title: "FATO / TLOF Flush Mounted Helipad Lights",
+            subtitle: "Precision Guidance Without Obstruction",
+            paragraphs: [
+              "Crantron’s flush mounted helipad lights are designed for seamless integration into landing surfaces, providing clear visual guidance without creating physical obstacles for aircraft or ground operations.",
+              "Ideal for Final Approach and Take-Off (FATO) and Touchdown and Lift-Off (TLOF) areas, these lights deliver dependable performance in both day and night operations.",
+            ],
+            image: "/heliport-vertiports/fato.png",
+            imageAlt: "Engineering Precision",
+            keytitle: "Key Features:",
+            points: [
+              { title: "Omnidirectional light output for uniform visibility" },
+              { title: "Low power consumption (approximately 15W)" },
+              { title: "Long-life integrated LED (up to 100,000 hours)" },
+              { title: "IP67-rated for dust and water protection" },
+              { title: "High-strength cast aluminium construction" },
+              {
+                title:
+                  "Night Vision Goggle (NVG) compatibility with optional IR LED",
+              },
+              {
+                title:
+                  "Designed to withstand extreme temperatures (-40°C to +60°C)",
+              },
+            ],
+            greytitle: "Why It Matters",
+            greypara:
+              "Flush-mounted lighting eliminates surface obstructions while maintaining optimal visibility making it ideal for high-traffic or space-constrained heliports and vertiports.",
+          },
+        ]}
+      />
+      <HvLeftRight
+        sections={[
+          {
+            reverse: true,
             title: "Hooded LED Floodlights",
             subtitle: "High-Performance Surface Illumination",
             paragraphs: [
@@ -134,74 +174,40 @@ const HeliportsLightingSolutions = () => {
             greypara:
               "Improves landing accuracy by giving pilots a clear, well-lit view of terrain conditions and potential hazards",
           },
-          {
-            reverse: true,
-            title: "Illuminated Wind Direction Indicator (Windcone)",
-            subtitle: "Accurate Wind Visibility for Safer Landings",
-            paragraphs: [
-              "Wind awareness is critical for safe helicopter and eVTOL operations. Crantron’s illuminated wind direction indicators provide clear, real-time wind visibility—even in low-light and challenging weather conditions.",
-              "Fully aligned with aviation requirements, these systems ensure pilots can easily interpret wind conditions from a distance.",
-            ],
-            image: "/heliport-vertiports/wind.png",
-            imageAlt: "Engineering Precision",
-            keytitle: "Key Features:",
-            points: [
-              {
-                title: "Clearly visible from long distances (up to 200 meters)",
-              },
-              {
-                title:
-                  "Available in internally and externally illuminated configurations",
-              },
-              {
-                title:
-                  "Constructed with stainless steel or marine-grade coated poles",
-              },
-              { title: "Designed to withstand extreme wind speeds" },
-              { title: "Smooth 360° rotation for accurate wind indication" },
-              { title: "Multiple windsock sizes available" },
-              { title: "Optional tiltable pole for simplified maintenance" },
-            ],
-            greytitle: "Why It Matters",
-            greypara:
-              "Provides essential environmental information, enabling safer, more controlled landing and take-off operations.",
-          },
         ]}
       />
-      <HvLeftRight
-        isBlack={true}
-        sections={[
+      <HvLeftRight sections={[{
+        title: "Illuminated Wind Direction Indicator (Windcone)",
+        subtitle: "Accurate Wind Visibility for Safer Landings",
+        paragraphs: [
+          "Wind awareness is critical for safe helicopter and eVTOL operations. Crantron’s illuminated wind direction indicators provide clear, real-time wind visibility—even in low-light and challenging weather conditions.",
+          "Fully aligned with aviation requirements, these systems ensure pilots can easily interpret wind conditions from a distance.",
+        ],
+        image: "/heliport-vertiports/wind.png",
+        imageAlt: "Engineering Precision",
+        keytitle: "Key Features:",
+        points: [
           {
-            title: "FATO / TLOF Flush Mounted Helipad Lights",
-            subtitle: "Precision Guidance Without Obstruction",
-            paragraphs: [
-              "Crantron’s flush mounted helipad lights are designed for seamless integration into landing surfaces, providing clear visual guidance without creating physical obstacles for aircraft or ground operations.",
-              "Ideal for Final Approach and Take-Off (FATO) and Touchdown and Lift-Off (TLOF) areas, these lights deliver dependable performance in both day and night operations.",
-            ],
-            image: "/heliport-vertiports/fato.png",
-            imageAlt: "Engineering Precision",
-            keytitle: "Key Features:",
-            points: [
-              { title: "Omnidirectional light output for uniform visibility" },
-              { title: "Low power consumption (approximately 15W)" },
-              { title: "Long-life integrated LED (up to 100,000 hours)" },
-              { title: "IP67-rated for dust and water protection" },
-              { title: "High-strength cast aluminium construction" },
-              {
-                title:
-                  "Night Vision Goggle (NVG) compatibility with optional IR LED",
-              },
-              {
-                title:
-                  "Designed to withstand extreme temperatures (-40°C to +60°C)",
-              },
-            ],
-            greytitle: "Why It Matters",
-            greypara:
-              "Flush-mounted lighting eliminates surface obstructions while maintaining optimal visibility making it ideal for high-traffic or space-constrained heliports and vertiports.",
+            title: "Clearly visible from long distances (up to 200 meters)",
           },
-        ]}
-      />
+          {
+            title:
+              "Available in internally and externally illuminated configurations",
+          },
+          {
+            title:
+              "Constructed with stainless steel or marine-grade coated poles",
+          },
+          { title: "Designed to withstand extreme wind speeds" },
+          { title: "Smooth 360° rotation for accurate wind indication" },
+          { title: "Multiple windsock sizes available" },
+          { title: "Optional tiltable pole for simplified maintenance" },
+        ],
+        greytitle: "Why It Matters",
+        greypara:
+          "Provides essential environmental information, enabling safer, more controlled landing and take-off operations.",
+      }]}
+        isBlack={true} />
       <Urban
         btn="Inquire Now"
         title={"Built for the Future of Urban Air Mobility"}
