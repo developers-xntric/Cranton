@@ -33,7 +33,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             </p>
                             <div>
                                 {/* Gradient Button with SVG Icon */}
-                                <Button>Inquire Now</Button>
+                                <Button href='/contact'>Inquire Now</Button>
                             </div>
                         </div>
 
@@ -56,49 +56,49 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                         <h3 className="text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2] text-[#0a0f1e] mb-6">
                             {props.heading2 || "Trusted HIS Expertise for Healthcare Providers"}
                         </h3>
-                        <p className="text-md text-black mb-8" dangerouslySetInnerHTML={{ __html: props.desc2 || "" }}>
+                        <p className="text-md text-black mb-6" dangerouslySetInnerHTML={{ __html: props.desc2 || "" }}>
                         </p>
 
                         {/* Features Grid */}
-                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
                             {/* Feature 1 */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 bg-[#F5F5F5] p-3 rounded-lg">
                                 <div>
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[0]}
                                     </h4>
-                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-[19px] md:text-[14px] text-black">
                                         {props.para[0]}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Feature 2 */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 bg-[#F5F5F5] p-3 rounded-lg">
                                 <div>
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[1]}
                                     </h4>
-                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-[19px] md:text-[14px] text-black">
                                         {props.para[1]}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Feature 3 */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 bg-[#F5F5F5] p-3 rounded-lg">
                                 <div>
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[2]}
                                     </h4>
-                                    <p className="text-[12px] leading-4 md:leading-relaxed md:text-sm text-black">
+                                    <p className="text-[12px] leading-4 md:leading-[19px] md:text-[14px] text-black">
                                         {props.para[2]}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Feature 4 */}
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 bg-[#F5F5F5] p-3 rounded-lg">
                                 <div>
                                     <h4 className="font-semibold text-foreground leading-tight mb-1">
                                         {props.titles[3]}

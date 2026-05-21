@@ -28,34 +28,33 @@ const HeliportsLightingSolutions = () => {
           "From precision landing guidance to environmental awareness, our lighting portfolio supports safe aircraft operations in even the most demanding conditions."
         }
         image2={"/heliport-vertiports/right.jpg"}
-        image1={"/heliport-vertiports/left.png"}
+        image1={"/heliport-vertiports/newleft.png"}
       />
       <HvGrey
         sections={[
           {
             title: "Complete Lighting Ecosystem",
             subtitle: "End-to-End Airside Visibility.",
-            image: "/heliport-vertiports/hv-gray.png",
+            image: "/heliport-vertiports/secondsection.png",
             imageAlt: "Engineering Precision",
 
             points: [
-              {
-                title:
-                  "Approach & Guidance Lighting – Clear visual cues for pilots",
-              },
-              {
-                title:
-                  "FATO & TLOF Lighting – Accurate landing and lift-off zone marking",
-              },
-              {
-                title:
-                  "Floodlighting Systems – Surface and obstacle visibility",
-              },
-              {
-                title:
-                  "Wind Direction Indicators – Real-time environmental awareness",
-              },
-              { title: "Perimeter Lighting – Enhanced safety boundaries" },
+            {
+    title: "LED Perimeter Lights (Surface Mounted)",
+    description: "Elevated lighting systems designed to clearly define helideck and landing area boundaries for safe operations."
+  },
+  {
+    title: "LED Perimeter Lights (Flush Mounted)",
+    description: "Low-profile inset lighting solutions that provide clear visual guidance while maintaining a smooth deck surface. "
+  },
+   {
+    title: "LED Wind Direction Indicator",
+    description: "Illuminated wind indication systems that provide pilots with clear wind direction visibility in all operating conditions. "
+  },
+   {
+    title: "LED Wind Direction Indicator",
+    description: "Illuminated wind indication systems that provide pilots with clear wind direction visibility in all operating conditions. "
+  },
             ],
             paragraphs: [
               "Each component is engineered to integrate seamlessly, delivering consistent performance and unified control.",

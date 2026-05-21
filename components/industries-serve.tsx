@@ -31,7 +31,7 @@ export default function IndustriesServe({ badge, heading, industries, className 
                     {industries.map((industry, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-2 md:gap-4 bg-[#F5F5F5] md:p-3 rounded-full hover:shadow-md transition-shadow duration-300"
+                            className="flex items-center gap-2 md:gap-4 bg-[#F5F5F5]  rounded-full hover:shadow-md transition-shadow duration-300"
                         >
                             <div className="relative md:w-14 md:h-14 w-10 h-10 rounded-full overflow-hidden shrink-0">
                                 <Image
@@ -41,7 +41,7 @@ export default function IndustriesServe({ badge, heading, industries, className 
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="text-[9px] md:text-[17px] text-[#1a1a1a] font-medium">
+                            <span className="text-[9px] md:text-[16px] leading-5 text-[#1a1a1a] font-medium pr-2">
                                 {industry.name}
                             </span>
                         </div>

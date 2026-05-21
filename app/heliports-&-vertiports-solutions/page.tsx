@@ -18,7 +18,7 @@ const HelideckPlatformSolutions = () => {
                 backgroundImage={"/hhero.png"}
             />
             <SecondHeli
-                heading="Reliable Heliports & Vertiports for Offshore & Onshore <br/> Operations"
+                heading="Reliable Heliports & Vertiports for Offshore, Urban & Remote Operations"
                 desc="Engineered for safety, durability, and operational efficiency, our heliport and vertiport solutions support secure helicopter landing operations across offshore, marine, industrial, and remote environments."
                 heading2="Built for Safe Aviation Operations"
                 desc2="Cranton’s heliport and vertiport solutions are designed to deliver stable, compliant, and high-performance landing areas for helicopters operating in demanding environments. Built using durable materials and precision engineering, our systems ensure long-term reliability, operational safety, and efficient deployment. <br /> <br /> From offshore energy facilities to temporary remote operations, our heliports and vertiports are tailored to meet aviation standards while supporting safe and uninterrupted helicopter access."
@@ -47,7 +47,7 @@ const HelideckPlatformSolutions = () => {
                 },
                 {
                     icon: "/h2.png",
-                    title: "Weather & Corrosion Resistant",
+                    title: "Weatherproof & Durable",
                     desc: "Designed to perform in challenging marine and offshore environments with long-lasting durability.",
                 },
                 {
@@ -68,13 +68,14 @@ const HelideckPlatformSolutions = () => {
                         image: "/hb.png",
                         imageAlt: "Engineering",
                         paragraphs: [
-                            "Our helideck systems are engineered to provide dependable helicopter access across offshore, marine, industrial, and emergency response operations. Combining structural reliability with aviation-focused safety, the platforms are built for continuous performance in critical environments.",
+                            "Cranton helideck platforms are engineered to provide safe, durable, and reliable landing infrastructure for offshore and land-based aviation operations. Manufactured using high-strength aluminium, our platforms are designed to perform in harsh environmental conditions while maintaining structural integrity, operational safety, and long-term efficiency.",
+                            "From permanent installations to portable deployment systems, every helideck platform is developed to meet international aviation standards and project-specific operational requirements. With a strong focus on lightweight construction, corrosion resistance, and low maintenance performance, Cranton delivers dependable solutions for critical aviation environments."
                         ],
                         points: [
-                            { title: "High-strength structural framework" },
-                            { title: "Optimized stability and safety" },
-                            { title: "Long operational lifespan" },
-                            { title: "Low maintenance requirements" },
+                            { title: "Lightweight Aluminium Construction",description: "Strong, corrosion-resistant structures designed for demanding environments." },
+                            { title: "Fixed & Portable Platform Solutions",description: "Flexible helideck systems for permanent, temporary, and remote operations."  },
+                            { title: "Engineered For Harsh Conditions",description: "Built to withstand offshore, marine, industrial, and remote environments."  },
+                            { title: "Safe, Durable & Compliant",description: "Designed to meet international aviation safety and operational standards."  },
                         ],
                     },
                 ]}
@@ -83,11 +84,12 @@ const HelideckPlatformSolutions = () => {
                 badge=""
                 heading="Where It's Used"
                 industries={[
-                    { name: "Offshore Oil & Gas Platforms", image: "/w11.png" },
-                    { name: "Marine & Vessel Operations", image: "/w12.png" },
-                    { name: "Industrial & Remote Facilities", image: "/w13.png" },
-                    { name: "Temporary Aviation Installations", image: "/w14.png" },
-                    { name: "Emergency Response Sites", image: "/w15.png" },
+                    { name: "Emergency & Medical Operations", image: "/w11new.png" },
+                    { name: "Marine & Vessel Operations", image: "/w12new.png" },
+                    { name: "Construction & Infrastructure Projects", image: "/w13.png" },
+                    { name: "Temporary Aviation Installations", image: "/w14new.png" },
+                    { name: "Emergency Response Sites", image: "/w15new.png" },
+                    { name: "Healthcare", image: "/w16new.png" },
                 ]}
                 className="md:py-0! md:pb-10!"
             />

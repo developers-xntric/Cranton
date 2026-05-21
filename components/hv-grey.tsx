@@ -6,6 +6,7 @@ import SectionHeading from "./ui/section-heading";
 type Point = {
   title: string;
   subtitle?: string;
+   description?: string;
 };
 
 type SectionItem = {
@@ -52,22 +53,29 @@ export default function HvGrey({
               {section.subtitle}
             </p>
             
+<div className="space-y-3 py-4">
+  {section.points.map((item, i) => (
+    <div key={i} className="space-y-2">
 
-            <div className="space-y-3 py-4">
-              {section.points.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
+      <div className="flex items-start gap-3">
+        <div className="shrink-0">
+          <CheckIcon />
+        </div>
 
-                  <div className="shrink-0">
-                    <CheckIcon />
-                  </div>
+        <p className="text-[14px] md:text-[15px] font-normal text-black leading-snug">
+          {item.title}
+        </p>
+      </div>
 
-                  <p className="text-[14px] md:text-[15px] font-normal text-black leading-snug">
-                    {item.title}
-                  </p>
+      {item.description && (
+        <p className="text-[13px] md:text-[14px] text-[#555555] leading-relaxed">
+          {item.description}
+        </p>
+      )}
 
-                </div>
-              ))}
-            </div>
+    </div>
+  ))}
+</div>
 
             <div className="space-y-3 md:space-y-4 pt-2">
               {section.paragraphs.map((para, i) => (

@@ -5,6 +5,7 @@ import SectionHeading from "../ui/section-heading";
 
 type Point = {
   title: string;
+   description?: string;
 };
 
 type SectionItem = {
@@ -58,21 +59,27 @@ export default function SplitSectionHelideck({
               ))}
             </div>
 
-            <div className="space-y-3 py-4">
-              {section.points.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
+            {section.points.map((item, i) => (
+  <div key={i} className="space-y-2 pt-3">
+    
+    <div className="flex items-start gap-3">
+      <div className="shrink-0">
+        <CheckIcon />
+      </div>
 
-                  <div className="shrink-0">
-                    <CheckIcon />
-                  </div>
+      <p className="text-[14px] md:text-[17px] font-medium text-black leading-snug">
+        {item.title}
+      </p>
+    </div>
 
-                  <p className="text-[14px] md:text-[17px] font-medium text-black leading-snug">
-                    {item.title}
-                  </p>
+    {item.description && (
+      <p className="text-[13px] md:text-[15px] text-[#555] leading-relaxed">
+        {item.description}
+      </p>
+    )}
 
-                </div>
-              ))}
-            </div>
+  </div>
+))}
 
           </div>
 

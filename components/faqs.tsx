@@ -86,7 +86,7 @@ export default function Faqs({
 
                     <div className="relative md:block hidden w-full  rounded-2xl overflow-hidden shadow-lg h-100">
                         <Image
-                            src="/faqs-left.png"
+                            src="/faq-new.png"
                             alt="faqs image"
                             fill
                             className="object-cover"
