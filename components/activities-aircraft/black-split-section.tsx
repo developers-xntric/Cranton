@@ -99,7 +99,7 @@ export default function BlackSplitSection({
 
         {/* Image (LEFT on desktop, BOTTOM on mobile) */}
         <div
-          className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} order-2 lg:order-1`}
+          className={`relative w-full h-[220px] sm:h-[300px] lg:h-[450px] rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"} order-2 lg:order-1`}
         >
           <Image
             src={sections[0].image}
@@ -157,7 +157,7 @@ export default function BlackSplitSection({
 
         {/* Right: Image */}
         <div
-          className={`relative w-full h-[220px] sm:h-[300px] lg:h-full rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"}`}
+          className={`relative w-full h-[220px] sm:h-[300px] lg:h-[450px]  rounded-[24px] overflow-hidden border ${isBlack ? "border-[#333131]" : "border-[#D7D7D7]"}`}
         >
           <Image
             src={sections[1].image}
