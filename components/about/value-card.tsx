@@ -10,15 +10,6 @@ interface ValueCardProps {
     isBlack?: boolean
 }
 
-// Default descriptions
-const defaultDescription1 = "We are a global brand that specializes in consulting, manufacturing & constructing aluminium helidecks and providing heliport solutions, for both offshore and land-based helidecks. We focus on delivering effective and superior solutions for marking assets and landing areas for guaranteed safe operations. We have been a huge part of offering our trusted services to both government and private organizations.";
-
-const defaultDescription2 = "Working with experts, vendors and other external partners help Cranton Electrical to support its mission of providing optimal solutions in the industry. Our expert team has extensive knowledge of aluminium helidecks and delivering heliport related solutions. This offers possibilities for successful implementation of innovative ideas and advanced aluminium solutions in helidecks.";
-
-const defaultDescription3 = "Our wide range of solutions focuses on areas where there are weight limitations and also provide low maintenance costs without compromising on the strength of structures. We cater to offering our services to suit every specific requirement to all brands and businesses locally and internationally.";
-
-const defaultDescription4 = "Our wide range of solutions focuses on areas where there are weight limitations and also provide low maintenance costs without compromising on the strength of structures. We cater to offering our services to suit every specific requirement to all brands and businesses locally and internationally.";
-
 export function ValueCard({
     title,
     image,
@@ -54,21 +45,20 @@ export function ValueCard({
                             {title}
                         </h2>
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
-                            {description1 ? description1 : defaultDescription1}
-                        </p>
+                        {description1 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-start'}`}>
+                            {description1}
+                        </p>}
 
+                        {description2 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-start'}`}>
+                            {description2}
+                        </p>}
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
-                            {description2 ? description2 : defaultDescription2}
-                        </p>
+                        {description3 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-start'}`}>
+                            {description3}
+                        </p>}
 
-                        <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
-                            {description3 ? description3 : defaultDescription3}
-                        </p>
-
-                        {description4 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333]  ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
-                            {description4 ? description4 : defaultDescription4}
+                        {description4 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] ${isBlack ? 'text-end text-white opacity-80' : 'text-start'}`}>
+                            {description4}
                         </p>}
                     </div>
 
