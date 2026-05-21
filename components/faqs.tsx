@@ -59,7 +59,7 @@ export default function Faqs({
     assistanceDescription = "Have questions about our IT services or need immediate assistance?",
     contactPhone = "+971 2 813 7300",
     contactEmail = "info@acsllc.ae",
-    image = "/faqs-left.png",
+    image = "/faqs-ps.png",
 }: FaqsProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
