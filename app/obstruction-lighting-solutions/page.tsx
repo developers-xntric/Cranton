@@ -40,12 +40,12 @@ const ObstructionLightingSolutions = () => {
           },
           {
             icon: "/portable-lighting/2.png",
-            title: "High-Intensity LED Technology",
+            title: "High-Intensity LED",
             desc: "Ultra-bright LED lighting ensures maximum visibility while reducing power consumption and maintenance.",
           },
           {
             icon: "/portable-lighting/3.png",
-            title: "Rugged & Weatherproof Design",
+            title: "Weatherproof Design",
             desc: "Built with durable materials and sealed construction (IP-rated) to withstand harsh environmental conditions.",
           },
           {
