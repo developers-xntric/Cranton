@@ -17,6 +17,7 @@ interface FaqsProps {
     assistanceDescription?: string;
     contactPhone?: string;
     contactEmail?: string;
+    image?: string;
 }
 
 const defaultFaqs: FaqItem[] = [
@@ -57,7 +58,8 @@ export default function Faqs({
     assistanceHeading = "Need Assistance With Your IT Infrastructure?",
     assistanceDescription = "Have questions about our IT services or need immediate assistance?",
     contactPhone = "+971 2 813 7300",
-    contactEmail = "info@acsllc.ae"
+    contactEmail = "info@acsllc.ae",
+    image = "/faqs-left.png",
 }: FaqsProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -86,7 +88,7 @@ export default function Faqs({
 
                     <div className="relative md:block hidden w-full  rounded-2xl overflow-hidden shadow-lg h-100">
                         <Image
-                            src="/faqs-left.png"
+                            src={image || "/faqs-left.png"}
                             alt="faqs image"
                             fill
                             className="object-cover"
