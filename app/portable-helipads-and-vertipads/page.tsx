@@ -42,7 +42,7 @@ const PortableHelipadsAndVertipads = () => {
                 },
                 {
                     icon: "/44.png",
-                    title: "Anti-Slip & Weather Resistant",
+                    title: "Slip-Resistant & Durable",
                     desc: "Durable surface ensures safe operations in all environmental conditions.",
                 },
                 {
