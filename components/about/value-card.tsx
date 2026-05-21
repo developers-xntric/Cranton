@@ -31,11 +31,11 @@ export function ValueCard({
     return (
         <section className={`w-full ${isBlack ? "bg-black" : "bg-background"} py-12 md:py-20 md:px-8`}>
             <div className="2xl:max-w-350 w-[90%] mx-auto">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 ${isBlack ? ' direction-rtl' : ''} items-center`}>
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 ${isBlack ? ' direction-rtl' : ''} items-stretch`}>
 
                     {/* Desktop Image */}
-                    <div className="hidden md:flex justify-center">
-                        <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-m">
+                    <div className="hidden md:flex justify-center h-full">
+                        <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-m h-full">
                             <Image
                                 width={2000}
                                 height={2000}
@@ -47,7 +47,7 @@ export function ValueCard({
                     </div>
 
                     {/* Content */}
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 h-full">
 
                         {/* Title */}
                         <h2 className={`text-[20px] md:text-3xl lg:text-[36px] font-medium leading-[1.2]  ${isBlack ? 'text-end text-white' : 'text-start text-[#0a0f1e]'}`}>
@@ -67,7 +67,7 @@ export function ValueCard({
                             {description3 ? description3 : defaultDescription3}
                         </p>
 
-                        {description4 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333] font-medium ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
+                        {description4 && <p className={`text-[14px] md:text-[14px] 2xl:text-[18px] leading-relaxed text-[#333]  ${isBlack ? 'text-end text-white opacity-80' : 'text-text-start'}`}>
                             {description4 ? description4 : defaultDescription4}
                         </p>}
                     </div>
