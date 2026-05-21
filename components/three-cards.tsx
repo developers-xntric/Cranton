@@ -124,7 +124,7 @@ export default function ThreeCards({ heading, para, isBlack = false, features }:
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false }}
                             transition={{ duration: 0.5, delay: idx * 0.15 }}
-                            className="flex flex-col items-start justify-between p-6 h-full min-h-52 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.02)]"
+                            className="flex flex-col  p-6 h-full min-h-52 rounded-[10px] border border-[#969696] bg-[rgba(255,255,255,0.02)]"
                         >
                             <div className="mb-4 w-12 h-12 relative">
                                 <Image src={feature.icon} alt={feature.title} height={500} width={500} />
