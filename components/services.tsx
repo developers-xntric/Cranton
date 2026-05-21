@@ -12,7 +12,7 @@ const services = [
         link: "/portable-helipads-and-vertipads",
     },
     {
-        title: "End-to-End Solutions for Heliports, Vertiports",
+        title: "End-to-End Solutions for Heliports, Vertiports, AAM & Obstruction Lighting",
         description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
         image: null,
         link: "#",
@@ -129,7 +129,7 @@ export default function Services() {
                         );
                     })}
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4">
                     {services.slice(3).map((service, index) => (
                         <Link
