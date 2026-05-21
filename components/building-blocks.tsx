@@ -17,14 +17,24 @@ const blocks = [
         icon: "/home/block-card2.png"
     },
     {
-        title: "Engineered Steel Foundation Systems",
-        description: "A Vertiport & heliport is only as strong as its foundation. Our steel structures are engineered for optimal load distribution.",
-        icon: "/home/block-card3.png"
+        title: "Integrated Helideck Systems",
+        description: "Cranton helidecks are built for safe, stable, and reliable aviation operations, delivering certified landing environments with long-term durability and high performance.",
+        icon: "/home/bc3.png"
     },
     {
-        title: "Precision Platform Mounting & Isolation",
-        description: "We utilize specialized mounting and isolation solutions to separate the heliport from the building structure.",
-        icon: "/home/block-card4.png"
+        title: "Deck Platforms Fixed & Portable",
+        description: "Cranton offers both permanent and portable helideck solutions designed for different operational requirements, providing reliable performance, flexibility.",
+        icon: "/home/bc4.png"
+    },
+    {
+        title: "Lighting Solutions  Fixed Systems",
+        description: "Our fixed aviation lighting systems are designed to deliver clear visual guidance, enhanced night operations, and full compliance with heliport and helideck standards. Integrated perimeter lighting, approach lighting, and illuminated markings improve pilot visibility and operational safety in all weather conditions.",
+        icon: "/home/bc5.png"
+    },
+    {
+        title: "Lighting Solutions Portable Systems",
+        description: "Cranton portable lighting solutions provide rapid-deployment illumination for temporary landing zones, emergency response operations, and remote-site aviation support. Lightweight, durable, and easy to transport, these systems ensure dependable visibility wherever operations are required.",
+        icon: "/home/bc6.png"
     }
 ];
 
@@ -97,19 +107,6 @@ export default function BuildingBlocks() {
                                     <p className="font-onest text-[#86898C] text-[14px] mb-auto">
                                         {block.description}
                                     </p>
-                                    {/* <div className="mt-4">
-                                        <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-[#168DCA] group-hover:border-[#168DCA]">
-                                            <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2.5"
-                                                className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"
-                                            >
-                                                <path d="M7 17L17 7M7 7h10v10" />
-                                            </svg>
-                                        </div>
-                                    </div> */}
                                 </div>
                             </div>
                         ))}
@@ -135,11 +132,11 @@ export default function BuildingBlocks() {
                 </div>
 
                 {/* Desktop Grid Version */}
-                <div className="hidden md:grid grid-cols-2 xl:grid-cols-4 gap-6">
+                <div className={`hidden md:grid grid-cols-2 xl:grid-cols-4 gap-6`}>
                     {blocks.map((block, index) => (
                         <div
                             key={index}
-                            className="group p-5 rounded-[20px] border border-[#969696]  transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 flex flex-col"
+                            className={`group p-5 rounded-[20px] border border-[#969696]  transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 flex flex-col ${index > 3 ? 'col-span-2' : ''}`}
                         >
                             <div className="mb-8 relative w-20 h-20">
                                 <Image
