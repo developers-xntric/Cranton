@@ -134,7 +134,7 @@ export function WhyChooseUsSection() {
 
     return (
         <section className="bg-white pb-12 lg:py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-350 w-[90%] mx-auto">
                 {/* Top Grid: Left Text | Right Mission/Vision */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-b border-dashed border-[#C9C9C9]">
                     {/* Left Column */}

@@ -6,7 +6,7 @@ import DynamicHero from "@/components/dynamic-hero";
 
 const About = () => {
     return (
-        <div>
+        <div className="overflow-hidden md:overflow-auto">
             <DynamicHero
                 title={"About Us"}
                 breadcrumbs={[
