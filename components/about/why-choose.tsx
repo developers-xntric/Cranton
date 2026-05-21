@@ -143,18 +143,13 @@ export function WhyChooseUsSection() {
                             Why Choose Us
                         </h2>
                         <p className="text-sm sm:text-base max-w-[95%] text-[#64748B] leading-relaxed mb-5">
-                            We Deliver Lightweight, Strong, And Low-Maintenance Helideck
-                            Solutions Tailored To Meet The Unique Requirements Of Every
-                            Project. Our Experienced Team Ensures Reliable Performance, Strict
-                            Safety Compliance, And Innovative Engineering Practices.
+                            We deliver lightweight, high-strength helideck and heliport/vertiport solutions engineered for durability, safety, and long-term performance. From aluminium helidecks and deck platforms to advanced lighting and obstruction systems, every solution is tailored to meet the specific operational needs of each project.
                         </p>
                         <p className="text-sm sm:text-base max-w-[95%] text-[#64748B] leading-relaxed">
-                            We Combine Advanced Technology, Precise Planning, And
-                            International Standards To Provide Solutions That Are Safe,
-                            Durable, And Cost-Effective. Trusted By Both Government And
-                            Private Sector Clients, Locally And Internationally, We Focus On
-                            Delivering Consistent Excellence And Long-Term Value In Every
-                            Project We Undertake.
+                            Our experienced team combines engineering expertise, precision manufacturing, and international aviation standards to provide safe, reliable, and low-maintenance infrastructure for offshore and land-based operations.
+                        </p>
+                         <p className="text-sm sm:text-base max-w-[95%] text-[#64748B] leading-relaxed">
+                            Trusted by government and private sector clients worldwide, Cranton is committed to delivering innovative, compliant, and cost-effective solutions that ensure operational confidence and lasting value.
                         </p>
                     </div>
 
@@ -172,9 +167,7 @@ export function WhyChooseUsSection() {
                                 </h3>
                             </div>
                             <p className="lg:ms-14 lg:max-w-[70%] text-sm text-gray-600 leading-relaxed">
-                                To Provide The Highest Technical Competence Through Strong
-                                Collaboration And The Shortest Possible Delivery Time In The
-                                Manufacturing And Commissioning Of Helidecks.
+                                To provide the highest technical competence through strong collaboration and the shortest possible delivery time in the manufacturing and commissioning of helidecks.
                             </p>
                         </div>
 
@@ -190,9 +183,7 @@ export function WhyChooseUsSection() {
                                 </h3>
                             </div>
                             <p className="lg:ms-24 lg:max-w-[70%] text-sm text-gray-600 leading-relaxed">
-                                To Collaborate With Research Institutes And High-Tech Partners
-                                In Developing Advanced, Innovative, And Future-Ready Heliport
-                                Solutions.
+                                To collaborate with research institutes and high-tech partners in developing advanced, innovative, and future-ready heliport solutions.
                             </p>
                         </div>
                     </div>
