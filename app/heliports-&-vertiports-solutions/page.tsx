@@ -124,7 +124,7 @@ const HelideckPlatformSolutions = () => {
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"
             />
-            <CTASection heading="Need a Portable Helipad Solution?" description={"Tell us about your project requirements and our experts will help you design the right solution for your operational needs."} />
+            <CTASection heading="Need a Reliable Heliport & Vertiport Solution?" description={"Tell us about your project requirements and our experts will help you design the right solution for your operational needs."} />
         </div>
     )
 }
