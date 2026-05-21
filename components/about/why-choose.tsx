@@ -29,28 +29,70 @@ const testimonials: Testimonial[] = [
     {
         id: 1,
         stars: 5,
-        text: "Cranton Electrical Delivered Our Offshore Helideck Project On Time With Exceptional Quality. Their Team Ensured Every Detail Met International Safety Standards.",
+        text: "Cranton delivered exactly what we needed for our offshore project. The team was professional, responsive, and committed to maintaining the highest safety standards throughout the process. We were especially impressed with the quality and finish of the helideck system",
         name: "John Smith",
         role: "Offshore Project Manager",
     },
     {
         id: 2,
         stars: 4,
-        text: "The Team's Technical Expertise And Innovative Approach Made Our Land-Based Heliport Project Seamless And Reliable. Highly Recommended!",
+        text: "Working with Cranton was a smooth experience from start to finish. Their technical team understood our operational requirements clearly and provided practical solutions that worked perfectly for our site. The installation process was efficient and well managed.",
         name: "Sarah Johnson",
         role: "Aviation Operations Lead",
     },
     {
         id: 3,
         stars: 5,
-        text: "Outstanding professionalism and technical excellence throughout the entire project lifecycle. Their commitment to quality is unmatched in the industry.",
+        text: "The aluminium helideck supplied by Cranton has performed exceptionally well in harsh environmental conditions. The structure is lightweight, durable, and requires very little maintenance. Their engineering expertise was evident at every stage of the project.",
         name: "Michael Chen",
         role: "Senior Infrastructure Director",
     },
     {
         id: 4,
         stars: 5,
-        text: "Working with this team transformed our heliport project from a complex challenge into a smooth delivery. Their engineering precision is second to none.",
+        text: "We were looking for a reliable heliport lighting solution, and Cranton exceeded our expectations. The system was easy to integrate and has provided excellent visibility and operational reliability. Their after-sales support has also been very dependable.",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 5,
+        stars: 5,
+        text: "Cranton’s team maintained clear communication and strong coordination throughout the project. They paid close attention to safety, compliance, and project timelines without compromising quality. It was a pleasure working with such an experienced company.",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 6,
+        stars: 5,
+        text: "The portable helideck platform provided by Cranton was exactly suited to our operational needs. It was easy to deploy, structurally strong, and delivered excellent performance in remote conditions. We would confidently work with them again.",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 7,
+        stars: 5,
+        text: "Their ability to customize solutions based on our project requirements made a significant difference. The team offered valuable technical guidance and ensured every detail was properly addressed. The final result met all our expectations",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 8,
+        stars: 5,
+        text: "Cranton combines strong engineering knowledge with practical execution. From manufacturing to final installation, everything was handled professionally and efficiently. Their commitment to quality and reliability is clearly reflected in their work.",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 9,
+        stars: 5,
+        text: "We have worked with several suppliers in the industry, and Cranton stands out for their professionalism and product quality. The helideck and lighting systems were delivered on time and performed exactly as promised. Their support team was always available when needed.",
+        name: "Amira Hassan",
+        role: "Aviation Safety Consultant",
+    },
+    {
+        id: 10,
+        stars: 5,
+        text: "WWhat impressed us most about Cranton was their dedication to delivering a safe and long lasting solution. They worked closely with our project team and ensured smooth execution at every stage. The overall experience was positive and highly professional.",
         name: "Amira Hassan",
         role: "Aviation Safety Consultant",
     },
@@ -329,10 +371,10 @@ export function TestimonialsSection() {
                             </p>
 
                             {/* Author */}
-                            <div className="border-t lg:flex lg:gap-2 items-center border-gray-100 pt-4">
+                            {/* <div className="border-t lg:flex lg:gap-2 items-center border-gray-100 pt-4 ">
                                 <p className="text-sm font-semibold text-[#1B1B1B]">{t.name}</p>
                                 <p className="text-sm text-[rgba(27,27,27,0.50)]">{t.role}</p>
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
