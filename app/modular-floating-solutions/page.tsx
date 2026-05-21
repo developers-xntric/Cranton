@@ -33,28 +33,28 @@ const ModularFloatingSolutions = () => {
                 features={[{
                     icon: "/22.png",
                     title: "Modular & Scalable Design",
-                    desc: "Flexible interlocking systems that adapt to different site sizes and operational requirements.",
+                    desc: "Interlocking units allow flexible configurations tailored to different project sizes and requirements.",
                 },
                 {
                     icon: "/333.png",
-                    title: "High Load-Bearing Strength",
-                    desc: "Built to support heavy helicopter operations with structural stability.",
+                    title: "High Load Stability",
+                    desc: "Designed for balanced load distribution, ensuring safe and stable performance on water.",
                 },
                 {
                     icon: "/444.png",
-                    title: "Anti-Slip & Weather Resistant",
-                    desc: "Durable surface ensures safe operations in all environmental conditions.",
+                    title: "Durable Weather Protection",
+                    desc: "Built with high-quality materials to withstand harsh marine and environmental conditions.",
                 },
                 {
                     icon: "/555.png",
-                    title: "Rapid Installation",
-                    desc: "Quick assembly and dismantling for time-critical deployments.",
+                    title: "Quick Installation",
+                    desc: "Simple assembly process enables fast deployment with minimal equipment and manpower.",
                 },
                 ]} />
             <SplitSectionHelideck
                 sections={[
                     {
-                        title: "Designed for Demanding Environments",
+                        title: "Designed for Demanding Water Environments",
                         image: "/mb.png",
                         imageAlt: "Engineering Precision",
                         paragraphs: [
@@ -111,6 +111,7 @@ const ModularFloatingSolutions = () => {
                 assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"
+                image="/faqs-ps.png"
             />
             <CTASection heading="Need a Portable Helipad Solution?" description={"Tell us about your project requirements and our experts will help you design the right solution for your operational needs."} />
         </div>

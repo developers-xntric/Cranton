@@ -39,12 +39,12 @@ const PortableLightingSolutions = () => {
                     },
                     {
                         icon: "/portable-lighting/2.png",
-                        title: "High-Intensity LED Technology",
+                        title: "Advanced LED",
                         desc: "Ultra-bright LED lighting ensures maximum visibility while reducing power consumption and maintenance.",
                     },
                     {
                         icon: "/portable-lighting/3.png",
-                        title: "Rugged & Weatherproof Design",
+                        title: "Rugged Construction",
                         desc: "Built with durable materials and sealed construction (IP-rated) to withstand harsh environmental conditions.",
                     },
                     {
@@ -148,6 +148,7 @@ const PortableLightingSolutions = () => {
                 assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"
+                image="/faqs-ps.png"
             />
 
             <CTASection

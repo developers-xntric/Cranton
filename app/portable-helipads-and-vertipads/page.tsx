@@ -42,7 +42,7 @@ const PortableHelipadsAndVertipads = () => {
                 },
                 {
                     icon: "/44.png",
-                    title: "Anti-Slip & Weather Resistant",
+                    title: "Slip-Resistant & Durable",
                     desc: "Durable surface ensures safe operations in all environmental conditions.",
                 },
                 {
@@ -111,6 +111,7 @@ const PortableHelipadsAndVertipads = () => {
                 assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"
+                image="/faqs-ps.png"
             />
             <CTASection heading="Need a Portable Helipad Solution?" description={"Tell us about your project requirements and our experts will help you design the right solution for your operational needs."} />
         </div>
