@@ -1,8 +1,9 @@
 'use client';
 
 import { ChevronRight, MapPin, MessageCircle, PhoneCall } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 interface ContactFormData {
     name: string;
@@ -18,6 +19,8 @@ export function ContactSection() {
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState("");
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
@@ -31,15 +34,21 @@ export function ContactSection() {
         setErrorMessage('');
 
         try {
+            if (!recaptchaToken) {
+                throw new Error('Please complete the reCAPTCHA verification');
+            }
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, recaptchaToken }),
             });
 
             if (response.ok) {
                 setStatus('success');
                 setFormData({ name: '', email: '', message: '' });
+                recaptchaRef.current?.reset();
+                setRecaptchaToken(null);
             } else {
                 const data = await response.json();
                 throw new Error(data.error || 'Something went wrong');
@@ -157,7 +166,7 @@ export function ContactSection() {
 
                         {/* Right Side - Form */}
                         <div className="p-4 md:p-12 flex flex-col justify-center">
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-5">
                                 {/* Name Input */}
                                 <div>
                                     <label
@@ -215,6 +224,15 @@ export function ContactSection() {
                                         rows={5}
                                         className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22A1D8] focus:border-transparent transition-all text-black placeholder-gray-400 resize-none"
                                         required
+                                    />
+                                </div>
+
+                                {/* reCAPTCHA */}
+                                <div className="flex ">
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                                        onChange={(token) => setRecaptchaToken(token)}
                                     />
                                 </div>
 

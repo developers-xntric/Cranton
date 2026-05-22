@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 import Button from "./ui/grad-button";
 import SectionHeading from "./ui/section-heading";
 
@@ -86,6 +87,8 @@ export default function ContactSection() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -102,6 +105,10 @@ export default function ContactSection() {
     setErrorMessage("");
 
     try {
+      if (!recaptchaToken) {
+        throw new Error("Please complete the reCAPTCHA verification");
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -110,6 +117,7 @@ export default function ContactSection() {
           email: formData.email,
           subject: formData.service,
           message: formData.message,
+          recaptchaToken,
         }),
       });
 
@@ -122,6 +130,8 @@ export default function ContactSection() {
           service: "",
           message: "",
         });
+        recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
       } else {
         const data = await response.json();
         throw new Error(data.error || "Something went wrong");
@@ -153,7 +163,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right — Form */}
-          <div className="w-full lg:w-[55%] bg-white px-6 py-8 md:px-10 md:py-10 lg:py-12 flex flex-col justify-center lg:max-h-[600px]">
+          <div className="w-full lg:w-[55%] bg-white px-1 py-8 md:px-10 md:py-10 lg:py-12 flex flex-col justify-center lg:max-h-[650px]">
             <SectionHeading
               title=" Tell Us Your Requirements"
               className="text-2xl md:text-3xl  text-black"
@@ -275,6 +285,15 @@ export default function ContactSection() {
                   placeholder="Tell us about your project requirements, timeline, and goals."
                   rows={4}
                   className={`${inputBase} resize-none`}
+                />
+              </div>
+
+              {/* reCAPTCHA */}
+              <div className="flex">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                  onChange={(token) => setRecaptchaToken(token)}
                 />
               </div>
 
