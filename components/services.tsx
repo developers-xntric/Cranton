@@ -6,39 +6,41 @@ import { cn } from "@/lib/utils";
 
 const services = [
     {
+        title: "Heliports & Vertiports Solutions",
+        description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
+        image: "/home/service-4.png",
+        link: "heliports-&-vertiports-solutions",
+       
+    },
+    {
+        title: "End-to-End Solutions for Heliports, Vertiports, & Obstruction Lighting",
+        description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
+        image: null,
+        link: "#",
+    },
+    {
+         title: "Heliports & Vertiports Lighting Solutions",
+        description: "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations.",
+        image: "/home/service-5.png",
+        link: "/heliports-&-vertiports-lighting-solutions",
+    },
+    {
         title: "Portable Helipads & Vertipads",
         description: "Rapid-deploy, modular landing solutions designed for temporary and emergency operations, ensuring safe and stable helicopter access across diverse terrains.",
         image: "/home/service-1.png",
         link: "/portable-helipads-and-vertipads",
     },
     {
-        title: "End-to-End Solutions for Heliports, Vertiports, AAM & Obstruction Lighting",
-        description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
-        image: null,
-        link: "#",
-    },
-    {
+       
         title: "Modular Floating Solutions",
         description: "Modular, easy-to-deploy floating systems designed for stability and versatility. Ideal for helipads, platforms, and marine applications, delivering reliable performance.",
         image: "/home/service-3.png",
         link: "/modular-floating-solutions",
     },
     {
-        title: "Heliports & Vertiports Solutions",
-        description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
-        image: "/home/service-4.png",
-        link: "heliports-&-vertiports-solutions",
-    },
-    {
-        title: "Heliports & Vertiports Lighting Solutions",
-        description: "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations.",
-        image: "/home/service-5.png",
-        link: "/heliports-&-vertiports-lighting-solutions",
-    },
-    {
         title: "Obstruction Lighting Solutions",
         description: "High-performance warning lights designed to enhance visibility of structures, ensuring aviation safety and regulatory compliance.",
-        image: "/home/service-6.png",
+        image: "/obs.png",
         link: "/obstruction-lighting-solutions",
     },
     {
@@ -72,7 +74,7 @@ export default function Services() {
                                 >
 
                                     <div className="relative z-20 text-center">
-                                        <h3 className="font-rethink text-[20px] lg:text-3xl font-medium text-black mb-4">{service.title}</h3>
+                                        <h3 className="font-rethink text-[20px] lg:text-4xl font-light text-black mb-4">{service.title}</h3>
                                         <p className="font-onest text-[14px] md:text-[15px] text-black ">{service.description}</p>
                                     </div>
 

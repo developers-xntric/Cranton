@@ -26,8 +26,8 @@ export default function Hero() {
                     <br />
                     Vertical Aviation
                 </h1>
-                <p className="ms-1 w-full md:w-[50%] text-sm md:text-lg text-white leading-relaxed mt-3 mb-2">
-                    Heliports, Vertiports, Obstruction Lighting, and AAM Landing Systems Built for Safety, Precision, and Performance
+                <p className="ms-1 w-full md:w-[45%] text-sm md:text-lg text-white leading-relaxed mt-3 mb-2">
+                    Heliports, Vertiports, and Obstruction Lighting Built for Safety, Precision, and Performance
                 </p>
 
                 <Button href={"/about"} className="px-6 py-3 mt-3">

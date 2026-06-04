@@ -74,7 +74,7 @@ export default function BuildingBlocks() {
             <div className="max-w-[1440px] w-[90%] mx-auto">
                 <div className="text-center max-w-[90%] mx-auto mb-10">
                     <SectionHeading
-                        title="The Building Blocks Of Safe & Reliable Vertiport & Heliport"
+                        title="The Building Blocks of Safe & Reliable Vertiport & Heliport"
                         className="text-[20px] md:text-4xl text-black mb-6 leading-tight"
                     />
                     <p className="font-onest text-[14px] md:text-base leading-relaxed">
