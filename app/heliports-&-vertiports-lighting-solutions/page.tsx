@@ -27,7 +27,7 @@ const HeliportsLightingSolutions = () => {
         description2={
           "From precision landing guidance to environmental awareness, our lighting portfolio supports safe aircraft operations in even the most demanding conditions."
         }
-        image2={"/heliport-vertiports/right.jpg"}
+        image2={"/heliport-vertiports/right1.jpg"}
         image1={"/heliport-vertiports/newleft.png"}
       />
       <HvGrey
