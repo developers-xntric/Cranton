@@ -10,12 +10,12 @@ import { motion, AnimatePresence } from "framer-motion"
 const defaultSolutionImage = "/navbar/helideck-vertiport.png"
 
 const solutionItems = [
-    { name: "Heliports & Vertiports Solutions", href: "/heliports-&-vertiports-solutions", hoverImage: "/navbar/helideck-vertiport.png" },
-    { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/navbar/portable-helipads.png" },
-    { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/navbar/portable-lighting.png" },
-    { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/navbar/heliport-vertiport.png" },
-    { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/navbar/moduler-floating.png" },
-    { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/navbar/obstruction-lighting.png" },
+    { name: "Heliports & Vertiports Solutions", href: "/heliports-&-vertiports-solutions", hoverImage: "/home/service-4.png" },
+    { name: "Portable Helipads & Vertipads", href: "/portable-helipads-and-vertipads", hoverImage: "/home/service-1.png" },
+    { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/home/service-7.png" },
+    { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/home/service-5.png" },
+    { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/home/service-3.png" },
+    { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/obs.png" },
 ]
 
 export default function Navbar() {
@@ -51,12 +51,12 @@ export default function Navbar() {
         )}>
             {/* Top Bar */}
             <div className=" text-white py-2.5 hidden md:block">
-                <div className="max-w-[1440px] w-[90%] mx-auto flex justify-between items-center text-[12px] font-onest border-b pb-2">
+                <div className="max-w-360 w-[90%] mx-auto flex justify-between items-center text-[12px] font-onest border-b pb-2">
                     <Link
                         href="https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-[#fff] hover:text-[#168DCA] transition-colors"
+                        className="flex items-center gap-2 text-white hover:text-[#168DCA] transition-colors"
                     >
                         <MapPin size={14} />
                         Office 11A, Design Works, William Street, Felling, NE10 0JP, United Kingdom.
@@ -77,7 +77,7 @@ export default function Navbar() {
 
             {/* Main Navbar */}
             <div className=" text-white py-2 ">
-                <div className="max-w-[1440px] w-[90%] mx-auto  flex justify-between items-center">
+                <div className="max-w-360 w-[90%] mx-auto  flex justify-between items-center">
                     {/* Logo */}
                     <Link href="/" className="relative h-10 md:h-12 w-48">
                         <Image
@@ -109,7 +109,7 @@ export default function Navbar() {
                                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        className="absolute top-[140%] -left-16 w-[500px] bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl"
+                                        className="absolute top-[140%] -left-16 w-125 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl"
                                     >
                                         <div className="flex">
                                             {/* Image Panel */}
