@@ -23,7 +23,7 @@ const ObstructionLightingSolutions = () => {
       <ReliableSurveillance
         title="Obstruction Lighting Solutions for Safer Airspace"
         description="Cranton obstruction lighting solutions are engineered to mark tall structures and potential hazards, helping pilots maintain safe navigation in all conditions. Designed for reliability and long-term performance, our systems support aviation safety across a wide range of environments."
-        image="/obstruction-lighting/obstract.png"
+        image="/obstruction-lighting/obstract1.png"
         buttonText="Request a Quote"
         buttonHref="/contact"
       />
@@ -35,23 +35,23 @@ const ObstructionLightingSolutions = () => {
         features={[
           {
             icon: "/portable-lighting/1.png",
-            title: "Self-Powered Operation",
-            desc: "Integrated rechargeable battery system enables independent operation without external power sources.",
+            title: "High-Visibility Aviation Warning Systems",
+            desc: "Designed to provide clear and reliable obstruction marking for enhanced airspace safety.",
           },
           {
             icon: "/portable-lighting/2.png",
-            title: "High-Intensity LED",
-            desc: "Ultra-bright LED lighting ensures maximum visibility while reducing power consumption and maintenance.",
+            title: "Durable Weather-Resistant Construction",
+            desc: "Built to perform in harsh offshore, industrial, coastal, and remote environmental conditions.",
           },
           {
             icon: "/portable-lighting/3.png",
-            title: "Weatherproof Design",
-            desc: "Built with durable materials and sealed construction (IP-rated) to withstand harsh environmental conditions.",
+            title: "Energy-Efficient LED Technology",
+            desc: "Advanced LED systems deliver long operational life with low power consumption and minimal maintenance.",
           },
           {
             icon: "/portable-lighting/4.png",
-            title: "Portable & Easy to Deploy",
-            desc: "Lightweight design with integrated handles allows quick installation, relocation, and setup.",
+            title: "Compliant & Reliable Operation",
+            desc: "Engineered to meet international aviation obstruction lighting standards for dependable continuous performance.",
           },
         ]}
       />
