@@ -23,7 +23,7 @@ export default function ReliableSurveillance({ title, description, image, button
                         transition={{ duration: 0.6 }}
                         className="flex flex-col gap-3"
                     >
-                        <h2 className="text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] text-[#000]">
+                        <h2 className="text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] text-black">
                             {title.split('.').map((line, i) => (
                                 <span key={i}>
                                     {line}{i === 0 ? '.' : ''}
@@ -31,7 +31,7 @@ export default function ReliableSurveillance({ title, description, image, button
                                 </span>
                             ))}
                         </h2>
-                        <div className="relative md:block hidden w-full md:h-[400px] h-[200px] rounded-[10px] md:rounded-[24px] overflow-hidden shadow-lg">
+                        <div className="relative md:block hidden w-full md:h-100 h-50 rounded-[10px] md:rounded-[24px] overflow-hidden shadow-lg">
                             <Image
                                 src={image}
                                 alt={title}
@@ -47,7 +47,7 @@ export default function ReliableSurveillance({ title, description, image, button
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false }}
                             transition={{ duration: 0.6 }}
-                            className="text-[#000] text-[16px] lg:text-[25px] leading-relaxed md:max-w-[90%] font-onset"
+                            className="text-black text-[16px] lg:text-[25px] leading-relaxed md:max-w-[90%] font-onset"
                         >
                             {description}
                         </motion.p>
@@ -66,7 +66,7 @@ export default function ReliableSurveillance({ title, description, image, button
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6 }}
-                        className="relative md:hidden block w-full md:h-[400px] h-[200px] rounded-[10px] md:rounded-[24px] overflow-hidden shadow-lg"
+                        className="relative md:hidden block w-full md:h-100 h-50 rounded-[10px] md:rounded-[24px] overflow-hidden shadow-lg"
                     >
                         <Image
                             src={image}
