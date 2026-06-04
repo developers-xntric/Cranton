@@ -228,6 +228,7 @@ const ObstructionLightingSolutions = () => {
         assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
         contactPhone="+44 191 640 75 03"
         contactEmail="info@crantonelectric.com"
+        image="/faqs/5.png"
       />
 
       <CTASection
