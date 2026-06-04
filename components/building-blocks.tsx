@@ -71,7 +71,7 @@ export default function BuildingBlocks() {
 
     return (
         <section className="bg-white pb-8 md:pb-16 overflow-hidden">
-            <div className="max-w-[1440px] w-[90%] mx-auto">
+            <div className="max-w-360 w-[90%] mx-auto">
                 <div className="text-center max-w-[90%] mx-auto mb-10">
                     <SectionHeading
                         title="The Building Blocks of Safe & Reliable Vertiport & Heliport"
