@@ -97,6 +97,7 @@ const HelideckPlatformSolutions = () => {
             <Faqs
                 heading="Frequently Asked Questions"
                 description=""
+                image="/faqs/1.png"
                 faqs={[
                     {
                         question: "What are helideck platform solutions?",
