@@ -149,10 +149,10 @@ export default function ContactSection() {
 
   return (
     <section className="w-full bg-white py-10 md:py-16 lg:py-20">
-      <div className="max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
+      <div className="max-w-360 w-[90%] md:w-[85%] mx-auto">
         <div className="flex flex-col lg:flex-row items-stretch overflow-hidden ">
           {/* Left — Image */}
-          <div className="relative w-full lg:w-[55%] min-h-[300px] lg:min-h-[650px] rounded-[16px]">
+          <div className="relative w-full lg:w-[55%] min-h-75 lg:min-h-162.5 rounded-[16px]">
             <Image
               src="/home/contact.png"
               alt="Futuristic Vertiport"
@@ -163,7 +163,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right — Form */}
-          <div className="w-full lg:w-[55%] bg-white px-1 py-8 md:px-10 md:py-10 lg:py-12 flex flex-col justify-center lg:max-h-[700px]">
+          <div className="w-full lg:w-[55%] bg-white px-1 py-8 md:px-10 md:py-10 lg:py-12 flex flex-col justify-center lg:max-h-175">
             <SectionHeading
               title=" Tell Us Your Requirements"
               className="text-2xl md:text-3xl  text-black"
