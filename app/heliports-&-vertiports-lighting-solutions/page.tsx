@@ -231,6 +231,7 @@ const HeliportsLightingSolutions = () => {
         assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
         contactPhone="+44 191 640 75 03"
         contactEmail="info@crantonelectric.com"
+        image="/faqs/6.png"
       />
     </div>
   );
