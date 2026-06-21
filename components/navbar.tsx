@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 
 
-const defaultSolutionImage = "/navbar/helideck-vertiport.png"
+const defaultSolutionImage = "/home/service-4.png"
 
 const solutionItems = [
     { name: "Heliports & Vertiports Solutions", href: "/heliports-&-vertiports-solutions", hoverImage: "/home/service-4.png" },

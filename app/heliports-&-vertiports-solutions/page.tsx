@@ -34,7 +34,7 @@ const HelideckPlatformSolutions = () => {
                     "Safe Landing Surface",
                     "Custom Platform Solutions"
                 ]}
-                image="/hs1.png"
+                image="/newheliport.png"
             />
             <FourCards
                 heading="Engineered for Performance"
