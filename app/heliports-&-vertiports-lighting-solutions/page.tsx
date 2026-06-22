@@ -3,6 +3,7 @@ import Faqs from "@/components/faqs";
 import HvGrey from "@/components/hv-grey";
 import HvLeftRight from "@/components/hv-left-right";
 import ITValueCard from "@/components/it-value-card";
+import { heliportsVertiportsLightingSolutionsFaqs } from "@/lib/solution-faqs";
 import ThreeCards from "@/components/three-cards";
 import Urban from "@/components/urban";
 
@@ -227,6 +228,10 @@ const HeliportsLightingSolutions = () => {
         image2={"/hv2.png"}
       />
       <Faqs
+        heading="Frequently Asked Questions"
+        description=""
+        faqs={heliportsVertiportsLightingSolutionsFaqs}
+        showNumbers={true}
         assistanceHeading="Need a Help ?"
         assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
         contactPhone="+44 191 640 75 03"

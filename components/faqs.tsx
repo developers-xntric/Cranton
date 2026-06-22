@@ -13,6 +13,7 @@ interface FaqsProps {
     heading?: string;
     description?: string;
     faqs?: FaqItem[];
+    showNumbers?: boolean;
     assistanceHeading?: string;
     assistanceDescription?: string;
     contactPhone?: string;
@@ -55,6 +56,7 @@ export default function Faqs({
     heading = "Frequently\nAsked Questions",
     description = "Find answers to common questions about our IT and networking solutions, services, and support.",
     faqs = defaultFaqs,
+    showNumbers = false,
     assistanceHeading = "Need Assistance With Your IT Infrastructure?",
     assistanceDescription = "Have questions about our IT services or need immediate assistance?",
     contactPhone = "+971 2 813 7300",
@@ -62,6 +64,8 @@ export default function Faqs({
     image = "/faqs-ps.png",
 }: FaqsProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const phoneHref = `tel:${contactPhone.replace(/\s+/g, "")}`;
+    const emailHref = `mailto:${contactEmail}`;
 
     const toggleFaq = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -103,11 +107,11 @@ export default function Faqs({
                             <div className="w-full h-px bg-white/20 mb-6" />
 
                             <div className="flex flex-col gap-4">
-                                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
+                                <a href={phoneHref} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
                                     <Phone size={18} strokeWidth={1.5} />
                                     <span>{contactPhone}</span>
                                 </a>
-                                <a href={`mailto:${contactEmail}`} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
+                                <a href={emailHref} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
                                     <Mail size={18} strokeWidth={1.5} />
                                     <span>{contactEmail}</span>
                                 </a>
@@ -128,7 +132,7 @@ export default function Faqs({
                                         onClick={() => toggleFaq(index)}
                                     >
                                         <span className="text-[14px] md:text-[19px] text-[#161616] pr-8">
-                                            {faq.question}
+                                            {showNumbers ? `${index + 1}. ${faq.question}` : faq.question}
                                         </span>
                                         <span className="text-gray-500 shrink-0">
                                             {isOpen ? (
@@ -171,11 +175,11 @@ export default function Faqs({
                             <div className="w-full h-px bg-white/20 mb-6" />
 
                             <div className="flex flex-col gap-4">
-                                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
+                                <a href={phoneHref} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
                                     <Phone size={18} strokeWidth={1.5} />
                                     <span>{contactPhone}</span>
                                 </a>
-                                <a href={`mailto:${contactEmail}`} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
+                                <a href={emailHref} className="flex items-center gap-3 text-sm hover:text-gray-300 transition-colors">
                                     <Mail size={18} strokeWidth={1.5} />
                                     <span>{contactEmail}</span>
                                 </a>

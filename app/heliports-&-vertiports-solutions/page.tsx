@@ -4,6 +4,7 @@ import CTASection from '@/components/cta-section';
 import DynamicHero from '@/components/dynamic-hero';
 import Faqs from '@/components/faqs';
 import IndustriesServe from '@/components/industries-serve';
+import { heliportsVertiportsSolutionsFaqs } from '@/lib/solution-faqs';
 import SecondHeli from '@/components/second-heli';
 
 const HelideckPlatformSolutions = () => {
@@ -98,28 +99,8 @@ const HelideckPlatformSolutions = () => {
                 heading="Frequently Asked Questions"
                 description=""
                 image="/faqs/1.png"
-                faqs={[
-                    {
-                        question: "What are helideck platform solutions?",
-                        answer: "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
-                    },
-                    {
-                        question: "Where can helideck platforms be installed?",
-                        answer: "They can be installed on offshore platforms, vessels, industrial facilities, remote sites, and temporary operational locations."
-                    },
-                    {
-                        question: "Are the platforms compliant with aviation standards?",
-                        answer: "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
-                    },
-                    {
-                        question: "Can the platforms be customized?",
-                        answer: "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
-                    },
-                    {
-                        question: "Are the platforms suitable for long-term use?",
-                        answer: "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations."
-                    }
-                ]}
+                faqs={heliportsVertiportsSolutionsFaqs}
+                showNumbers={true}
                 assistanceHeading="Need a Help ?"
                 assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
                 contactPhone="+44 191 640 75 03"

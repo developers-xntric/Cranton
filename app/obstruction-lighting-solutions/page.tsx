@@ -7,6 +7,7 @@ import InstallationProcess from "@/components/installation-process";
 import IndustriesServe from "@/components/industries-serve";
 import Faqs from "@/components/faqs";
 import CTASection from "@/components/cta-section";
+import { obstructionLightingSolutionsFaqs } from "@/lib/solution-faqs";
 
 const ObstructionLightingSolutions = () => {
   return (
@@ -197,33 +198,8 @@ const ObstructionLightingSolutions = () => {
       <Faqs
         heading="Frequently Asked Questions"
         description=""
-        faqs={[
-          {
-            question: "How long does the battery last on a full charge?",
-            answer:
-              "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings.",
-          },
-          {
-            question: "Are these lights suitable for harsh weather conditions?",
-            answer:
-              "Yes. All our obstruction lighting units are IP65-rated or higher, making them fully weatherproof and resistant to dust, rain, and extreme temperatures.",
-          },
-          {
-            question: "How quickly can the system be deployed?",
-            answer:
-              "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation.",
-          },
-          {
-            question: "What is the visibility range of the lights?",
-            answer:
-              "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting.",
-          },
-          {
-            question: "Can the lights be recharged in the field?",
-            answer:
-              "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations.",
-          },
-        ]}
+        faqs={obstructionLightingSolutionsFaqs}
+        showNumbers={true}
         assistanceHeading="Need a Help ?"
         assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
         contactPhone="+44 191 640 75 03"

@@ -4,6 +4,7 @@ import CTASection from '@/components/cta-section';
 import DynamicHero from '@/components/dynamic-hero';
 import Faqs from '@/components/faqs';
 import IndustriesServe from '@/components/industries-serve';
+import { modularFloatingSolutionsFaqs } from '@/lib/solution-faqs';
 import SecondHeli from '@/components/second-heli';
 
 const ModularFloatingSolutions = () => {
@@ -85,28 +86,8 @@ const ModularFloatingSolutions = () => {
             <Faqs
                 heading="Frequently Asked Questions"
                 description=""
-                faqs={[
-                    {
-                        question: "What are modular floating solutions?",
-                        answer: "Our obstruction lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
-                    },
-                    {
-                        question: "Where can these floating systems be used?",
-                        answer: "They can be deployed in remote locations, construction sites, emergency zones, offshore areas, and any environment where permanent infrastructure is not feasible."
-                    },
-                    {
-                        question: "How easy is the installation process?",
-                        answer: "Our obstruction lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
-                    },
-                    {
-                        question: "Are the platforms stable in water?",
-                        answer: "Depending on the model, our obstruction lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
-                    },
-                    {
-                        question: "Can the system be reused or relocated?",
-                        answer: "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations."
-                    }
-                ]}
+                faqs={modularFloatingSolutionsFaqs}
+                showNumbers={true}
                 assistanceHeading="Need a Help ?"
                 assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
                 contactPhone="+44 191 640 75 03"

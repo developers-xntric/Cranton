@@ -6,6 +6,7 @@ import InstallationProcess from "@/components/installation-process";
 import IndustriesServe from "@/components/industries-serve";
 import Faqs from "@/components/faqs";
 import CTASection from "@/components/cta-section";
+import { portableLightingSolutionsFaqs } from "@/lib/solution-faqs";
 
 const PortableLightingSolutions = () => {
     return (
@@ -122,28 +123,8 @@ const PortableLightingSolutions = () => {
             <Faqs
                 heading="Frequently Asked Questions"
                 description=""
-                faqs={[
-                    {
-                        question: "How long does the battery last on a full charge?",
-                        answer: "Our portable lighting systems feature high-capacity batteries that provide 8-12 hours of continuous operation on a single charge, depending on the model and brightness settings."
-                    },
-                    {
-                        question: "Are these lights suitable for harsh weather conditions?",
-                        answer: "Yes. All our portable lighting units are IP65-rated or higher, making them fully weatherproof and resistant to dust, rain, and extreme temperatures."
-                    },
-                    {
-                        question: "How quickly can the system be deployed?",
-                        answer: "Our portable lighting systems can be fully deployed and operational within 15-30 minutes, requiring no external power source or complex installation."
-                    },
-                    {
-                        question: "What is the visibility range of the lights?",
-                        answer: "Depending on the model, our portable helipad lights provide visibility ranging from 3 to 10 nautical miles, meeting ICAO and FAA standards for aviation lighting."
-                    },
-                    {
-                        question: "Can the lights be recharged in the field?",
-                        answer: "Yes. Our systems support multiple charging options including AC power, solar panels, and vehicle charging, ensuring operational flexibility in remote locations."
-                    }
-                ]}
+                faqs={portableLightingSolutionsFaqs}
+                showNumbers={true}
                 assistanceHeading="Need a Help ?"
                 assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
                 contactPhone="+44 191 640 75 03"
