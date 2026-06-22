@@ -82,7 +82,7 @@ export default function Faqs({
         <section className="bg-white py-6 md:py-14 ">
             <div className="2xl:max-w-360 w-[90%] mx-auto flex flex-col lg:flex-row lg:items-start md:gap-12 gap-6 ">
 
-                <div className="flex flex-col w-full lg:w-[40%] xl:w-[35%] lg:sticky lg:top-24 self-start">
+                <div className="flex flex-col w-full lg:w-[40%] xl:w-[35%] lg:sticky lg:top-28 self-start">
                     <h2 className="text-[20px] md:text-3xl lg:text-[40px] leading-[1.2] text-[#0a0f1e] mb-3 whitespace-pre-line">
                         {formattedHeading}
                     </h2>
@@ -160,7 +160,7 @@ export default function Faqs({
 
                     <div className="relative md:hidden block w-full rounded-2xl md:rounded-2xl overflow-hidden shadow-lg mt-6 h-100">
                         <Image
-                            src="/our-partners/faqs-left.png"
+                            src={image || "/our-partners/faqs-left.png"}
                             alt=""
                             fill
                             className="object-cover"
