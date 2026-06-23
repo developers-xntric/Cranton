@@ -112,12 +112,12 @@ export function ContactSection() {
                         >
                             info@crantonelectric.com
                         </Link>
-                        <Link
+                        {/* <Link
                             href="mailto:stuart@crantonelectric.com"
                             className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
                         >
                             stuart@crantonelectric.com
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

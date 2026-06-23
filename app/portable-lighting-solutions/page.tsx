@@ -125,7 +125,7 @@ const PortableLightingSolutions = () => {
                 description=""
                 faqs={portableLightingSolutionsFaqs}
                 showNumbers={true}
-                assistanceHeading="Need a Help ?"
+                assistanceHeading="Need Help ?"
                 assistanceDescription="Need reliable solutions or urgent support? Get in touch with our expert team today."
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"

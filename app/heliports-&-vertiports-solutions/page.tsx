@@ -101,7 +101,7 @@ const HelideckPlatformSolutions = () => {
                 image="/faqs/1.png"
                 faqs={heliportsVertiportsSolutionsFaqs}
                 showNumbers={true}
-                assistanceHeading="Need a Help ?"
+                assistanceHeading="Need Help ?"
                 assistanceDescription="Our lighting specialists are ready to help you select the perfect obstruction lighting solution for your operational needs."
                 contactPhone="+44 191 640 75 03"
                 contactEmail="info@crantonelectric.com"
