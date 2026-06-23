@@ -36,7 +36,7 @@ const HeliportsLightingSolutions = () => {
           {
             title: "Complete Lighting Ecosystem",
             subtitle: "End-to-End Airside Visibility.",
-            image: "/heliport-vertiports/secondsection.png",
+            image: "/heliport-vertiports/ecosystem.png",
             imageAlt: "Engineering Precision",
             points: [
               {
