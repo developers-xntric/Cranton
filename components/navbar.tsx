@@ -15,7 +15,7 @@ const solutionItems = [
     { name: "Portable Lighting Solutions", href: "/portable-lighting-solutions", hoverImage: "/home/service-7.png" },
     { name: "Heliports & Vertiports Lighting Solutions", href: "/heliports-&-vertiports-lighting-solutions", hoverImage: "/home/service-5.png" },
     { name: "Moduler Floating Solutions", href: "/modular-floating-solutions", hoverImage: "/home/service-3.png" },
-    { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/obs.png" },
+    { name: "Obstructions Lights", href: "/obstruction-lighting-solutions", hoverImage: "/obs2.png" },
 ]
 
 export default function Navbar() {
