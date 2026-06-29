@@ -20,7 +20,7 @@ const TwitterIcon = () => (
 export default function Footer() {
     return (
         <footer className="bg-black text-white pt-10 pb-5">
-            <div className="max-w-[1440px] w-[90%] mx-auto">
+            <div className="2xl:max-w-360 w-[90%] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 lg:gap-8 mb-6">
                     {/* Column 1: Brand */}
                     <div className="flex flex-col gap-6">
@@ -32,7 +32,7 @@ export default function Footer() {
                                 className="object-contain object-left"
                             />
                         </Link>
-                        <p className="font-onest text-[#FFF] font-normal text-sm md:text-[14px] leading-relaxed max-w-[280px]">
+                        <p className="font-onest text-[#FFF] font-normal text-sm md:text-[14px] leading-relaxed max-w-70">
                             From precision-engineered deck platforms to advanced fixed and portable lighting systems, Cranton delivers aviation, vertiport, and heliport solutions built for safety, compliance, and long-term operational reliability.
                         </p>
                     </div>
