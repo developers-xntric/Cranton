@@ -2,8 +2,7 @@
 import Image from "next/image";
 import SectionHeading from "./ui/section-heading";
 import { ArrowUpRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface InsightCardProps {
@@ -40,30 +39,19 @@ const InsightCard = ({ title, image, className = "", isLarge = false }: InsightC
     </div>
 );
 
-const insights = [
-    {
-        title: "What Is The Difference Between A Helipad And A Vertiport?",
-        image: "/home/insights-1.png",
-        isLarge: true
-    },
-    {
-        title: "Decoding The Visual Language Of Vertiport & Heliport Markings",
-        image: "/home/insights-2.png",
-        isLarge: false
-    },
-    {
-        title: "Differences Between Helicopter Landing Pads",
-        image: "/home/insights-3.png",
-        isLarge: false
-    },
-    {
-        title: "Aluminum Vertiports- The Future Of Green Landing Systems For EVTOL/VTOL?",
-        image: "/home/insights-4.png",
-        isLarge: false
-    }
-];
+type Insight = {
+    title: string;
+    image: string;
+    isLarge?: boolean;
+};
 
-export default function InsightsSection() {
+export default function InsightsSection({
+    heading,
+    insights,
+}: {
+    heading: string;
+    insights: Insight[];
+}) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -78,33 +66,28 @@ export default function InsightsSection() {
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    const startAutoplay = useCallback(() => {
+    useEffect(() => {
         if (autoplayRef.current) clearInterval(autoplayRef.current);
         if (isMobile) {
             autoplayRef.current = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % insights.length);
             }, 4000);
         }
-    }, [isMobile]);
-
-    useEffect(() => {
-        startAutoplay();
         return () => {
             if (autoplayRef.current) clearInterval(autoplayRef.current);
         };
-    }, [startAutoplay]);
+    }, [isMobile, insights.length]);
 
     return (
         <section className=" pt-7 md:pt-6 pb-16 overflow-hidden">
             <div className="max-w-360 w-[90%] mx-auto">
                 <div className="text-center mb-10">
                     <SectionHeading
-                        title="Insights That Power Smarter Decisions"
+                        title={heading}
                         className="text-3xl md:text-4xl  text-black"
                     />
                 </div>
 
-                {/* Mobile Slider Version */}
                 <div className="md:hidden w-full relative">
                     <div
                         className="flex transition-transform duration-500 ease-in-out items-stretch"
@@ -121,14 +104,18 @@ export default function InsightsSection() {
                         ))}
                     </div>
 
-                    {/* Dots indicator */}
                     <div className="flex justify-center gap-2 mt-6">
                         {insights.map((_, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => {
                                     setCurrentIndex(idx);
-                                    startAutoplay();
+                                    if (autoplayRef.current) clearInterval(autoplayRef.current);
+                                    if (isMobile) {
+                                        autoplayRef.current = setInterval(() => {
+                                            setCurrentIndex((prev) => (prev + 1) % insights.length);
+                                        }, 4000);
+                                    }
                                 }}
                                 className={cn(
                                     "w-2 h-2 rounded-full transition-all duration-300",
@@ -140,16 +127,13 @@ export default function InsightsSection() {
                     </div>
                 </div>
 
-                {/* Desktop Grid Version */}
                 <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    {/* Left: One Large Card */}
                     <InsightCard
                         isLarge
                         image={insights[0].image}
                         title={insights[0].title}
                     />
 
-                    {/* Right: Grid of 3 Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <InsightCard
                             image={insights[1].image}

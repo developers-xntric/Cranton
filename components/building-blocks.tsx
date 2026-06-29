@@ -1,44 +1,26 @@
 "use client";
 import Image from "next/image";
 import SectionHeading from "./ui/section-heading";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-const blocks = [
-    {
-        title: "High-Performance Aluminium Profiles",
-        description: "Precision-engineered aluminium profiles form the foundation of our heliport landing surfaces.",
-        icon: "/home/block-card1.png"
-    },
-    {
-        title: "Advanced Electrical & Lighting Systems",
-        description: "Our integrated electrical systems ensure clear visibility and safe operations in all conditions.",
-        icon: "/home/block-card2.png"
-    },
-    {
-        title: "Integrated Helideck Systems",
-        description: "Cranton helidecks are built for safe, stable, and reliable aviation operations, delivering certified landing environments with long-term durability and high performance.",
-        icon: "/home/bc3.png"
-    },
-    {
-        title: "Deck Platforms Fixed & Portable",
-        description: "Cranton offers both permanent and portable helideck solutions designed for different operational requirements, providing reliable performance, flexibility.",
-        icon: "/home/bc4.png"
-    },
-    {
-        title: "Lighting Solutions  Fixed Systems",
-        description: "Our fixed aviation lighting systems are designed to deliver clear visual guidance, enhanced night operations, and full compliance with heliport and helideck standards. Integrated perimeter lighting, approach lighting, and illuminated markings improve pilot visibility and operational safety in all weather conditions.",
-        icon: "/home/bc5.png"
-    },
-    {
-        title: "Lighting Solutions Portable Systems",
-        description: "Cranton portable lighting solutions provide rapid-deployment illumination for temporary landing zones, emergency response operations, and remote-site aviation support. Lightweight, durable, and easy to transport, these systems ensure dependable visibility wherever operations are required.",
-        icon: "/home/bc6.png"
-    }
-];
+type BuildingBlock = {
+    title: string;
+    description: string;
+    icon: string;
+};
 
-export default function BuildingBlocks() {
+type BuildingBlocksProps = {
+    heading: string;
+    description: string;
+    blocks: BuildingBlock[];
+};
+
+export default function BuildingBlocks({
+    heading,
+    description,
+    blocks,
+}: BuildingBlocksProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -53,36 +35,28 @@ export default function BuildingBlocks() {
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    const startAutoplay = useCallback(() => {
+    useEffect(() => {
         if (autoplayRef.current) clearInterval(autoplayRef.current);
         if (isMobile) {
             autoplayRef.current = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % blocks.length);
             }, 3000);
         }
-    }, [isMobile]);
-
-    useEffect(() => {
-        startAutoplay();
         return () => {
             if (autoplayRef.current) clearInterval(autoplayRef.current);
         };
-    }, [startAutoplay]);
+    }, [isMobile, blocks.length]);
 
     return (
         <section className="bg-white pb-8 md:pb-16 overflow-hidden">
             <div className="max-w-360 w-[90%] mx-auto">
                 <div className="text-center max-w-[90%] mx-auto mb-10">
-                    <SectionHeading
-                        title="The Building Blocks of Safe & Reliable Vertiport & Heliport"
-                        className="text-[20px] md:text-4xl text-black mb-6 leading-tight"
-                    />
+                    <SectionHeading title={heading} className="text-[20px] md:text-4xl text-black mb-6 leading-tight" />
                     <p className="font-onest text-[14px] md:text-base leading-relaxed">
-                        Cranton Heliport is engineered with precision, using high-performance materials and systems designed to meet demanding aviation standards. These core elements work together to deliver safety, durability, and long-term operational confidence.
+                        {description}
                     </p>
                 </div>
 
-                {/* Mobile Slider Version */}
                 <div className="md:hidden w-full relative">
                     <div
                         className="flex transition-transform duration-500 ease-in-out items-stretch"
@@ -112,14 +86,18 @@ export default function BuildingBlocks() {
                         ))}
                     </div>
 
-                    {/* Dots indicator */}
                     <div className="flex justify-center gap-2 mt-6">
                         {blocks.map((_, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => {
                                     setCurrentIndex(idx);
-                                    startAutoplay();
+                                    if (autoplayRef.current) clearInterval(autoplayRef.current);
+                                    if (isMobile) {
+                                        autoplayRef.current = setInterval(() => {
+                                            setCurrentIndex((prev) => (prev + 1) % blocks.length);
+                                        }, 3000);
+                                    }
                                 }}
                                 className={cn(
                                     "w-2 h-2 rounded-full transition-all duration-300",
@@ -131,7 +109,6 @@ export default function BuildingBlocks() {
                     </div>
                 </div>
 
-                {/* Desktop Grid Version */}
                 <div className={`hidden md:grid grid-cols-2 xl:grid-cols-4 gap-6`}>
                     {blocks.map((block, index) => (
                         <div

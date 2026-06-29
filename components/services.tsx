@@ -4,52 +4,14 @@ import Button from "./ui/grad-button";
 
 import { cn } from "@/lib/utils";
 
-const services = [
-    {
-        title: "Heliports & Vertiports Solutions",
-        description: "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
-        image: "/home/service-4.png",
-        link: "heliports-&-vertiports-solutions",
-       
-    },
-    {
-        title: "End-to-End Solutions for Heliports, Vertiports, & Obstruction Lighting",
-        description: "We engineer future ready high-performance solutions for heliports, vertiports, and advanced air mobility sites with a focus on safety, precision, and compliance.",
-        image: null,
-        link: "#",
-    },
-    {
-         title: "Heliports & Vertiports Lighting Solutions",
-        description: "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations.",
-        image: "/home/service-5.png",
-        link: "/heliports-&-vertiports-lighting-solutions",
-    },
-    {
-        title: "Portable Helipads & Vertipads",
-        description: "Rapid-deploy, modular landing solutions designed for temporary and emergency operations, ensuring safe and stable helicopter access across diverse terrains.",
-        image: "/home/service-1.png",
-        link: "/portable-helipads-and-vertipads",
-    },
-    {
-       
-        title: "Modular Floating Solutions",
-        description: "Modular, easy-to-deploy floating systems designed for stability and versatility. Ideal for helipads, platforms, and marine applications, delivering reliable performance.",
-        image: "/home/service-3.png",
-        link: "/modular-floating-solutions",
-    },
-    {
-        title: "Obstruction Lighting Solutions",
-        description: "High-performance warning lights designed to enhance visibility of structures, ensuring aviation safety and regulatory compliance.",
-        image: "/obs.png",
-        link: "/obstruction-lighting-solutions",
-    },
-    {
-        title: "Portable Lighting Solutions",
-        description: "Self-powered, high-intensity lighting systems built for quick setup, enabling safe aviation operations in remote or time-critical environments.",
-        image: "/home/service-7.png",
-        link: "/portable-lighting-solutions",
-    },
-];
+type ServiceCard = {
+    title: string;
+    description: string;
+    image: string | null;
+    link: string;
+    ctaLabel?: string;
+    ctaHref?: string;
+};
 
 const ArrowUpRight = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -58,7 +20,7 @@ const ArrowUpRight = () => (
     </svg>
 );
 
-export default function Services() {
+export default function Services({ services }: { services: ServiceCard[] }) {
     return (
         <section className=" py-8 md:py-16 ">
             <div className="max-w-360 w-[90%] mx-auto">
