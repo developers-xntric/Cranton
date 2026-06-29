@@ -54,9 +54,6 @@ export default function Footer() {
                                 <Link href="mailto:info@crantonelectric.com" className="hover:text-white transition-colors block border-b border-[#B8BCC4] pb-1 w-fit">
                                     info@crantonelectric.com
                                 </Link>
-                                {/* <Link href="mailto:stuart@crantonelectric.com" className="hover:text-white transition-colors block border-b border-[#B8BCC4] pb-1 w-fit">
-                                    stuart@crantonelectric.com
-                                </Link> */}
                             </div>
                             <Link href="tel:+441916407503" className=" text-white text-base pt-2">
                                 +44 191 640 75 03
