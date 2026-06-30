@@ -35,7 +35,7 @@ interface Section {
 
 interface BlackSplitSectionProps {
   isBlack?: boolean;
-  sections: [Section, Section];
+  sections: Section[];
 }
 
 export default function BlackSplitSection({

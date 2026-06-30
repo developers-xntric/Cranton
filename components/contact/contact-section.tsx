@@ -11,7 +11,55 @@ interface ContactFormData {
     message: string;
 }
 
-export function ContactSection() {
+interface ContactInfoCard {
+    title: string;
+    value: string;
+    href: string;
+    type: "address" | "phone" | "email";
+}
+
+interface ContactSectionProps {
+    heading?: string;
+    infoCards?: ContactInfoCard[];
+}
+
+const defaultInfoCards: ContactInfoCard[] = [
+    {
+        title: "Our Address",
+        value: "Office 11A, Design Works, William \nStreet, Felling, NE10 0JP, United \nKingdom.",
+        href: "https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom",
+        type: "address",
+    },
+    {
+        title: "Contact Info",
+        value: "+44 191 640 76 03",
+        href: "tel:+441916407603",
+        type: "phone",
+    },
+    {
+        title: "E-mail Us",
+        value: "info@crantonelectric.com",
+        href: "mailto:info@crantonelectric.com",
+        type: "email",
+    },
+];
+
+function ContactCardIcon({ type }: { type: ContactInfoCard["type"] }) {
+    if (type === "address") {
+        return <MapPin className="w-8 h-8 md:w-7 md:h-7 text-white" />;
+    }
+
+    if (type === "phone") {
+        return <PhoneCall className="w-8 h-8 md:w-7 md:h-7 text-white" />;
+    }
+
+    return <MessageCircle className="w-8 h-8 md:w-7 md:h-7 text-white" />;
+}
+
+export function ContactSection({
+    heading = "Have Inquiries?\nReach Out Via\nMessage",
+    infoCards = defaultInfoCards,
+}: ContactSectionProps) {
     const [formData, setFormData] = useState<ContactFormData>({
         name: '',
         email: '',
@@ -64,61 +112,24 @@ export function ContactSection() {
             {/* Info Cards Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                    {/* Address Card */}
-                    <div className="flex flex-col items-center text-center">
-                        <div className="bg-linear-to-br from-[#22A1D8] to-[#025094] rounded-full w-16 h-16 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
-                            <MapPin className="w-8 h-8 md:w-7 md:h-7 text-white" />
+                    {infoCards.map((card) => (
+                        <div key={`${card.type}-${card.title}`} className="flex flex-col items-center text-center">
+                            <div className="bg-linear-to-br from-[#22A1D8] to-[#025094] rounded-full w-16 h-16 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
+                                <ContactCardIcon type={card.type} />
+                            </div>
+                            <h3 className="text-lg md:text-xl text-black mb-3">
+                                {card.title}
+                            </h3>
+                            <Link
+                                href={card.href}
+                                target={card.type === "address" ? "_blank" : undefined}
+                                rel={card.type === "address" ? "noopener noreferrer" : undefined}
+                                className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors whitespace-pre-line"
+                            >
+                                {card.value}
+                            </Link>
                         </div>
-                        <h3 className="text-lg md:text-xl text-black mb-3">
-                            Our Address
-                        </h3>
-                        <Link
-                            href="https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
-                        >
-                            Office 11A, Design Works, William <br /> Street, Felling, NE10 0JP, United <br />  Kingdom.
-                        </Link>
-                    </div>
-
-                    {/* Contact Info Card */}
-                    <div className="flex flex-col items-center text-center">
-                        <div className="bg-linear-to-br from-[#22A1D8] to-[#025094] rounded-full w-16 h-16 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
-                            <PhoneCall className="w-8 h-8 md:w-7 md:h-7 text-white" />
-                        </div>
-                        <h3 className="text-lg md:text-xl text-black mb-3">
-                            Contact Info
-                        </h3>
-                        <Link
-                            href="tel:+441916407603"
-                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
-                        >
-                            +44 191 640 76 03
-                        </Link>
-                    </div>
-
-                    {/* Live Support Card */}
-                    <div className="flex flex-col items-center text-center">
-                        <div className="bg-linear-to-br from-[#22A1D8] to-[#025094] rounded-full w-16 h-16 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
-                            <MessageCircle className="w-8 h-8 md:w-7 md:h-7 text-white" />
-                        </div>
-                        <h3 className="text-lg md:text-xl text-black mb-3">
-                            E-mail Us
-                        </h3>
-                        <Link
-                            href="mailto:info@crantonelectric.com"
-                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
-                        >
-                            info@crantonelectric.com
-                        </Link>
-                        {/* <Link
-                            href="mailto:stuart@crantonelectric.com"
-                            className="text-sm md:text-base text-[#333] leading-relaxed hover:text-[#22A1D8] transition-colors"
-                        >
-                            stuart@crantonelectric.com
-                        </Link> */}
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -129,9 +140,12 @@ export function ContactSection() {
                         {/* Left Side - Illustration and Text */}
                         <div className="p-8 md:p-12 flex flex-col justify-between items-center lg:items-start">
                             <h2 className="text-xl md:text-3xl lg:text-5xl text-black mb-8 lg:mb-0 text-center lg:text-left leading-tight">
-                                Have Inquiries?
-                                Reach Out Via
-                                Message
+                                {heading.split("\n").map((line, index) => (
+                                    <span key={index}>
+                                        {line}
+                                        {index < heading.split("\n").length - 1 && <br />}
+                                    </span>
+                                ))}
                             </h2>
 
                             {/* Illustration */}

@@ -18,6 +18,26 @@ STORYBLOK_PREVIEW_TOKEN=your_storyblok_preview_token
 STORYBLOK_CONTENT_VERSION=published
 ```
 
+## Local preview URL for Storyblok
+
+Storyblok only accepts `https://` preview URLs.
+
+This project now includes:
+
+```bash
+npm run dev:https
+```
+
+That starts Next.js with local HTTPS using the built-in `--experimental-https` flag available in your installed Next.js version.
+
+Use this preview URL in Storyblok:
+
+```txt
+https://localhost:3000/
+```
+
+If your browser shows a certificate warning the first time, open `https://localhost:3000/` manually and accept the local certificate once before testing the Storyblok preview iframe.
+
 Use `draft` for preview content if you want unpublished Storyblok content to render locally:
 
 ```env
