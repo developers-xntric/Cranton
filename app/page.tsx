@@ -23,7 +23,7 @@ const homeFallbackContent = {
       description:
         "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations.",
       image: "/home/service-4.png",
-      link: "/heliports-&-vertiports-solutions",
+      link: "/heliports-and-vertiports-solutions",
     },
     {
       title:
@@ -40,7 +40,7 @@ const homeFallbackContent = {
       description:
         "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations.",
       image: "/home/service-5.png",
-      link: "/heliports-&-vertiports-lighting-solutions",
+      link: "/heliports-and-vertiports-lighting-solutions",
     },
     {
       title: "Portable Helipads & Vertipads",

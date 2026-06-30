@@ -25,7 +25,7 @@ const siteSettingsFallback = {
     solutionItems: [
       {
         name: "Heliports & Vertiports Solutions",
-        href: "/heliports-&-vertiports-solutions",
+        href: "/heliports-and-vertiports-solutions",
         hoverImage: "/home/service-4.png",
       },
       {
@@ -40,7 +40,7 @@ const siteSettingsFallback = {
       },
       {
         name: "Heliports & Vertiports Lighting Solutions",
-        href: "/heliports-&-vertiports-lighting-solutions",
+        href: "/heliports-and-vertiports-lighting-solutions",
         hoverImage: "/home/service-5.png",
       },
       {

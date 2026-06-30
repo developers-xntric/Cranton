@@ -303,7 +303,7 @@ $homeContent = @{
             title = "Heliports & Vertiports Solutions"
             description = "High-strength, durable platform systems designed to provide secure and reliable landing surfaces for offshore and onshore helideck operations."
             image = New-AssetValue "/home/service-4.png"
-            link = "/heliports-&-vertiports-solutions"
+            link = "/heliports-and-vertiports-solutions"
         },
         @{
             component = "service_item"
@@ -318,7 +318,7 @@ $homeContent = @{
             title = "Heliports & Vertiports Lighting Solutions"
             description = "Advanced lighting systems engineered for precision, visibility, and compliance, supporting safe take-off, landing, and ground operations."
             image = New-AssetValue "/home/service-5.png"
-            link = "/heliports-&-vertiports-lighting-solutions"
+            link = "/heliports-and-vertiports-lighting-solutions"
         },
         @{
             component = "service_item"
@@ -463,10 +463,10 @@ $siteSettingsContent = @{
             primaryCtaLabel = "Request a Quote"
             primaryCtaHref = "/contact"
             solutionItems = @(
-                @{ component = "navbar_solution_item"; name = "Heliports & Vertiports Solutions"; href = "/heliports-&-vertiports-solutions"; hoverImage = New-AssetValue "/home/service-4.png" },
+                @{ component = "navbar_solution_item"; name = "Heliports & Vertiports Solutions"; href = "/heliports-and-vertiports-solutions"; hoverImage = New-AssetValue "/home/service-4.png" },
                 @{ component = "navbar_solution_item"; name = "Portable Helipads & Vertipads"; href = "/portable-helipads-and-vertipads"; hoverImage = New-AssetValue "/home/service-1.png" },
                 @{ component = "navbar_solution_item"; name = "Portable Lighting Solutions"; href = "/portable-lighting-solutions"; hoverImage = New-AssetValue "/home/service-7.png" },
-                @{ component = "navbar_solution_item"; name = "Heliports & Vertiports Lighting Solutions"; href = "/heliports-&-vertiports-lighting-solutions"; hoverImage = New-AssetValue "/home/service-5.png" },
+                @{ component = "navbar_solution_item"; name = "Heliports & Vertiports Lighting Solutions"; href = "/heliports-and-vertiports-lighting-solutions"; hoverImage = New-AssetValue "/home/service-5.png" },
                 @{ component = "navbar_solution_item"; name = "Modular Floating Solutions"; href = "/modular-floating-solutions"; hoverImage = New-AssetValue "/home/service-3.png" },
                 @{ component = "navbar_solution_item"; name = "Obstruction Lighting Solutions"; href = "/obstruction-lighting-solutions"; hoverImage = New-AssetValue "/obs.png" }
             )
