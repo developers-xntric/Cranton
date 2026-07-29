@@ -170,7 +170,7 @@ export default function ContactSection() {
             />
             <p className="font-onest text-[#6B7280] text-[13px] md:text-sm mb-7 leading-relaxed">
               Please submit your requirements using the following online form.
-              Our team will revert asap.
+              Our team will revert asap
             </p>
 
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
