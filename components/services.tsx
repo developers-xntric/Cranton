@@ -40,7 +40,7 @@ const services = [
     {
         title: "Obstruction Lighting Solutions",
         description: "High-performance warning lights designed to enhance visibility of structures, ensuring aviation safety and regulatory compliance.",
-        image: "/obs3.png",
+        image: "/obs4.jpeg",
         link: "/obstruction-lighting-solutions",
     },
     {

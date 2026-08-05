@@ -24,7 +24,7 @@ const ObstructionLightingSolutions = () => {
       <ReliableSurveillance
         title="Obstruction Lighting Solutions for Safer Airspace"
         description="Cranton obstruction lighting solutions are engineered to mark tall structures and potential hazards, helping pilots maintain safe navigation in all conditions. Designed for reliability and long-term performance, our systems support aviation safety across a wide range of environments."
-        image="/obstruction-lighting/obstract3.png"
+        image="/obs-main1.png"
         buttonText="Request a Quote"
         buttonHref="/contact"
       />
