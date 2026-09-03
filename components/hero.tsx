@@ -21,7 +21,7 @@ export default function Hero() {
 
             {/* Hero Content */}
             <div className="relative z-10 max-w-360 w-[90%] mx-auto pb-8 md:pb-16 ">
-                <h1 className="text-white text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  tracking-tight md:w-[80%]">
+                <h1 className="text-white text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  tracking-tight md:w-[70%]">
                     Powering the Future of
                     <br />
                     Vertical Aviation
