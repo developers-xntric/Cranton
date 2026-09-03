@@ -1,0 +1,10 @@
+import type { SchemaTypeDefinition } from "sanity"
+import { footerType } from "./footer"
+import { headerType } from "./header"
+import { linkType } from "./shared"
+import { pageType } from "./page"
+import { homeType } from "./home"
+import { aboutType } from "./about"
+import { contactType } from "./contact"
+import { contentType } from "./content"
+export const schema: { types: SchemaTypeDefinition[] } = { types: [headerType, footerType, linkType, pageType, homeType, aboutType, contactType, contentType] }
