@@ -7,4 +7,10 @@ import { homeType } from "./home"
 import { aboutType } from "./about"
 import { contactType } from "./contact"
 import { contentType } from "./content"
-export const schema: { types: SchemaTypeDefinition[] } = { types: [headerType, footerType, linkType, pageType, homeType, aboutType, contactType, contentType] }
+import { lightingSolutionsType } from "./lightingSolutions"
+import { heliportsSolutionsType } from "./heliportsSolutions"
+import { modularFloatingSolutionsType } from "./modularFloatingSolutions"
+import { obstructionLightingType } from "./obstructionLighting"
+import { portableHelipadsVertipadsType } from "./portableHelipadsVertipads"
+import { portableLightingSolutionsType } from "./portableLightingSolutions"
+export const schema: { types: SchemaTypeDefinition[] } = { types: [headerType, footerType, linkType, pageType, homeType, aboutType, contactType, contentType, lightingSolutionsType, heliportsSolutionsType, modularFloatingSolutionsType, obstructionLightingType, portableHelipadsVertipadsType, portableLightingSolutionsType] }

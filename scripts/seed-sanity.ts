@@ -3,6 +3,9 @@ dotenv.config({ path: ".env.local" })
 import fs from "node:fs"
 import path from "node:path"
 import { createClient } from "next-sanity"
+import { heliportsVertiportsLightingSolutionsDefaults } from "../sanity/lib/lighting-solutions-defaults"
+import { obstructionLightingDefaults } from "../sanity/lib/obstruction-lighting-defaults"
+import { portableHelipadsVertipadsDefaults } from "../sanity/lib/portable-helipads-vertipads-defaults"
 
 type Kind = "text" | "image" | "href"
 type Entry = { _key: string; key: string; kind: Kind; source: string; value?: string; image?: any; enabled: boolean }
@@ -14,7 +17,7 @@ if (!projectId || !token) throw new Error("Set NEXT_PUBLIC_SANITY_PROJECT_ID and
 const client = createClient({ projectId, dataset, apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2025-01-01", token, useCdn: false })
 const root = process.cwd()
 const pages = [
-  ["/", "Home"], ["/about", "About Us"], ["/contact", "Contact Us"], ["/activities-aircraft", "Activities"], ["/activities-firefighting-system", "Firefighting System"], ["/activities-helideck-consulting", "Helideck Consulting"], ["/activities-helideck-lighting", "Helideck Lighting"], ["/activities-helideck-manufacturing", "Helideck Manufacturing"], ["/activities-helideck-refurbishing", "Refurbishing Helidecks"], ["/activities-heliport-platform-mounting", "Heliport Platform Mounting"], ["/heliports-&-vertiports-lighting-solutions", "Heliports & Vertiports Lighting Solutions"], ["/heliports-&-vertiports-solutions", "Heliports & Vertiports Solutions"], ["/modular-floating-solutions", "Modular Floating Solutions"], ["/obstruction-lighting-solutions", "Obstruction Lighting Solutions"], ["/portable-helipads-and-vertipads", "Portable Helipads & Vertipads"], ["/portable-lighting-solutions", "Portable Lighting Solutions"],
+  ["/", "Home"], ["/about", "About Us"], ["/contact", "Contact Us"], ["/activities-aircraft", "Activities"], ["/activities-firefighting-system", "Firefighting System"], ["/activities-helideck-consulting", "Helideck Consulting"], ["/activities-helideck-lighting", "Helideck Lighting"], ["/activities-helideck-manufacturing", "Helideck Manufacturing"], ["/activities-helideck-refurbishing", "Refurbishing Helidecks"], ["/activities-heliport-platform-mounting", "Heliport Platform Mounting"], ["/heliports-&-vertiports-lighting-solutions", "Heliports & Vertiports Lighting Solutions"], ["/heliports-&-vertiports-solutions", "Heliports & Vertiports Solutions"], ["/modular-floating-solutions", "Modular Floating Solutions"], ["/portable-lighting-solutions", "Portable Lighting Solutions"],
 ] as const
 const safeId = (slug: string) => `page-${(slug === "/" ? "home" : slug.slice(1)).replace(/[^a-zA-Z0-9_-]/g, "-")}`
 const resolveModule = (from: string, specifier: string) => {
@@ -161,6 +164,22 @@ async function main() {
   const nav = [{ label: "Home", href: "/" }, { label: "About Us", href: "/about" }, { label: "Contact Us", href: "/contact" }]
   await client.createOrReplace({ _id: "header-default", _type: "header", siteName: "Cranton", navigationItems: nav, ctaButtonText: "Request a Quote", ctaButtonHref: "/contact", logo: assets.get("/nav-logo.png"), address: "Office 11A, Design Works, William Street, Felling, NE10 0JP, United Kingdom.", addressHref: "https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom", email: "info@crantonelectric.com", emailHref: "mailto:info@crantonelectric.com", phone: "+44 191 640 75 03", phoneHref: "tel:+441916407503" })
   await client.createOrReplace({ _id: "footer-default", _type: "footer", logo: assets.get("/footer-logo.png"), description: "From precision-engineered deck platforms to advanced fixed and portable lighting systems, Cranton delivers aviation, vertiport, and heliport solutions built for safety, compliance, and long-term operational reliability.", address: "Office 11A, Design Works, William Street, Felling, NE10 0JP, United Kingdom.", addressHref: "https://www.google.com/maps/search/?api=1&query=Office+11A+Design+Works+William+Street+Felling+NE10+0JP+United+Kingdom", email: "info@crantonelectric.com", emailHref: "mailto:info@crantonelectric.com", phone: "+44 191 640 75 03", phoneHref: "tel:+441916407503", links: [{ label: "Home", href: "/" }, { label: "About Us", href: "/about" }, { label: "E-Brochure", href: "/Cranton-E-Brochure.pdf" }, { label: "Contact Us", href: "/contact" }], socialLinks: [{ label: "LinkedIn", href: "https://www.linkedin.com/company/cranton-electrical-limited-uk/", newTab: true }], copyrightText: "Copyright Ãƒâ€šÃ‚Â© {year} All Rights Reserved." })
+  const toSanityImages = (value: any, key = ""): any => {
+    if (Array.isArray(value)) return value.map((item) => toSanityImages(item, key))
+    if (value && typeof value === "object") {
+      if (typeof value.src === "string" && key.toLowerCase().includes("image") && assets.has(value.src)) return { _type: "image", asset: assets.get(value.src).asset, alt: value.alt }
+      return Object.fromEntries(Object.entries(value).map(([childKey, childValue]) => [childKey, toSanityImages(childValue, childKey)]))
+    }
+    return value
+  }
+  await client.createOrReplace(toSanityImages({ ...heliportsVertiportsLightingSolutionsDefaults, _id: "heliports-vertiports-lighting-solutions-page", _type: "lightingSolutionsPage" }))
+  console.log("Seeded Heliports & Vertiports Lighting Solutions dedicated page")
+  await client.createOrReplace(toSanityImages({ ...obstructionLightingDefaults, _id: "obstruction-lighting-solutions-page", _type: "obstructionLightingPage" }))
+  console.log("Seeded Obstruction Lighting Solutions dedicated page")
+  await client.delete("page-obstruction-lighting-solutions")
+  await client.createOrReplace(toSanityImages({ ...portableHelipadsVertipadsDefaults, _id: "portable-helipads-vertipads-page", _type: "portableHelipadsVertipadsPage" }))
+  console.log("Seeded Portable Helipads & Vertipads dedicated page")
+  await client.delete("page-portable-helipads-and-vertipads")
   for (const [slug, title] of pages) { const entries = (pageEntries.get(slug) || []).map(withAssets); const sections = (pageSections.get(slug) || []).map((section, index) => ({ _key: `${safeId(slug)}-${index}`, sectionName: section.name, sectionType: "content", editableFields: section.fields.map(withAssets), items: section.items?.map(withItemAssets) })); await client.createOrReplace({ _id: safeId(slug), _type: "sitePage", title, slug, seoTitle: title, seoDescription: title, sections }); console.log(`Seeded ${title}: ${entries.length} fields in ${sections.length} sections`) }
   await client.createOrReplace({ _id: "site-content-default", _type: "siteContent", title: "Internal content fallback", entries: allEntries.map(withAssets) })
   console.log(`Completed ${pages.length} pages, ${allEntries.length} unique values, ${imageFiles.length} assets.`)

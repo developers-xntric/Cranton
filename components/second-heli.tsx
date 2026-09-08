@@ -7,6 +7,9 @@ interface HealthcareSectionProps {
     heading2?: string;
     desc2?: string;
     image?: string;
+    imageAlt?: string;
+    buttonText?: string;
+    buttonHref?: string;
     titles: string[];
     para: string[];
 }
@@ -33,7 +36,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                             </p>
                             <div>
                                 {/* Gradient Button with SVG Icon */}
-                                <Button href='/contact'>Inquire Now</Button>
+                                 <Button href={props.buttonHref || "/contact"}>{props.buttonText || "Inquire Now"}</Button>
                             </div>
                         </div>
 
@@ -44,7 +47,7 @@ const SecondHeli = (props: HealthcareSectionProps) => {
                     <div className="relative h-96 md:h-full overflow-hidden rounded-lg shadow-lg">
                         <Image
                             src={props.image || "/1.png"}
-                            alt="Healthcare professional with stethoscope and digital network"
+                            alt={props.imageAlt || "Healthcare professional with stethoscope and digital network"}
                             fill
                             className="object-cover"
                             priority

@@ -2,6 +2,37 @@ import { sanityClient } from "./client"
 import { isSanityConfigured } from "../env"
 export type CmsEntry = { key: string; kind: "text" | "image" | "href"; source: string; value?: string; image?: { url?: string; alt?: string }; enabled?: boolean; pageSlug?: string }
 export type CmsPage = { title: string; slug: string; seoTitle?: string; seoDescription?: string; sections?: unknown[] }
+
+export async function getLightingSolutionsPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "lightingSolutionsPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, overview{ ..., "imageOne": imageOne{ "url": asset->url, alt }, "imageTwo": imageTwo{ "url": asset->url, alt } }, ecosystem{ ..., "image": image{ "url": asset->url, alt } }, reliability{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, flushMounted{ ..., "image": image{ "url": asset->url, alt } }, floodlights{ ..., "image": image{ "url": asset->url, alt } }, windIndicator{ ..., "image": image{ "url": asset->url, alt } }, urbanMobility{ ..., "imageOne": imageOne{ "url": asset->url, alt }, "imageTwo": imageTwo{ "url": asset->url, alt } }, faqs{ ..., "image": image{ "url": asset->url, alt } } }`, { slug: "/heliports-&-vertiports-lighting-solutions" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity lighting solutions fetch failed; using local content:", error); return null }
+}
+export async function getHeliportsSolutionsPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "heliportsSolutionsPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, introduction{ ..., "image": image{ "url": asset->url, alt } }, performance{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, environments{ ..., "image": image{ "url": asset->url, alt }, points[]{ ... } }, industries{ ..., items[]{ ..., "image": image{ "url": asset->url, alt } } }, faqs{ ..., "image": image{ "url": asset->url, alt }, items[]{ ... } }, cta }`, { slug: "/heliports-&-vertiports-solutions" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity heliports solutions fetch failed; using local content:", error); return null }
+}
+export async function getModularFloatingSolutionsPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "modularFloatingSolutionsPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, introduction{ ..., "image": image{ "url": asset->url, alt } }, performance{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, environments{ ..., "image": image{ "url": asset->url, alt }, points[]{ ... } }, industries{ ..., items[]{ ..., "image": image{ "url": asset->url, alt } } }, faqs{ ..., "image": image{ "url": asset->url, alt }, items[]{ ... } }, cta }`, { slug: "/modular-floating-solutions" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity modular floating solutions fetch failed; using local content:", error); return null }
+}
+export async function getObstructionLightingPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "obstructionLightingPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, overview{ ..., "image": image{ "url": asset->url, alt } }, performance{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, lowMedium{ ..., sections[]{ ..., "image": image{ "url": asset->url, alt } } }, highSolar{ ..., sections[]{ ..., "image": image{ "url": asset->url, alt } } }, led{ ..., "image": image{ "url": asset->url, alt } }, installation{ ..., steps[]{ ..., "image": image{ "url": asset->url, alt } } }, industries{ ..., items[]{ ..., "image": image{ "url": asset->url, alt } } }, faqs{ ..., "image": image{ "url": asset->url, alt }, items[]{ ... } }, cta }`, { slug: "/obstruction-lighting-solutions" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity obstruction lighting fetch failed; using local content:", error); return null }
+}
+export async function getPortableHelipadsVertipadsPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "portableHelipadsVertipadsPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, introduction{ ..., "image": image{ "url": asset->url, alt } }, performance{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, environments{ ..., "image": image{ "url": asset->url, alt }, points[]{ ... } }, industries{ ..., items[]{ ..., "image": image{ "url": asset->url, alt } } }, faqs{ ..., "image": image{ "url": asset->url, alt }, items[]{ ... } }, cta }`, { slug: "/portable-helipads-and-vertipads" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity portable helipads fetch failed; using local content:", error); return null }
+}
+export async function getPortableLightingSolutionsPage() {
+  if (!isSanityConfigured()) return null
+  try { return await sanityClient.fetch(`*[_type == "portableLightingSolutionsPage" && slug == $slug][0]{ ..., hero{ ..., "image": image{ "url": asset->url, alt } }, overview{ ..., "image": image{ "url": asset->url, alt } }, performance{ ..., features[]{ ..., "image": image{ "url": asset->url, alt } } }, reliability{ ..., "image": image{ "url": asset->url, alt }, points[]{ ... } }, capabilities{ ..., steps[]{ ..., "image": image{ "url": asset->url, alt } } }, industries{ ..., items[]{ ..., "image": image{ "url": asset->url, alt } } }, faqs{ ..., "image": image{ "url": asset->url, alt }, items[]{ ... } }, cta }`, { slug: "/portable-lighting-solutions" }, { next: { revalidate: 10 } }) }
+  catch (error) { console.error("Sanity portable lighting fetch failed; using local content:", error); return null }
+}
 export async function getCmsEntries(): Promise<CmsEntry[]> {
   if (!isSanityConfigured()) return []
   try {
