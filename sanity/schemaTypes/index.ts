@@ -1,6 +1,6 @@
 import type { SchemaTypeDefinition } from "sanity"
 import { footerType } from "./footer"
-import { headerType } from "./header"
+import { headerType, navigationItem } from "./header"
 import { linkType } from "./shared"
 import { pageType } from "./page"
 import { homeType } from "./home"
@@ -13,4 +13,4 @@ import { modularFloatingSolutionsType } from "./modularFloatingSolutions"
 import { obstructionLightingType } from "./obstructionLighting"
 import { portableHelipadsVertipadsType } from "./portableHelipadsVertipads"
 import { portableLightingSolutionsType } from "./portableLightingSolutions"
-export const schema: { types: SchemaTypeDefinition[] } = { types: [headerType, footerType, linkType, pageType, homeType, aboutType, contactType, contentType, lightingSolutionsType, heliportsSolutionsType, modularFloatingSolutionsType, obstructionLightingType, portableHelipadsVertipadsType, portableLightingSolutionsType] }
+export const schema: { types: SchemaTypeDefinition[] } = { types: [headerType, navigationItem, footerType, linkType, pageType, homeType, aboutType, contactType, contentType, lightingSolutionsType, heliportsSolutionsType, modularFloatingSolutionsType, obstructionLightingType, portableHelipadsVertipadsType, portableLightingSolutionsType] }

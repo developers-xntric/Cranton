@@ -1,8 +1,9 @@
-﻿"use client"
+"use client"
 import { usePathname } from "next/navigation"
 import Footer from "@/components/footer"
-export default function SiteFooter() {
+import type { SiteFooter } from "@/sanity/lib/content"
+export default function SiteFooter({ footer }: { footer?: SiteFooter | null }) {
   const pathname = usePathname()
   if (pathname === "/studio" || pathname.startsWith("/studio/")) return null
-  return <Footer />
+  return <Footer footer={footer} />
 }
