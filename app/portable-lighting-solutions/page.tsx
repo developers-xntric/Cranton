@@ -10,7 +10,7 @@ import CTASection from "@/components/cta-section"
 import { getPortableLightingSolutionsPage } from "@/sanity/lib/content"
 import { portableLightingSolutionsDefaults as defaults } from "@/sanity/lib/portable-lighting-solutions-defaults"
 
-const merge = (fallback: any, cms: any): any => { if (cms === undefined || cms === null) return fallback; if (Array.isArray(fallback)) return Array.isArray(cms) && cms.length ? cms : fallback; if (fallback && typeof fallback === "object" && cms && typeof cms === "object") return Object.fromEntries(Object.keys(fallback).map((key) => [key, merge(fallback[key], cms[key])])); return cms }
+const merge = (fallback: any, cms: any): any => { if (cms === undefined || cms === null) return fallback; if (Array.isArray(fallback)) return Array.isArray(cms) && cms.length ? cms : fallback; if (cms && typeof cms === "object" && typeof cms.url === "string") return { ...fallback, ...cms }; if (fallback && typeof fallback === "object" && cms && typeof cms === "object") return Object.fromEntries(Object.keys(fallback).map((key) => [key, merge(fallback[key], cms[key])])); return cms }
 const imageUrl = (fallback: any, cms: any) => cms?.url || fallback.src
 const imageAlt = (fallback: any, cms: any) => cms?.alt || fallback.alt
 
@@ -23,7 +23,7 @@ export default async function PortableLightingSolutions() {
     <SplitSectionHelideck sections={[{ title: data.reliability.heading, image: imageUrl(defaults.reliability.image, data.reliability.image), imageAlt: imageAlt(defaults.reliability.image, data.reliability.image), paragraphs: data.reliability.paragraphs, points: data.reliability.points }]} />
     <InstallationProcess title={data.capabilities.heading} description={data.capabilities.description} steps={data.capabilities.steps.map((step: any, index: number) => ({ id: step.id || defaults.capabilities.steps[index].id, title: step.title || defaults.capabilities.steps[index].title, desc: step.description || defaults.capabilities.steps[index].description, image: imageUrl(defaults.capabilities.steps[index].image, step.image) }))} />
     <IndustriesServe badge={data.industries.badge} heading={data.industries.heading} industries={data.industries.items.map((item: any, index: number) => ({ name: item.name || defaults.industries.items[index].name, image: imageUrl(defaults.industries.items[index].image, item.image) }))} />
-    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} image={imageUrl(defaults.faqs.image, data.faqs.image)} />
+    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} image={data.faqs.image?.url || defaults.faqs.image.src} />
     <CTASection heading={data.cta.heading} description={data.cta.description} buttonText={data.cta.buttonText} buttonHref={data.cta.buttonHref} />
   </div>
 }

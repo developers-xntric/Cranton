@@ -14,6 +14,8 @@ import { obstructionLightingDefaults as defaults } from "@/sanity/lib/obstructio
 const merge = (fallback: any, cms: any): any => {
   if (cms === undefined || cms === null) return fallback
   if (Array.isArray(fallback)) return Array.isArray(cms) && cms.length ? cms : fallback
+
+  if (cms && typeof cms === "object" && typeof cms.url === "string") return { ...fallback, ...cms }
   if (fallback && typeof fallback === "object" && cms && typeof cms === "object") return Object.fromEntries(Object.keys(fallback).map((key) => [key, merge(fallback[key], cms[key])]))
   return cms
 }
@@ -32,7 +34,7 @@ export default async function ObstructionLightingSolutions() {
     <SingleSplitSection isBlack={false} title={data.led.title} model={data.led.model} description={data.led.description} features={data.led.features} image={imageUrl(defaults.led.image, data.led.image)} imageAlt={data.led.imageAlt || defaults.led.image.alt} />
     <InstallationProcess title={data.installation.title} description={data.installation.description} steps={data.installation.steps.map((step: any, index: number) => ({ id: step.id || defaults.installation.steps[index].id, title: step.title || defaults.installation.steps[index].title, desc: step.description || defaults.installation.steps[index].description, image: imageUrl(defaults.installation.steps[index].image, step.image) }))} />
     <IndustriesServe badge={data.industries.badge} heading={data.industries.heading} industries={data.industries.items.map((item: any, index: number) => ({ name: item.name || defaults.industries.items[index].name, image: imageUrl(defaults.industries.items[index].image, item.image) }))} />
-    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} image={imageUrl(defaults.faqs.image, data.faqs.image)} />
+    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} image={data.faqs.image?.url || defaults.faqs.image.src} />
     <CTASection heading={data.cta.heading} description={data.cta.description} buttonText={data.cta.buttonText} buttonHref={data.cta.buttonHref} />
   </div>
 }

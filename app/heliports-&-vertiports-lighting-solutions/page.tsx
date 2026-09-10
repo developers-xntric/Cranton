@@ -14,6 +14,7 @@ type RenderSplit = { title: string; subtitle: string; paragraphs: string[]; poin
 const mergeDefaults = (fallback: any, cms: any): any => {
   if (cms === undefined || cms === null) return fallback
   if (Array.isArray(fallback)) return Array.isArray(cms) && cms.length ? cms : fallback
+  if (cms && typeof cms === "object" && typeof cms.url === "string") return { ...fallback, ...cms }
   if (fallback && typeof fallback === "object" && cms && typeof cms === "object") return Object.fromEntries(Object.keys(fallback).map((key) => [key, mergeDefaults(fallback[key], cms[key])]))
   return cms
 }
@@ -38,6 +39,6 @@ export default async function HeliportsLightingSolutions() {
     <HvLeftRight sections={[{ ...floodlights, keytitle: floodlights.keyTitle, greytitle: floodlights.whyItMattersTitle, greypara: floodlights.whyItMattersDescription }]} />
     <HvLeftRight isBlack sections={[{ ...windIndicator, keytitle: windIndicator.keyTitle, greytitle: windIndicator.whyItMattersTitle, greypara: windIndicator.whyItMattersDescription }]} />
     <Urban btn={data.urbanMobility.buttonText} title={data.urbanMobility.title} subtitle={data.urbanMobility.subtitle} description1={data.urbanMobility.paragraphs[0]} description2={data.urbanMobility.paragraphs[1]} solutions={data.urbanMobility.solutions} image1={imageUrl(defaults.urbanMobility.imageOne, data.urbanMobility.imageOne)} image2={imageUrl(defaults.urbanMobility.imageTwo, data.urbanMobility.imageTwo)} />
-    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.contactPhone} contactEmail={data.faqs.contactEmail} image={imageUrl(defaults.faqs.image, data.faqs.image)} />
+    <Faqs heading={data.faqs.heading} description={data.faqs.description} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.contactPhone} contactEmail={data.faqs.contactEmail} image={data.faqs.image?.url || defaults.faqs.image.src} />
   </div>
 }

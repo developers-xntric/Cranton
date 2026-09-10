@@ -12,6 +12,8 @@ import { heliportsSolutionsDefaults as defaults } from "@/sanity/lib/heliports-s
 const merge = (fallback: any, cms: any): any => {
   if (cms === undefined || cms === null) return fallback
   if (Array.isArray(fallback)) return Array.isArray(cms) && cms.length ? cms : fallback
+
+  if (cms && typeof cms === "object" && typeof cms.url === "string") return { ...fallback, ...cms }
   if (fallback && typeof fallback === "object" && cms && typeof cms === "object") return Object.fromEntries(Object.keys(fallback).map((key) => [key, merge(fallback[key], cms[key])]))
   return cms
 }
@@ -27,7 +29,7 @@ export default async function HeliportsVertiportsSolutions() {
     <FourCards heading={data.performance.heading} para={data.performance.description} isBlack features={data.performance.features.map((feature: any, index: number) => ({ title: feature.title || defaults.performance.features[index].title, desc: feature.description || defaults.performance.features[index].description, icon: imageUrl(defaults.performance.features[index].image, feature.image) }))} />
     <SplitSectionHelideck sections={[{ title: data.environments.heading, image: imageUrl(defaults.environments.image, data.environments.image), imageAlt: data.environments.image?.alt || defaults.environments.image.alt, paragraphs: data.environments.paragraphs, points: data.environments.points }]} />
     <IndustriesServe badge={data.industries.badge} heading={data.industries.heading} industries={data.industries.items.map((item: any, index: number) => ({ name: item.name || defaults.industries.items[index].name, image: imageUrl(defaults.industries.items[index].image, item.image) }))} className="md:py-0! md:pb-10!" />
-    <Faqs heading={data.faqs.heading} description={data.faqs.description} image={imageUrl(defaults.faqs.image, data.faqs.image)} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} />
+    <Faqs heading={data.faqs.heading} description={data.faqs.description} image={data.faqs.image?.url || defaults.faqs.image.src} faqs={data.faqs.items} showNumbers={data.faqs.showNumbers} assistanceHeading={data.faqs.assistanceHeading} assistanceDescription={data.faqs.assistanceDescription} contactPhone={data.faqs.phone} contactEmail={data.faqs.email} />
     <CTASection heading={data.cta.heading} description={data.cta.description} buttonText={data.cta.buttonText} buttonHref={data.cta.buttonHref} />
   </div>
 }
