@@ -109,7 +109,7 @@ export default function HvLeftRight({
               src={section.image}
               alt={section.imageAlt}
               fill
-              className="object-cover"
+              className=""
               unoptimized
             />
           </div>
